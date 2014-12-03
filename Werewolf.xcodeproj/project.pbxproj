@@ -17,6 +17,7 @@
 		4510A9D41A2EB8AE00063107 /* Position.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9D31A2EB8AE00063107 /* Position.m */; };
 		4510A9D91A2EBD6100063107 /* GameStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9D71A2EBD6100063107 /* GameStartViewController.m */; };
 		4510A9DC1A2EBE7900063107 /* PlayerSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9DB1A2EBE7900063107 /* PlayerSettingViewController.m */; };
+		4544C2441A2EFF75001040E9 /* PlayerStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 4544C2431A2EFF75001040E9 /* PlayerStatus.m */; };
 		45D98B8C1A2D6A2B00487E04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D98B8B1A2D6A2B00487E04 /* main.m */; };
 		45D98B8F1A2D6A2B00487E04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D98B8E1A2D6A2B00487E04 /* AppDelegate.m */; };
 		45D98B951A2D6A2B00487E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D98B931A2D6A2B00487E04 /* Main.storyboard */; };
@@ -56,6 +57,8 @@
 		4510A9D71A2EBD6100063107 /* GameStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStartViewController.m; sourceTree = "<group>"; };
 		4510A9DA1A2EBE7900063107 /* PlayerSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSettingViewController.h; sourceTree = "<group>"; };
 		4510A9DB1A2EBE7900063107 /* PlayerSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSettingViewController.m; sourceTree = "<group>"; };
+		4544C2421A2EFF75001040E9 /* PlayerStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerStatus.h; sourceTree = "<group>"; };
+		4544C2431A2EFF75001040E9 /* PlayerStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerStatus.m; sourceTree = "<group>"; };
 		45D98B861A2D6A2B00487E04 /* Werewolf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Werewolf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D98B8A1A2D6A2B00487E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45D98B8B1A2D6A2B00487E04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 		4510A9BC1A2EAA4000063107 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				4544C2421A2EFF75001040E9 /* PlayerStatus.h */,
+				4544C2431A2EFF75001040E9 /* PlayerStatus.m */,
 				4510A9BD1A2EACF100063107 /* PlayerManager.h */,
 				4510A9BE1A2EACF100063107 /* PlayerManager.m */,
 				4510A9C01A2EAD2000063107 /* Player.h */,
@@ -293,6 +298,7 @@
 				4510A9BF1A2EACF100063107 /* PlayerManager.m in Sources */,
 				4510A9CB1A2EAE9300063107 /* Villager.m in Sources */,
 				4510A9C81A2EAE6600063107 /* Seer.m in Sources */,
+				4544C2441A2EFF75001040E9 /* PlayerStatus.m in Sources */,
 				4510A9D91A2EBD6100063107 /* GameStartViewController.m in Sources */,
 				4510A9C51A2EAD3B00063107 /* Werewolf.m in Sources */,
 				4510A9D11A2EAF4A00063107 /* madman.m in Sources */,

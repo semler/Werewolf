@@ -17,6 +17,18 @@
 
 @implementation PlayerSettingViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    // ナビゲーションバー非表示
+    [self.navigationController setNavigationBarHidden:NO];
+    
+    
+    
+    
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
