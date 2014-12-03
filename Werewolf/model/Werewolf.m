@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 semler. All rights reserved.
 //
 
-#import "Wolf.h"
+#import "Werewolf.h"
 
-@implementation Wolf
+@implementation Werewolf
 
 @end

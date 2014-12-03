@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4510A9BF1A2EACF100063107 /* PlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9BE1A2EACF100063107 /* PlayerManager.m */; };
+		4510A9C21A2EAD2000063107 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9C11A2EAD2000063107 /* Player.m */; };
+		4510A9C51A2EAD3B00063107 /* Werewolf.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9C41A2EAD3B00063107 /* Werewolf.m */; };
+		4510A9C81A2EAE6600063107 /* Seer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9C71A2EAE6600063107 /* Seer.m */; };
+		4510A9CB1A2EAE9300063107 /* Villager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9CA1A2EAE9300063107 /* Villager.m */; };
+		4510A9CE1A2EAEE900063107 /* Bodyguard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9CD1A2EAEE900063107 /* Bodyguard.m */; };
+		4510A9D11A2EAF4A00063107 /* madman.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9D01A2EAF4A00063107 /* madman.m */; };
+		4510A9D41A2EB8AE00063107 /* Position.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9D31A2EB8AE00063107 /* Position.m */; };
+		4510A9D91A2EBD6100063107 /* GameStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9D71A2EBD6100063107 /* GameStartViewController.m */; };
+		4510A9DC1A2EBE7900063107 /* PlayerSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9DB1A2EBE7900063107 /* PlayerSettingViewController.m */; };
 		45D98B8C1A2D6A2B00487E04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D98B8B1A2D6A2B00487E04 /* main.m */; };
 		45D98B8F1A2D6A2B00487E04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D98B8E1A2D6A2B00487E04 /* AppDelegate.m */; };
-		45D98B921A2D6A2B00487E04 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D98B911A2D6A2B00487E04 /* ViewController.m */; };
 		45D98B951A2D6A2B00487E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D98B931A2D6A2B00487E04 /* Main.storyboard */; };
 		45D98B971A2D6A2B00487E04 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D98B961A2D6A2B00487E04 /* Images.xcassets */; };
 		45D98B9A1A2D6A2B00487E04 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45D98B981A2D6A2B00487E04 /* LaunchScreen.xib */; };
@@ -27,13 +36,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4510A9BD1A2EACF100063107 /* PlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerManager.h; sourceTree = "<group>"; };
+		4510A9BE1A2EACF100063107 /* PlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerManager.m; sourceTree = "<group>"; };
+		4510A9C01A2EAD2000063107 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		4510A9C11A2EAD2000063107 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		4510A9C31A2EAD3B00063107 /* Werewolf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Werewolf.h; sourceTree = "<group>"; };
+		4510A9C41A2EAD3B00063107 /* Werewolf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Werewolf.m; sourceTree = "<group>"; };
+		4510A9C61A2EAE6600063107 /* Seer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seer.h; sourceTree = "<group>"; };
+		4510A9C71A2EAE6600063107 /* Seer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seer.m; sourceTree = "<group>"; };
+		4510A9C91A2EAE9300063107 /* Villager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Villager.h; sourceTree = "<group>"; };
+		4510A9CA1A2EAE9300063107 /* Villager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Villager.m; sourceTree = "<group>"; };
+		4510A9CC1A2EAEE900063107 /* Bodyguard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bodyguard.h; sourceTree = "<group>"; };
+		4510A9CD1A2EAEE900063107 /* Bodyguard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bodyguard.m; sourceTree = "<group>"; };
+		4510A9CF1A2EAF4A00063107 /* madman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madman.h; sourceTree = "<group>"; };
+		4510A9D01A2EAF4A00063107 /* madman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madman.m; sourceTree = "<group>"; };
+		4510A9D21A2EB8AE00063107 /* Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Position.h; sourceTree = "<group>"; };
+		4510A9D31A2EB8AE00063107 /* Position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Position.m; sourceTree = "<group>"; };
+		4510A9D61A2EBD6100063107 /* GameStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStartViewController.h; sourceTree = "<group>"; };
+		4510A9D71A2EBD6100063107 /* GameStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStartViewController.m; sourceTree = "<group>"; };
+		4510A9DA1A2EBE7900063107 /* PlayerSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSettingViewController.h; sourceTree = "<group>"; };
+		4510A9DB1A2EBE7900063107 /* PlayerSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSettingViewController.m; sourceTree = "<group>"; };
 		45D98B861A2D6A2B00487E04 /* Werewolf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Werewolf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D98B8A1A2D6A2B00487E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45D98B8B1A2D6A2B00487E04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		45D98B8D1A2D6A2B00487E04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		45D98B8E1A2D6A2B00487E04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		45D98B901A2D6A2B00487E04 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		45D98B911A2D6A2B00487E04 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		45D98B941A2D6A2B00487E04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45D98B961A2D6A2B00487E04 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		45D98B991A2D6A2B00487E04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -60,6 +87,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4510A9BC1A2EAA4000063107 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4510A9BD1A2EACF100063107 /* PlayerManager.h */,
+				4510A9BE1A2EACF100063107 /* PlayerManager.m */,
+				4510A9C01A2EAD2000063107 /* Player.h */,
+				4510A9C11A2EAD2000063107 /* Player.m */,
+				4510A9D21A2EB8AE00063107 /* Position.h */,
+				4510A9D31A2EB8AE00063107 /* Position.m */,
+				4510A9C31A2EAD3B00063107 /* Werewolf.h */,
+				4510A9C41A2EAD3B00063107 /* Werewolf.m */,
+				4510A9C61A2EAE6600063107 /* Seer.h */,
+				4510A9C71A2EAE6600063107 /* Seer.m */,
+				4510A9C91A2EAE9300063107 /* Villager.h */,
+				4510A9CA1A2EAE9300063107 /* Villager.m */,
+				4510A9CC1A2EAEE900063107 /* Bodyguard.h */,
+				4510A9CD1A2EAEE900063107 /* Bodyguard.m */,
+				4510A9CF1A2EAF4A00063107 /* madman.h */,
+				4510A9D01A2EAF4A00063107 /* madman.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4510A9D51A2EBD6100063107 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4510A9D61A2EBD6100063107 /* GameStartViewController.h */,
+				4510A9D71A2EBD6100063107 /* GameStartViewController.m */,
+				4510A9DA1A2EBE7900063107 /* PlayerSettingViewController.h */,
+				4510A9DB1A2EBE7900063107 /* PlayerSettingViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		4510A9D81A2EBD6100063107 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		45D98B7D1A2D6A2B00487E04 = {
 			isa = PBXGroup;
 			children = (
@@ -81,13 +149,14 @@
 		45D98B881A2D6A2B00487E04 /* Werewolf */ = {
 			isa = PBXGroup;
 			children = (
+				4510A9D51A2EBD6100063107 /* controller */,
+				4510A9D81A2EBD6100063107 /* view */,
+				4510A9BC1A2EAA4000063107 /* model */,
 				45D98B8D1A2D6A2B00487E04 /* AppDelegate.h */,
 				45D98B8E1A2D6A2B00487E04 /* AppDelegate.m */,
-				45D98B901A2D6A2B00487E04 /* ViewController.h */,
-				45D98B911A2D6A2B00487E04 /* ViewController.m */,
 				45D98B931A2D6A2B00487E04 /* Main.storyboard */,
-				45D98B961A2D6A2B00487E04 /* Images.xcassets */,
 				45D98B981A2D6A2B00487E04 /* LaunchScreen.xib */,
+				45D98B961A2D6A2B00487E04 /* Images.xcassets */,
 				45D98B891A2D6A2B00487E04 /* Supporting Files */,
 			);
 			path = Werewolf;
@@ -219,9 +288,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45D98B921A2D6A2B00487E04 /* ViewController.m in Sources */,
 				45D98B8F1A2D6A2B00487E04 /* AppDelegate.m in Sources */,
+				4510A9CE1A2EAEE900063107 /* Bodyguard.m in Sources */,
+				4510A9BF1A2EACF100063107 /* PlayerManager.m in Sources */,
+				4510A9CB1A2EAE9300063107 /* Villager.m in Sources */,
+				4510A9C81A2EAE6600063107 /* Seer.m in Sources */,
+				4510A9D91A2EBD6100063107 /* GameStartViewController.m in Sources */,
+				4510A9C51A2EAD3B00063107 /* Werewolf.m in Sources */,
+				4510A9D11A2EAF4A00063107 /* madman.m in Sources */,
 				45D98B8C1A2D6A2B00487E04 /* main.m in Sources */,
+				4510A9D41A2EB8AE00063107 /* Position.m in Sources */,
+				4510A9DC1A2EBE7900063107 /* PlayerSettingViewController.m in Sources */,
+				4510A9C21A2EAD2000063107 /* Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +490,7 @@
 				45D98BAB1A2D6A2C00487E04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		45D98BAC1A2D6A2C00487E04 /* Build configuration list for PBXNativeTarget "WerewolfTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +499,7 @@
 				45D98BAE1A2D6A2C00487E04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

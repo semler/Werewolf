@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 semler. All rights reserved.
 //
 
-#import "Player.h"
+#import <Foundation/Foundation.h>
 
-@interface Position : Player
+@interface Position : NSObject
 
 @end

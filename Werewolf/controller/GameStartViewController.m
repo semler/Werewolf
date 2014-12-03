@@ -6,13 +6,15 @@
 //  Copyright (c) 2014年 semler. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "GameStartViewController.h"
 
-@interface ViewController ()
+@interface GameStartViewController ()
+
+- (IBAction)startButtonPressed:(id)sender;
 
 @end
 
-@implementation ViewController
+@implementation GameStartViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,4 +26,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)startButtonPressed:(id)sender {
+    [self performSegueWithIdentifier:@"startGame" sender:self];
+    
+}
 @end

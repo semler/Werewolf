@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 semler. All rights reserved.
 //
 
-#import "Player.h"
+#import "Position.h"
 
-@interface Villager : Player
+@interface Villager : Position
 
 @end
