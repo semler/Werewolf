@@ -7,7 +7,7 @@
 //
 
 #import "GameStartViewController.h"
-#import "PlayerStatus.h"
+#import "GameStatus.h"
 
 @interface GameStartViewController ()
 
@@ -70,7 +70,7 @@
 
 - (IBAction)startButtonPressed:(id)sender {
     
-    [PlayerStatus sharedManager].playerCount = self.playerCount;
+    [GameStatus sharedManager].playerCount = self.playerCount;
     
     [self performSegueWithIdentifier:@"startGame" sender:self];
     

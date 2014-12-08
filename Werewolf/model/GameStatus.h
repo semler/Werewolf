@@ -1,19 +1,23 @@
 //
-//  PlayerStatus.h
+//  GameStatus.h
 //  Werewolf
 //
-//  Created by semler on 14-12-3.
+//  Created by semler on 14-12-4.
 //  Copyright (c) 2014年 semler. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface PlayerStatus : NSObject
+@interface GameStatus : NSObject
 
 @property int playerCount;
+@property int currentPlayer;
 
-+ (PlayerStatus *)sharedManager;
 
 
+
+
+
++ (GameStatus *)sharedManager;
 
 @end
