@@ -28,7 +28,25 @@ static PlayerManager *playerStatus = nil;
     return self;
 }
 
-
+- (void) gacha {
+    //配列を初期化
+    self.position = [NSMutableArray array];
+    //要素になる数字
+    NSInteger num;
+    
+    //要素を満たすまで繰り返す
+    while (self.position.count < 3) {
+        //乱数
+        num = arc4random() % 3;
+        
+        //要素を検索
+        NSUInteger index = [self.position indexOfObject:@(num)];
+        
+        if(index == NSNotFound){
+            [self.position addObject:@(num)];
+        }
+    }
+}
 
 
 

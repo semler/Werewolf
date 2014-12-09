@@ -10,8 +10,15 @@
 
 @interface GameStatus : NSObject
 
-@property int playerCount;
-@property int currentPlayer;
+@property (nonatomic) int playerCount;
+@property (nonatomic) int currentPlayer;
+
+@property (nonatomic) int villageCount;
+@property (nonatomic) int werewolfCount;
+@property (nonatomic) int seerCount;
+@property (nonatomic) int bodyguardCount;
+@property (nonatomic) int madmanCount;
+@property (nonatomic) int mediumCount;
 
 
 

@@ -23,9 +23,10 @@
 @property (strong, nonatomic) Player *player10;
 @property (strong, nonatomic) Player *player11;
 
+@property (strong, nonatomic) NSMutableArray *position;
 
 + (PlayerManager *)sharedManager;
 
-
+- (void) gacha;
 
 @end
