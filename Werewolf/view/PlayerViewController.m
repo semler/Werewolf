@@ -19,6 +19,7 @@
 - (IBAction)callCamera:(id)sender;
 - (IBAction)callLibrary:(id)sender;
 - (IBAction)okButtonPressed:(id)sender;
+- (IBAction)cacelButtonPressed:(id)sender;
 
 @end
 
@@ -133,6 +134,10 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
         NSLog(@"save NG");
     }
     
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)cacelButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

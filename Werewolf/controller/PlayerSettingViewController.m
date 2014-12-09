@@ -48,6 +48,7 @@
 - (IBAction)player10ButttonPressed:(id)sender;
 - (IBAction)player11ButttonPressed:(id)sender;
 
+- (IBAction)startButtonPressed:(id)sender;
 - (IBAction)backButtonPressed:(id)sender;
 
 @end
@@ -58,7 +59,6 @@
     [super viewWillAppear:animated];
     
     if ([GameStatus sharedManager].playerCount == 5) {
-        NSData *myData;
         NSString *path1 = [NSString stringWithFormat:@"%@/%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], @"player1.jpg"];
         NSString *path2 = [NSString stringWithFormat:@"%@/%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], @"player2.jpg"];
         NSString *path3 = [NSString stringWithFormat:@"%@/%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], @"player3.jpg"];
@@ -208,6 +208,10 @@
     
     PlayerViewController *viewController = [[PlayerViewController alloc] init];
     [self presentViewController:viewController animated:YES completion:nil];
+}
+
+- (IBAction)startButtonPressed:(id)sender {
+    [self performSegueWithIdentifier:@"toCardSetting" sender:self];
 }
 
 - (IBAction)backButtonPressed:(id)sender {

@@ -72,7 +72,7 @@
     
     [GameStatus sharedManager].playerCount = self.playerCount;
     
-    [self performSegueWithIdentifier:@"startGame" sender:self];
+    [self performSegueWithIdentifier:@"toPlayerSetting" sender:self];
     
 }
 @end

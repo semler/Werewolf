@@ -20,6 +20,7 @@
 		4544C2481A2F48D1001040E9 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4544C2461A2F48D1001040E9 /* PlayerViewController.m */; };
 		4544C2491A2F48D1001040E9 /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4544C2471A2F48D1001040E9 /* PlayerViewController.xib */; };
 		45A861761A30422F000124C4 /* GameStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A861751A30422F000124C4 /* GameStatus.m */; };
+		45B0C9901A3583E400E192A1 /* CardSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B0C98F1A3583E400E192A1 /* CardSettingViewController.m */; };
 		45D98B8C1A2D6A2B00487E04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D98B8B1A2D6A2B00487E04 /* main.m */; };
 		45D98B8F1A2D6A2B00487E04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D98B8E1A2D6A2B00487E04 /* AppDelegate.m */; };
 		45D98B951A2D6A2B00487E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D98B931A2D6A2B00487E04 /* Main.storyboard */; };
@@ -64,6 +65,8 @@
 		4544C2471A2F48D1001040E9 /* PlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerViewController.xib; sourceTree = "<group>"; };
 		45A861741A30422F000124C4 /* GameStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStatus.h; sourceTree = "<group>"; };
 		45A861751A30422F000124C4 /* GameStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStatus.m; sourceTree = "<group>"; };
+		45B0C98E1A3583E400E192A1 /* CardSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardSettingViewController.h; sourceTree = "<group>"; };
+		45B0C98F1A3583E400E192A1 /* CardSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardSettingViewController.m; sourceTree = "<group>"; };
 		45D98B861A2D6A2B00487E04 /* Werewolf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Werewolf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D98B8A1A2D6A2B00487E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45D98B8B1A2D6A2B00487E04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 				4510A9DB1A2EBE7900063107 /* PlayerSettingViewController.m */,
 				4544C2451A2F48D1001040E9 /* PlayerViewController.h */,
 				4544C2461A2F48D1001040E9 /* PlayerViewController.m */,
+				45B0C98E1A3583E400E192A1 /* CardSettingViewController.h */,
+				45B0C98F1A3583E400E192A1 /* CardSettingViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 				4510A9D41A2EB8AE00063107 /* Position.m in Sources */,
 				4510A9DC1A2EBE7900063107 /* PlayerSettingViewController.m in Sources */,
 				4510A9C21A2EAD2000063107 /* Player.m in Sources */,
+				45B0C9901A3583E400E192A1 /* CardSettingViewController.m in Sources */,
 				45A861761A30422F000124C4 /* GameStatus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
