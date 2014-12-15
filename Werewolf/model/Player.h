@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "Position.h"
 
 @interface Player : NSObject
 
@@ -16,7 +15,8 @@
 @property (strong, nonatomic) UIImage *image;
 
 // 役職
-@property (strong, nonatomic) Position *position;
+// 1:村人2:人狼3:預言者4:ボディガード5:狂人6:霊媒師
+@property (nonatomic) int position;
 
 @end
 

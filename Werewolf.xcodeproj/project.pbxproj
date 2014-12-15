@@ -11,12 +11,6 @@
 		4503AA631A3C118800F2FB67 /* villagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4503AA611A3C118800F2FB67 /* villagerViewController.m */; };
 		4503AA641A3C118800F2FB67 /* villagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4503AA621A3C118800F2FB67 /* villagerViewController.xib */; };
 		4510A9C21A2EAD2000063107 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9C11A2EAD2000063107 /* Player.m */; };
-		4510A9C51A2EAD3B00063107 /* Werewolf.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9C41A2EAD3B00063107 /* Werewolf.m */; };
-		4510A9C81A2EAE6600063107 /* Seer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9C71A2EAE6600063107 /* Seer.m */; };
-		4510A9CB1A2EAE9300063107 /* Villager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9CA1A2EAE9300063107 /* Villager.m */; };
-		4510A9CE1A2EAEE900063107 /* Bodyguard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9CD1A2EAEE900063107 /* Bodyguard.m */; };
-		4510A9D11A2EAF4A00063107 /* madman.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9D01A2EAF4A00063107 /* madman.m */; };
-		4510A9D41A2EB8AE00063107 /* Position.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9D31A2EB8AE00063107 /* Position.m */; };
 		4510A9D91A2EBD6100063107 /* GameStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9D71A2EBD6100063107 /* GameStartViewController.m */; };
 		4510A9DC1A2EBE7900063107 /* PlayerSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9DB1A2EBE7900063107 /* PlayerSettingViewController.m */; };
 		4544C2441A2EFF75001040E9 /* PlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4544C2431A2EFF75001040E9 /* PlayerManager.m */; };
@@ -39,18 +33,6 @@
 		4503AA621A3C118800F2FB67 /* villagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = villagerViewController.xib; sourceTree = "<group>"; };
 		4510A9C01A2EAD2000063107 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		4510A9C11A2EAD2000063107 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
-		4510A9C31A2EAD3B00063107 /* Werewolf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Werewolf.h; sourceTree = "<group>"; };
-		4510A9C41A2EAD3B00063107 /* Werewolf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Werewolf.m; sourceTree = "<group>"; };
-		4510A9C61A2EAE6600063107 /* Seer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seer.h; sourceTree = "<group>"; };
-		4510A9C71A2EAE6600063107 /* Seer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seer.m; sourceTree = "<group>"; };
-		4510A9C91A2EAE9300063107 /* Villager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Villager.h; sourceTree = "<group>"; };
-		4510A9CA1A2EAE9300063107 /* Villager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Villager.m; sourceTree = "<group>"; };
-		4510A9CC1A2EAEE900063107 /* Bodyguard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bodyguard.h; sourceTree = "<group>"; };
-		4510A9CD1A2EAEE900063107 /* Bodyguard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bodyguard.m; sourceTree = "<group>"; };
-		4510A9CF1A2EAF4A00063107 /* madman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = madman.h; sourceTree = "<group>"; };
-		4510A9D01A2EAF4A00063107 /* madman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = madman.m; sourceTree = "<group>"; };
-		4510A9D21A2EB8AE00063107 /* Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Position.h; sourceTree = "<group>"; };
-		4510A9D31A2EB8AE00063107 /* Position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Position.m; sourceTree = "<group>"; };
 		4510A9D61A2EBD6100063107 /* GameStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStartViewController.h; sourceTree = "<group>"; };
 		4510A9D71A2EBD6100063107 /* GameStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStartViewController.m; sourceTree = "<group>"; };
 		4510A9DA1A2EBE7900063107 /* PlayerSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSettingViewController.h; sourceTree = "<group>"; };
@@ -114,18 +96,6 @@
 				4544C2431A2EFF75001040E9 /* PlayerManager.m */,
 				4510A9C01A2EAD2000063107 /* Player.h */,
 				4510A9C11A2EAD2000063107 /* Player.m */,
-				4510A9D21A2EB8AE00063107 /* Position.h */,
-				4510A9D31A2EB8AE00063107 /* Position.m */,
-				4510A9C31A2EAD3B00063107 /* Werewolf.h */,
-				4510A9C41A2EAD3B00063107 /* Werewolf.m */,
-				4510A9C61A2EAE6600063107 /* Seer.h */,
-				4510A9C71A2EAE6600063107 /* Seer.m */,
-				4510A9C91A2EAE9300063107 /* Villager.h */,
-				4510A9CA1A2EAE9300063107 /* Villager.m */,
-				4510A9CC1A2EAEE900063107 /* Bodyguard.h */,
-				4510A9CD1A2EAEE900063107 /* Bodyguard.m */,
-				4510A9CF1A2EAF4A00063107 /* madman.h */,
-				4510A9D01A2EAF4A00063107 /* madman.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -288,18 +258,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				45D98B8F1A2D6A2B00487E04 /* AppDelegate.m in Sources */,
-				4510A9CE1A2EAEE900063107 /* Bodyguard.m in Sources */,
-				4510A9CB1A2EAE9300063107 /* Villager.m in Sources */,
-				4510A9C81A2EAE6600063107 /* Seer.m in Sources */,
 				4503AA5F1A3BF2CA00F2FB67 /* Player5ViewController_0.m in Sources */,
 				4503AA631A3C118800F2FB67 /* villagerViewController.m in Sources */,
 				4544C2441A2EFF75001040E9 /* PlayerManager.m in Sources */,
 				4510A9D91A2EBD6100063107 /* GameStartViewController.m in Sources */,
 				4544C2481A2F48D1001040E9 /* PlayerViewController.m in Sources */,
-				4510A9C51A2EAD3B00063107 /* Werewolf.m in Sources */,
-				4510A9D11A2EAF4A00063107 /* madman.m in Sources */,
 				45D98B8C1A2D6A2B00487E04 /* main.m in Sources */,
-				4510A9D41A2EB8AE00063107 /* Position.m in Sources */,
 				4510A9DC1A2EBE7900063107 /* PlayerSettingViewController.m in Sources */,
 				4510A9C21A2EAD2000063107 /* Player.m in Sources */,
 				45B0C9901A3583E400E192A1 /* CardSettingViewController.m in Sources */,

@@ -9,7 +9,6 @@
 #import "Player5ViewController_0.h"
 #import "PlayerManager.h"
 #import "GameStatus.h"
-#import "Villager.h"
 
 @interface Player5ViewController_0 ()
 
@@ -64,19 +63,19 @@
 */
 
 - (IBAction)player1ButtonPressed:(id)sender {
-    if ([[PlayerManager sharedManager].player1 isKindOfClass:[Villager class]]) {
-        
-        
-        
-    } else if ([[PlayerManager sharedManager].player1 isKindOfClass:[Villager class]]) {
-        //
-    } else if ([[PlayerManager sharedManager].player1 isKindOfClass:[Villager class]]) {
-        //
-    } else if ([[PlayerManager sharedManager].player1 isKindOfClass:[Villager class]]) {
-        //
-    } else if ([[PlayerManager sharedManager].player1 isKindOfClass:[Villager class]]) {
-        //
-    }
+//    if ([[PlayerManager sharedManager].player1 isKindOfClass:[Villager class]]) {
+//        
+//        
+//        
+//    } else if ([[PlayerManager sharedManager].player1 isKindOfClass:[Villager class]]) {
+//        //
+//    } else if ([[PlayerManager sharedManager].player1 isKindOfClass:[Villager class]]) {
+//        //
+//    } else if ([[PlayerManager sharedManager].player1 isKindOfClass:[Villager class]]) {
+//        //
+//    } else if ([[PlayerManager sharedManager].player1 isKindOfClass:[Villager class]]) {
+//        //
+//    }
 }
 
 - (IBAction)player2ButtonPressed:(id)sender {
