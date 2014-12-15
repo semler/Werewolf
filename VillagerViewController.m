@@ -16,8 +16,41 @@
 @property (weak, nonatomic) IBOutlet UILabel *commentLabel;
 
 @property (weak, nonatomic) IBOutlet UIView *subView;
+@property (weak, nonatomic) IBOutlet UIButton *player1Button;
+@property (weak, nonatomic) IBOutlet UIButton *player2Button;
+@property (weak, nonatomic) IBOutlet UIButton *player3Button;
+@property (weak, nonatomic) IBOutlet UIButton *player4Button;
+@property (weak, nonatomic) IBOutlet UIButton *player5Button;
+@property (weak, nonatomic) IBOutlet UIButton *player6Button;
+@property (weak, nonatomic) IBOutlet UIButton *player7Button;
+@property (weak, nonatomic) IBOutlet UIButton *player8Button;
+@property (weak, nonatomic) IBOutlet UIButton *player9Button;
+@property (weak, nonatomic) IBOutlet UIButton *player10Button;
+@property (weak, nonatomic) IBOutlet UIButton *player11Button;
+@property (weak, nonatomic) IBOutlet UIImageView *player1View;
+@property (weak, nonatomic) IBOutlet UIImageView *player2View;
+@property (weak, nonatomic) IBOutlet UIImageView *player3View;
+@property (weak, nonatomic) IBOutlet UIImageView *player4View;
+@property (weak, nonatomic) IBOutlet UIImageView *player5View;
+@property (weak, nonatomic) IBOutlet UIImageView *player6View;
+@property (weak, nonatomic) IBOutlet UIImageView *player7View;
+@property (weak, nonatomic) IBOutlet UIImageView *player8View;
+@property (weak, nonatomic) IBOutlet UIImageView *player9View;
+@property (weak, nonatomic) IBOutlet UIImageView *player10View;
+@property (weak, nonatomic) IBOutlet UIImageView *player11View;
 @property (weak, nonatomic) IBOutlet UIButton *okButton;
 
+- (IBAction)player1ButtonPressed:(id)sender;
+- (IBAction)player2ButtonPressed:(id)sender;
+- (IBAction)player3ButtonPressed:(id)sender;
+- (IBAction)player4ButtonPressed:(id)sender;
+- (IBAction)player5ButtonPressed:(id)sender;
+- (IBAction)player6ButtonPressed:(id)sender;
+- (IBAction)player7ButtonPressed:(id)sender;
+- (IBAction)player8ButtonPressed:(id)sender;
+- (IBAction)player9ButtonPressed:(id)sender;
+- (IBAction)player10ButtonPressed:(id)sender;
+- (IBAction)player11ButtonPressed:(id)sender;
 
 - (IBAction)okButtonPressed:(id)sender;
 
@@ -36,10 +69,25 @@
             self.commentLabel.text = @"村人です";
             self.subView.hidden = YES;
             
+            self.player1View.image = [PlayerManager sharedManager].player1.image;
+            self.player2View.image = [PlayerManager sharedManager].player2.image;
+            self.player3View.image = [PlayerManager sharedManager].player3.image;
+            self.player4View.image = [PlayerManager sharedManager].player4.image;
+            self.player5View.image = [PlayerManager sharedManager].player5.image;
+            self.player6View.alpha = 0.3;
+            self.player7View.alpha = 0.3;
+            self.player8View.alpha = 0.3;
+            self.player9View.alpha = 0.3;
+            self.player10View.alpha = 0.3;
+            self.player11View.alpha = 0.3;
+            [self.player6Button setEnabled:NO];
+            [self.player7Button setEnabled:NO];
+            [self.player8Button setEnabled:NO];
+            [self.player9Button setEnabled:NO];
+            [self.player10Button setEnabled:NO];
+            [self.player11Button setEnabled:NO];
             
-            
-            
-        
+            self.okButton.enabled = NO;
         } else if ([GameStatus sharedManager].currentTurn == 1) {
         
         
@@ -76,6 +124,39 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)player1ButtonPressed:(id)sender {
+}
+
+- (IBAction)player2ButtonPressed:(id)sender {
+}
+
+- (IBAction)player3ButtonPressed:(id)sender {
+}
+
+- (IBAction)player4ButtonPressed:(id)sender {
+}
+
+- (IBAction)player5ButtonPressed:(id)sender {
+}
+
+- (IBAction)player6ButtonPressed:(id)sender {
+}
+
+- (IBAction)player7ButtonPressed:(id)sender {
+}
+
+- (IBAction)player8ButtonPressed:(id)sender {
+}
+
+- (IBAction)player9ButtonPressed:(id)sender {
+}
+
+- (IBAction)player10ButtonPressed:(id)sender {
+}
+
+- (IBAction)player11ButtonPressed:(id)sender {
+}
 
 - (IBAction)okButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
