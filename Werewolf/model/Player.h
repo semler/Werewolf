@@ -12,9 +12,6 @@
 
 @interface Player : NSObject
 
-// 名前
-//@property (strong, nonatomic) NSString *name;
-
 // 写真
 @property (strong, nonatomic) UIImage *image;
 
