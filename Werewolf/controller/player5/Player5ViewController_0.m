@@ -9,6 +9,11 @@
 #import "Player5ViewController_0.h"
 #import "PlayerManager.h"
 #import "GameStatus.h"
+#import "VillagerViewController.h"
+//#import "WerewolfViewController.h"
+//#import "SeerViewController.h"
+//#import "BodyGuardViewController.h"
+//#import "MadmanViewController.h"
 
 @interface Player5ViewController_0 ()
 
@@ -63,19 +68,24 @@
 */
 
 - (IBAction)player1ButtonPressed:(id)sender {
-//    if ([[PlayerManager sharedManager].player1 isKindOfClass:[Villager class]]) {
-//        
-//        
-//        
-//    } else if ([[PlayerManager sharedManager].player1 isKindOfClass:[Villager class]]) {
-//        //
-//    } else if ([[PlayerManager sharedManager].player1 isKindOfClass:[Villager class]]) {
-//        //
-//    } else if ([[PlayerManager sharedManager].player1 isKindOfClass:[Villager class]]) {
-//        //
-//    } else if ([[PlayerManager sharedManager].player1 isKindOfClass:[Villager class]]) {
-//        //
-//    }
+    [GameStatus sharedManager].currentPlayer = [PlayerManager sharedManager].player1;
+    
+    if ([PlayerManager sharedManager].player1.position == 0) {
+        VillagerViewController *controller = [[VillagerViewController alloc] init];
+        [self presentViewController:controller animated:YES completion:nil];
+    } else if ([PlayerManager sharedManager].player1.position == 1) {
+        VillagerViewController *controller = [[VillagerViewController alloc] init];
+        [self presentViewController:controller animated:YES completion:nil];
+    } else if ([PlayerManager sharedManager].player1.position == 2) {
+        VillagerViewController *controller = [[VillagerViewController alloc] init];
+        [self presentViewController:controller animated:YES completion:nil];
+    } else if ([PlayerManager sharedManager].player1.position == 3) {
+        VillagerViewController *controller = [[VillagerViewController alloc] init];
+        [self presentViewController:controller animated:YES completion:nil];
+    } else if ([PlayerManager sharedManager].player1.position == 4) {
+        VillagerViewController *controller = [[VillagerViewController alloc] init];
+        [self presentViewController:controller animated:YES completion:nil];
+    }
 }
 
 - (IBAction)player2ButtonPressed:(id)sender {

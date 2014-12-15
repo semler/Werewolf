@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4503AA5F1A3BF2CA00F2FB67 /* Player5ViewController_0.m in Sources */ = {isa = PBXBuildFile; fileRef = 4503AA5E1A3BF2CA00F2FB67 /* Player5ViewController_0.m */; };
-		4503AA631A3C118800F2FB67 /* villagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4503AA611A3C118800F2FB67 /* villagerViewController.m */; };
-		4503AA641A3C118800F2FB67 /* villagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4503AA621A3C118800F2FB67 /* villagerViewController.xib */; };
 		4510A9C21A2EAD2000063107 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9C11A2EAD2000063107 /* Player.m */; };
 		4510A9D91A2EBD6100063107 /* GameStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9D71A2EBD6100063107 /* GameStartViewController.m */; };
 		4510A9DC1A2EBE7900063107 /* PlayerSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9DB1A2EBE7900063107 /* PlayerSettingViewController.m */; };
@@ -23,14 +21,13 @@
 		45D98B951A2D6A2B00487E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D98B931A2D6A2B00487E04 /* Main.storyboard */; };
 		45D98B971A2D6A2B00487E04 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D98B961A2D6A2B00487E04 /* Images.xcassets */; };
 		45D98B9A1A2D6A2B00487E04 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45D98B981A2D6A2B00487E04 /* LaunchScreen.xib */; };
+		45E02A171A3EBC920053CEB4 /* VillagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E02A151A3EBC920053CEB4 /* VillagerViewController.m */; };
+		45E02A181A3EBC920053CEB4 /* VillagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45E02A161A3EBC920053CEB4 /* VillagerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4503AA5D1A3BF2CA00F2FB67 /* Player5ViewController_0.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player5ViewController_0.h; sourceTree = "<group>"; };
 		4503AA5E1A3BF2CA00F2FB67 /* Player5ViewController_0.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player5ViewController_0.m; sourceTree = "<group>"; };
-		4503AA601A3C118800F2FB67 /* villagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = villagerViewController.h; path = ../../view/villagerViewController.h; sourceTree = "<group>"; };
-		4503AA611A3C118800F2FB67 /* villagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = villagerViewController.m; path = ../../view/villagerViewController.m; sourceTree = "<group>"; };
-		4503AA621A3C118800F2FB67 /* villagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = villagerViewController.xib; sourceTree = "<group>"; };
 		4510A9C01A2EAD2000063107 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		4510A9C11A2EAD2000063107 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		4510A9D61A2EBD6100063107 /* GameStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStartViewController.h; sourceTree = "<group>"; };
@@ -56,6 +53,9 @@
 		45D98B991A2D6A2B00487E04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		45D98BA41A2D6A2C00487E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45D98BA51A2D6A2C00487E04 /* WerewolfTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WerewolfTests.m; sourceTree = "<group>"; };
+		45E02A141A3EBC920053CEB4 /* VillagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VillagerViewController.h; sourceTree = SOURCE_ROOT; };
+		45E02A151A3EBC920053CEB4 /* VillagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VillagerViewController.m; sourceTree = SOURCE_ROOT; };
+		45E02A161A3EBC920053CEB4 /* VillagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VillagerViewController.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +81,8 @@
 		4503AA651A3C11C300F2FB67 /* common */ = {
 			isa = PBXGroup;
 			children = (
-				4503AA601A3C118800F2FB67 /* villagerViewController.h */,
-				4503AA611A3C118800F2FB67 /* villagerViewController.m */,
+				45E02A141A3EBC920053CEB4 /* VillagerViewController.h */,
+				45E02A151A3EBC920053CEB4 /* VillagerViewController.m */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -121,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				4544C2471A2F48D1001040E9 /* PlayerViewController.xib */,
-				4503AA621A3C118800F2FB67 /* villagerViewController.xib */,
+				45E02A161A3EBC920053CEB4 /* VillagerViewController.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -242,7 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4503AA641A3C118800F2FB67 /* villagerViewController.xib in Resources */,
+				45E02A181A3EBC920053CEB4 /* VillagerViewController.xib in Resources */,
 				45D98B951A2D6A2B00487E04 /* Main.storyboard in Resources */,
 				4544C2491A2F48D1001040E9 /* PlayerViewController.xib in Resources */,
 				45D98B9A1A2D6A2B00487E04 /* LaunchScreen.xib in Resources */,
@@ -259,7 +259,6 @@
 			files = (
 				45D98B8F1A2D6A2B00487E04 /* AppDelegate.m in Sources */,
 				4503AA5F1A3BF2CA00F2FB67 /* Player5ViewController_0.m in Sources */,
-				4503AA631A3C118800F2FB67 /* villagerViewController.m in Sources */,
 				4544C2441A2EFF75001040E9 /* PlayerManager.m in Sources */,
 				4510A9D91A2EBD6100063107 /* GameStartViewController.m in Sources */,
 				4544C2481A2F48D1001040E9 /* PlayerViewController.m in Sources */,
@@ -267,6 +266,7 @@
 				4510A9DC1A2EBE7900063107 /* PlayerSettingViewController.m in Sources */,
 				4510A9C21A2EAD2000063107 /* Player.m in Sources */,
 				45B0C9901A3583E400E192A1 /* CardSettingViewController.m in Sources */,
+				45E02A171A3EBC920053CEB4 /* VillagerViewController.m in Sources */,
 				45A861761A30422F000124C4 /* GameStatus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

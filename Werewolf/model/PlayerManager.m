@@ -29,27 +29,87 @@ static PlayerManager *playerStatus = nil;
     return self;
 }
 
+// ランダムで役職決定
 - (void) gacha {
     //配列を初期化
     self.position = [NSMutableArray array];
-    //要素になる数字
-    NSInteger num;
+    NSMutableArray *array = [NSMutableArray array];
+    NSMutableArray *array0 = [NSMutableArray array];
+    NSMutableArray *array1 = [NSMutableArray array];
+    NSMutableArray *array2 = [NSMutableArray array];
+    NSMutableArray *array3 = [NSMutableArray array];
+    NSMutableArray *array4 = [NSMutableArray array];
+
+    for (int i = 0; i < [GameStatus sharedManager].villageCount; i ++) {
+        [self random: array subArray:array0];
+    }
+    for (int i = 0; i < [GameStatus sharedManager].werewolfCount; i ++) {
+        [self random: array subArray:array1];
+    }
+    for (int i = 0; i < [GameStatus sharedManager].seerCount; i ++) {
+        [self random: array subArray:array2];
+    }
+    for (int i = 0; i < [GameStatus sharedManager].bodyguardCount; i ++) {
+        [self random: array subArray:array3];
+    }
+    for (int i = 0; i < [GameStatus sharedManager].madmanCount; i ++) {
+        [self random: array subArray:array4];
+    }
     
-    //要素を満たすまで繰り返す
-    while (self.position.count < [GameStatus sharedManager].playerCount) {
-        //乱数
-        num = arc4random() % [GameStatus sharedManager].playerCount;
-        
+    for (int i = 0; i < [GameStatus sharedManager].playerCount; i ++) {
+        for (int j = 0; j < array0.count; j ++) {
+            if ([array0[j] integerValue] == i) {
+                [self.position addObject:@(0)];
+                break;
+            }
+        }
+        for (int j = 0; j < array1.count; j ++) {
+            if ([array1[j] integerValue] == i) {
+                [self.position addObject:@(1)];
+                break;
+            }
+        }
+        for (int j = 0; j < array2.count; j ++) {
+            if ([array2[j] integerValue] == i) {
+                [self.position addObject:@(2)];
+                break;
+            }
+        }
+        for (int j = 0; j < array3.count; j ++) {
+            if ([array3[j] integerValue] == i) {
+                [self.position addObject:@(3)];
+                break;
+            }
+        }
+        for (int j = 0; j < array4.count; j ++) {
+            if ([array4[j] integerValue] == i) {
+                [self.position addObject:@(4)];
+                break;
+            }
+        }
+    }
+    
+    [PlayerManager sharedManager].player1.position = [self.position[0] intValue];
+    [PlayerManager sharedManager].player2.position = [self.position[1] intValue];
+    [PlayerManager sharedManager].player3.position = [self.position[2] intValue];
+    [PlayerManager sharedManager].player4.position = [self.position[3] intValue];
+    [PlayerManager sharedManager].player5.position = [self.position[4] intValue];
+}
+
+- (void) random:(NSMutableArray*) array subArray:(NSMutableArray*) subArray {
+    BOOL flg = NO;
+    
+    while (!flg) {
+        int num = arc4random() % [GameStatus sharedManager].playerCount;
         //要素を検索
-        NSUInteger index = [self.position indexOfObject:@(num)];
-        
+        NSUInteger index = [array indexOfObject:@(num)];
         if(index == NSNotFound){
-            [self.position addObject:@(num)];
+            [array addObject:@(num)];
+            [subArray addObject:@(num)];
+            flg = YES;
         }
     }
 }
-
-
 
 
 

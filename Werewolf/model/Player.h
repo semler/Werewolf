@@ -15,7 +15,7 @@
 @property (strong, nonatomic) UIImage *image;
 
 // 役職
-// 1:村人2:人狼3:預言者4:ボディガード5:狂人6:霊媒師
+// 0:村人1:人狼2:預言者3:ボディガード4:狂人5:霊媒師
 @property (nonatomic) int position;
 
 @end

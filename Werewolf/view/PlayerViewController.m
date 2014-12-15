@@ -81,37 +81,37 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     Player *player = [[Player alloc] init];
     player.image = self.imageView.image;
     
-    if ([GameStatus sharedManager].currentPlayer == 1) {
+    if ([GameStatus sharedManager].currentPlayerInt == 1) {
         fileName = @"player1.jpg";
         [PlayerManager sharedManager].player1 = player;
-    } else if ([GameStatus sharedManager].currentPlayer == 2) {
+    } else if ([GameStatus sharedManager].currentPlayerInt == 2) {
         fileName = @"player2.jpg";
         [PlayerManager sharedManager].player2 = player;
-    } else if ([GameStatus sharedManager].currentPlayer == 3) {
+    } else if ([GameStatus sharedManager].currentPlayerInt == 3) {
         fileName = @"player3.jpg";
         [PlayerManager sharedManager].player3 = player;
-    } else if ([GameStatus sharedManager].currentPlayer == 4) {
+    } else if ([GameStatus sharedManager].currentPlayerInt == 4) {
         fileName = @"player4.jpg";
         [PlayerManager sharedManager].player4 = player;
-    } else if ([GameStatus sharedManager].currentPlayer == 5) {
+    } else if ([GameStatus sharedManager].currentPlayerInt == 5) {
         fileName = @"player5.jpg";
         [PlayerManager sharedManager].player5 = player;
-    } else if ([GameStatus sharedManager].currentPlayer == 6) {
+    } else if ([GameStatus sharedManager].currentPlayerInt == 6) {
         fileName = @"player6.jpg";
         [PlayerManager sharedManager].player6 = player;
-    } else if ([GameStatus sharedManager].currentPlayer == 7) {
+    } else if ([GameStatus sharedManager].currentPlayerInt == 7) {
         fileName = @"player7.jpg";
         [PlayerManager sharedManager].player7 = player;
-    } else if ([GameStatus sharedManager].currentPlayer == 8) {
+    } else if ([GameStatus sharedManager].currentPlayerInt == 8) {
         fileName = @"player8.jpg";
         [PlayerManager sharedManager].player8 = player;
-    } else if ([GameStatus sharedManager].currentPlayer == 9) {
+    } else if ([GameStatus sharedManager].currentPlayerInt == 9) {
         fileName = @"player9.jpg";
         [PlayerManager sharedManager].player9 = player;
-    } else if ([GameStatus sharedManager].currentPlayer == 10) {
+    } else if ([GameStatus sharedManager].currentPlayerInt == 10) {
         fileName = @"player10.jpg";
         [PlayerManager sharedManager].player10 = player;
-    } else if ([GameStatus sharedManager].currentPlayer == 11) {
+    } else if ([GameStatus sharedManager].currentPlayerInt == 11) {
         fileName = @"player11.jpg";
         [PlayerManager sharedManager].player11 = player;
     }

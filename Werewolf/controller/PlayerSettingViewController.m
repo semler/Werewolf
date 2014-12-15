@@ -150,77 +150,77 @@
 
 
 - (IBAction)player1ButttonPressed:(id)sender {
-    [GameStatus sharedManager].currentPlayer = 1;
+    [GameStatus sharedManager].currentPlayerInt = 1;
     
     PlayerViewController *viewController = [[PlayerViewController alloc] init];
     [self presentViewController:viewController animated:YES completion:nil];
 }
 
 - (IBAction)player2ButttonPressed:(id)sender {
-    [GameStatus sharedManager].currentPlayer = 2;
+    [GameStatus sharedManager].currentPlayerInt = 2;
     
     PlayerViewController *viewController = [[PlayerViewController alloc] init];
     [self presentViewController:viewController animated:YES completion:nil];
 }
 
 - (IBAction)player3ButttonPressed:(id)sender {
-    [GameStatus sharedManager].currentPlayer = 3;
+    [GameStatus sharedManager].currentPlayerInt = 3;
     
     PlayerViewController *viewController = [[PlayerViewController alloc] init];
     [self presentViewController:viewController animated:YES completion:nil];
 }
 
 - (IBAction)player4ButttonPressed:(id)sender {
-    [GameStatus sharedManager].currentPlayer = 4;
+    [GameStatus sharedManager].currentPlayerInt = 4;
     
     PlayerViewController *viewController = [[PlayerViewController alloc] init];
     [self presentViewController:viewController animated:YES completion:nil];
 }
 
 - (IBAction)player5ButttonPressed:(id)sender {
-    [GameStatus sharedManager].currentPlayer = 5;
+    [GameStatus sharedManager].currentPlayerInt = 5;
     
     PlayerViewController *viewController = [[PlayerViewController alloc] init];
     [self presentViewController:viewController animated:YES completion:nil];
 }
 
 - (IBAction)player6ButttonPressed:(id)sender {
-    [GameStatus sharedManager].currentPlayer = 6;
+    [GameStatus sharedManager].currentPlayerInt = 6;
     
     PlayerViewController *viewController = [[PlayerViewController alloc] init];
     [self presentViewController:viewController animated:YES completion:nil];
 }
 
 - (IBAction)player7ButttonPressed:(id)sender {
-    [GameStatus sharedManager].currentPlayer = 7;
+    [GameStatus sharedManager].currentPlayerInt = 7;
     
     PlayerViewController *viewController = [[PlayerViewController alloc] init];
     [self presentViewController:viewController animated:YES completion:nil];
 }
 
 - (IBAction)player8ButttonPressed:(id)sender {
-    [GameStatus sharedManager].currentPlayer = 8;
+    [GameStatus sharedManager].currentPlayerInt = 8;
     
     PlayerViewController *viewController = [[PlayerViewController alloc] init];
     [self presentViewController:viewController animated:YES completion:nil];
 }
 
 - (IBAction)player9ButttonPressed:(id)sender {
-    [GameStatus sharedManager].currentPlayer = 9;
+    [GameStatus sharedManager].currentPlayerInt = 9;
     
     PlayerViewController *viewController = [[PlayerViewController alloc] init];
     [self presentViewController:viewController animated:YES completion:nil];
 }
 
 - (IBAction)player10ButttonPressed:(id)sender {
-    [GameStatus sharedManager].currentPlayer = 10;
+    [GameStatus sharedManager].currentPlayerInt = 10;
     
     PlayerViewController *viewController = [[PlayerViewController alloc] init];
     [self presentViewController:viewController animated:YES completion:nil];
 }
 
 - (IBAction)player11ButttonPressed:(id)sender {
-    [GameStatus sharedManager].currentPlayer = 11;
+    [GameStatus sharedManager].currentPlayerInt = 11;
     
     PlayerViewController *viewController = [[PlayerViewController alloc] init];
     [self presentViewController:viewController animated:YES completion:nil];
