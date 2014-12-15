@@ -12,6 +12,7 @@
 
 @property (nonatomic) int playerCount;
 @property (nonatomic) int currentPlayer;
+@property (nonatomic) int currentTurn;
 
 @property (nonatomic) int villageCount;
 @property (nonatomic) int werewolfCount;

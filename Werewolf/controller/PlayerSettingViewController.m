@@ -67,26 +67,42 @@
         
         if ([[NSFileManager defaultManager] fileExistsAtPath:path1]) {
             [self.player1Image setImage:[UIImage imageWithContentsOfFile:path1]];
+            Player *player1 = [[Player alloc] init];
+            player1.image = self.player1Image.image;
+            [PlayerManager sharedManager].player1 = player1;
         } else {
             //
         }
         if ([[NSFileManager defaultManager] fileExistsAtPath:path2]) {
             [self.player2Image setImage:[UIImage imageWithContentsOfFile:path2]];
+            Player *player2 = [[Player alloc] init];
+            player2.image = self.player2Image.image;
+            [PlayerManager sharedManager].player2 = player2
+            ;
         } else {
             //
         }
         if ([[NSFileManager defaultManager] fileExistsAtPath:path3]) {
             [self.player3Image setImage:[UIImage imageWithContentsOfFile:path3]];
+            Player *player4 = [[Player alloc] init];
+            player4.image = self.player3Image.image;
+            [PlayerManager sharedManager].player3 = player4;
         } else {
             //
         }
         if ([[NSFileManager defaultManager] fileExistsAtPath:path4]) {
             [self.player4Image setImage:[UIImage imageWithContentsOfFile:path4]];
+            Player *player4 = [[Player alloc] init];
+            player4.image = self.player4Image.image;
+            [PlayerManager sharedManager].player4 = player4;
         } else {
             //
         }
         if ([[NSFileManager defaultManager] fileExistsAtPath:path5]) {
             [self.player5Image setImage:[UIImage imageWithContentsOfFile:path5]];
+            Player *player5 = [[Player alloc] init];
+            player5.image = self.player5Image.image;
+            [PlayerManager sharedManager].player5 = player5;
         } else {
             //
         }

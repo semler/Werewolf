@@ -7,6 +7,7 @@
 //
 
 #import "PlayerManager.h"
+#import "GameStatus.h"
 
 @implementation PlayerManager
 
@@ -35,9 +36,9 @@ static PlayerManager *playerStatus = nil;
     NSInteger num;
     
     //要素を満たすまで繰り返す
-    while (self.position.count < 3) {
+    while (self.position.count < [GameStatus sharedManager].playerCount) {
         //乱数
-        num = arc4random() % 3;
+        num = arc4random() % [GameStatus sharedManager].playerCount;
         
         //要素を検索
         NSUInteger index = [self.position indexOfObject:@(num)];
