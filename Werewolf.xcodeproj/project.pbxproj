@@ -29,18 +29,7 @@
 		45D98B951A2D6A2B00487E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D98B931A2D6A2B00487E04 /* Main.storyboard */; };
 		45D98B971A2D6A2B00487E04 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D98B961A2D6A2B00487E04 /* Images.xcassets */; };
 		45D98B9A1A2D6A2B00487E04 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45D98B981A2D6A2B00487E04 /* LaunchScreen.xib */; };
-		45D98BA61A2D6A2C00487E04 /* WerewolfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D98BA51A2D6A2C00487E04 /* WerewolfTests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		45D98BA01A2D6A2C00487E04 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 45D98B7E1A2D6A2B00487E04 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 45D98B851A2D6A2B00487E04;
-			remoteInfo = Werewolf;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4503AA5D1A3BF2CA00F2FB67 /* Player5ViewController_0.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player5ViewController_0.h; sourceTree = "<group>"; };
@@ -83,20 +72,12 @@
 		45D98B941A2D6A2B00487E04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45D98B961A2D6A2B00487E04 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		45D98B991A2D6A2B00487E04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		45D98B9F1A2D6A2C00487E04 /* WerewolfTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WerewolfTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D98BA41A2D6A2C00487E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45D98BA51A2D6A2C00487E04 /* WerewolfTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WerewolfTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		45D98B831A2D6A2B00487E04 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		45D98B9C1A2D6A2C00487E04 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -188,7 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				45D98B861A2D6A2B00487E04 /* Werewolf.app */,
-				45D98B9F1A2D6A2C00487E04 /* WerewolfTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -255,24 +235,6 @@
 			productReference = 45D98B861A2D6A2B00487E04 /* Werewolf.app */;
 			productType = "com.apple.product-type.application";
 		};
-		45D98B9E1A2D6A2C00487E04 /* WerewolfTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 45D98BAC1A2D6A2C00487E04 /* Build configuration list for PBXNativeTarget "WerewolfTests" */;
-			buildPhases = (
-				45D98B9B1A2D6A2C00487E04 /* Sources */,
-				45D98B9C1A2D6A2C00487E04 /* Frameworks */,
-				45D98B9D1A2D6A2C00487E04 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				45D98BA11A2D6A2C00487E04 /* PBXTargetDependency */,
-			);
-			name = WerewolfTests;
-			productName = WerewolfTests;
-			productReference = 45D98B9F1A2D6A2C00487E04 /* WerewolfTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -284,10 +246,6 @@
 				TargetAttributes = {
 					45D98B851A2D6A2B00487E04 = {
 						CreatedOnToolsVersion = 6.1.1;
-					};
-					45D98B9E1A2D6A2C00487E04 = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 45D98B851A2D6A2B00487E04;
 					};
 				};
 			};
@@ -305,7 +263,6 @@
 			projectRoot = "";
 			targets = (
 				45D98B851A2D6A2B00487E04 /* Werewolf */,
-				45D98B9E1A2D6A2C00487E04 /* WerewolfTests */,
 			);
 		};
 /* End PBXProject section */
@@ -320,13 +277,6 @@
 				4544C2491A2F48D1001040E9 /* PlayerViewController.xib in Resources */,
 				45D98B9A1A2D6A2B00487E04 /* LaunchScreen.xib in Resources */,
 				45D98B971A2D6A2B00487E04 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		45D98B9D1A2D6A2C00487E04 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,23 +307,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		45D98B9B1A2D6A2C00487E04 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				45D98BA61A2D6A2C00487E04 /* WerewolfTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		45D98BA11A2D6A2C00487E04 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 45D98B851A2D6A2B00487E04 /* Werewolf */;
-			targetProxy = 45D98BA01A2D6A2C00487E04 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		45D98B931A2D6A2B00487E04 /* Main.storyboard */ = {
@@ -412,7 +346,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: CHO U (Q8DQ6UA4AG)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: CHO U (Q8DQ6UA4AG)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -432,6 +367,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "668e00c3-6ea2-4646-9676-8cc3abc7f04a";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -453,7 +389,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: CHO U (Q8DQ6UA4AG)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: CHO U (Q8DQ6UA4AG)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -466,6 +403,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "668e00c3-6ea2-4646-9676-8cc3abc7f04a";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -491,40 +429,6 @@
 			};
 			name = Release;
 		};
-		45D98BAD1A2D6A2C00487E04 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = WerewolfTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Werewolf.app/Werewolf";
-			};
-			name = Debug;
-		};
-		45D98BAE1A2D6A2C00487E04 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = WerewolfTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Werewolf.app/Werewolf";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -542,15 +446,6 @@
 			buildConfigurations = (
 				45D98BAA1A2D6A2C00487E04 /* Debug */,
 				45D98BAB1A2D6A2C00487E04 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		45D98BAC1A2D6A2C00487E04 /* Build configuration list for PBXNativeTarget "WerewolfTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				45D98BAD1A2D6A2C00487E04 /* Debug */,
-				45D98BAE1A2D6A2C00487E04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
