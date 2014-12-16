@@ -26,6 +26,9 @@
 		45BD0DB01A3FFFA70087B43F /* BodyguardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45BD0DAF1A3FFFA70087B43F /* BodyguardViewController.xib */; };
 		45BD0DB41A400C1E0087B43F /* MadmanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BD0DB21A400C1E0087B43F /* MadmanViewController.m */; };
 		45BD0DB71A400C3C0087B43F /* MadmanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45BD0DB61A400C3C0087B43F /* MadmanViewController.xib */; };
+		45BD0DBA1A40150A0087B43F /* Player5ViewController_1.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BD0DB91A40150A0087B43F /* Player5ViewController_1.m */; };
+		45BD0DBF1A4023E20087B43F /* AlermViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45BD0DBD1A4023E20087B43F /* AlermViewController.xib */; };
+		45BD0DC21A40242D0087B43F /* AlermViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BD0DC11A40242D0087B43F /* AlermViewController.m */; };
 		45D98B8C1A2D6A2B00487E04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D98B8B1A2D6A2B00487E04 /* main.m */; };
 		45D98B8F1A2D6A2B00487E04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D98B8E1A2D6A2B00487E04 /* AppDelegate.m */; };
 		45D98B951A2D6A2B00487E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D98B931A2D6A2B00487E04 /* Main.storyboard */; };
@@ -66,6 +69,11 @@
 		45BD0DB11A400C1E0087B43F /* MadmanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MadmanViewController.h; sourceTree = "<group>"; };
 		45BD0DB21A400C1E0087B43F /* MadmanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MadmanViewController.m; sourceTree = "<group>"; };
 		45BD0DB61A400C3C0087B43F /* MadmanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MadmanViewController.xib; sourceTree = "<group>"; };
+		45BD0DB81A40150A0087B43F /* Player5ViewController_1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player5ViewController_1.h; sourceTree = "<group>"; };
+		45BD0DB91A40150A0087B43F /* Player5ViewController_1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player5ViewController_1.m; sourceTree = "<group>"; };
+		45BD0DBD1A4023E20087B43F /* AlermViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlermViewController.xib; sourceTree = "<group>"; };
+		45BD0DC01A40242D0087B43F /* AlermViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlermViewController.h; sourceTree = "<group>"; };
+		45BD0DC11A40242D0087B43F /* AlermViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlermViewController.m; sourceTree = "<group>"; };
 		45D98B861A2D6A2B00487E04 /* Werewolf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Werewolf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D98B8A1A2D6A2B00487E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45D98B8B1A2D6A2B00487E04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,6 +100,8 @@
 			children = (
 				4503AA5D1A3BF2CA00F2FB67 /* Player5ViewController_0.h */,
 				4503AA5E1A3BF2CA00F2FB67 /* Player5ViewController_0.m */,
+				45BD0DB81A40150A0087B43F /* Player5ViewController_1.h */,
+				45BD0DB91A40150A0087B43F /* Player5ViewController_1.m */,
 			);
 			path = player5;
 			sourceTree = "<group>";
@@ -109,6 +119,8 @@
 				45BD0DAB1A3FFF830087B43F /* BodyguardViewController.m */,
 				45BD0DB11A400C1E0087B43F /* MadmanViewController.h */,
 				45BD0DB21A400C1E0087B43F /* MadmanViewController.m */,
+				45BD0DC01A40242D0087B43F /* AlermViewController.h */,
+				45BD0DC11A40242D0087B43F /* AlermViewController.m */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -152,6 +164,7 @@
 				45BD0DA81A3FF5E50087B43F /* SeerViewController.xib */,
 				45BD0DAF1A3FFFA70087B43F /* BodyguardViewController.xib */,
 				45BD0DB61A400C3C0087B43F /* MadmanViewController.xib */,
+				45BD0DBD1A4023E20087B43F /* AlermViewController.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -260,6 +273,7 @@
 				45BD0DA21A3FF4F70087B43F /* WerewolfViewController.xib in Resources */,
 				45D98B951A2D6A2B00487E04 /* Main.storyboard in Resources */,
 				45BD0DB01A3FFFA70087B43F /* BodyguardViewController.xib in Resources */,
+				45BD0DBF1A4023E20087B43F /* AlermViewController.xib in Resources */,
 				4544C2491A2F48D1001040E9 /* PlayerViewController.xib in Resources */,
 				45D98B9A1A2D6A2B00487E04 /* LaunchScreen.xib in Resources */,
 				45D98B971A2D6A2B00487E04 /* Images.xcassets in Resources */,
@@ -277,7 +291,9 @@
 				45BD0D9F1A3FC6C40087B43F /* WerewolfViewController.m in Sources */,
 				4503AA5F1A3BF2CA00F2FB67 /* Player5ViewController_0.m in Sources */,
 				45BD0D8D1A3FBF070087B43F /* VillagerViewController.m in Sources */,
+				45BD0DC21A40242D0087B43F /* AlermViewController.m in Sources */,
 				4544C2441A2EFF75001040E9 /* PlayerManager.m in Sources */,
+				45BD0DBA1A40150A0087B43F /* Player5ViewController_1.m in Sources */,
 				4510A9D91A2EBD6100063107 /* GameStartViewController.m in Sources */,
 				45D98B8C1A2D6A2B00487E04 /* main.m in Sources */,
 				4510A9DC1A2EBE7900063107 /* PlayerSettingViewController.m in Sources */,

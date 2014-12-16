@@ -172,5 +172,6 @@
 }
 
 - (IBAction)okButtonPressed:(id)sender {
+    [self performSegueWithIdentifier:@"to_1" sender:self];
 }
 @end
