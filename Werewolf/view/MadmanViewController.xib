@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MadmanViewController">
+            <connections>
+                <outlet property="commentLabel" destination="OqP-0A-CYl" id="Odw-7x-rq9"/>
+                <outlet property="okButton" destination="8ur-Z6-8Xf" id="b9I-7d-c48"/>
+                <outlet property="player10Button" destination="t4C-97-9BX" id="DCV-5e-dOM"/>
+                <outlet property="player11Button" destination="wJH-Mu-L4s" id="HS3-Yr-ae5"/>
+                <outlet property="player1Button" destination="HJr-JY-l5a" id="FRV-pH-i63"/>
+                <outlet property="player2Button" destination="me1-b8-Vvm" id="pzO-9F-1A2"/>
+                <outlet property="player3Button" destination="7zg-MX-9sb" id="sXf-Oi-0Yh"/>
+                <outlet property="player4Button" destination="bX1-VT-4u1" id="8Iv-qE-g3A"/>
+                <outlet property="player5Button" destination="NzK-RA-uk3" id="zVa-Pc-b2J"/>
+                <outlet property="player6Button" destination="bID-ol-Ju2" id="phN-2U-TGY"/>
+                <outlet property="player7Button" destination="oBi-Ui-2WQ" id="l4r-1f-TpL"/>
+                <outlet property="player8Button" destination="rNs-4d-Vvr" id="RTD-xJ-4Eu"/>
+                <outlet property="player9Button" destination="HB2-b3-9j7" id="1Cd-HF-tAQ"/>
+                <outlet property="playerImage" destination="YUW-VP-l0g" id="Kmq-xO-vnq"/>
+                <outlet property="subview" destination="0mm-jC-obp" id="Xw0-98-QTi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgBgDark" translatesAutoresizingMaskIntoConstraints="NO" id="itG-0K-CI3">
+                    <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer" translatesAutoresizingMaskIntoConstraints="NO" id="YUW-VP-l0g">
+                    <rect key="frame" x="10" y="10" width="83" height="90"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconUragiri" translatesAutoresizingMaskIntoConstraints="NO" id="N2y-hx-Ic7">
+                    <rect key="frame" x="103" y="10" width="50" height="50"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="狂人" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6th-mt-LF5">
+                    <rect key="frame" x="163" y="10" width="395" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="説明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqP-0A-CYl">
+                    <rect key="frame" x="103" y="70" width="455" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0mm-jC-obp">
+                    <rect key="frame" x="10" y="120" width="548" height="190"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJr-JY-l5a">
+                            <rect key="frame" x="0.0" y="0.0" width="83" height="90"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" backgroundImage="imgPlayer1">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="player1ButtonPressed:" destination="-1" eventType="touchUpInside" id="75U-Db-GgB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNs-4d-Vvr">
+                            <rect key="frame" x="93" y="100" width="83" height="90"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" backgroundImage="imgPlayer8">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="player8ButtonPressed:" destination="-1" eventType="touchUpInside" id="fV9-dR-byt"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HB2-b3-9j7">
+                            <rect key="frame" x="186" y="100" width="83" height="90"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" backgroundImage="imgPlayer9">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="player9ButtonPressed:" destination="-1" eventType="touchUpInside" id="vuV-MH-OHN"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4C-97-9BX">
+                            <rect key="frame" x="279" y="100" width="83" height="90"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" backgroundImage="imgPlayer10">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="player10ButtonPressed:" destination="-1" eventType="touchUpInside" id="QDy-fS-OMt"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJH-Mu-L4s">
+                            <rect key="frame" x="372" y="100" width="83" height="90"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" backgroundImage="imgPlayer11">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="player11ButtonPressed:" destination="-1" eventType="touchUpInside" id="fy2-l6-FFm"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="me1-b8-Vvm">
+                            <rect key="frame" x="93" y="0.0" width="83" height="90"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" backgroundImage="imgPlayer2">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="player2ButtonPressed:" destination="-1" eventType="touchUpInside" id="roR-7L-gbe"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zg-MX-9sb">
+                            <rect key="frame" x="186" y="0.0" width="83" height="90"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" backgroundImage="imgPlayer3">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="player3ButtonPressed:" destination="-1" eventType="touchUpInside" id="rRW-ZA-4Cx"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bX1-VT-4u1">
+                            <rect key="frame" x="279" y="0.0" width="83" height="90"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" backgroundImage="imgPlayer4">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="player4ButtonPressed:" destination="-1" eventType="touchUpInside" id="4TR-We-8UH"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzK-RA-uk3">
+                            <rect key="frame" x="372" y="0.0" width="83" height="90"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" backgroundImage="imgPlayer5">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="player5ButtonPressed:" destination="-1" eventType="touchUpInside" id="ogy-L6-wwH"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bID-ol-Ju2">
+                            <rect key="frame" x="465" y="0.0" width="83" height="90"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" backgroundImage="imgPlayer6">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="player6ButtonPressed:" destination="-1" eventType="touchUpInside" id="fh7-MT-x7R"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBi-Ui-2WQ">
+                            <rect key="frame" x="0.0" y="100" width="83" height="90"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" backgroundImage="imgPlayer7">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="player7ButtonPressed:" destination="-1" eventType="touchUpInside" id="Egj-cR-sTl"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ur-Z6-8Xf">
+                    <rect key="frame" x="478" y="280" width="80" height="30"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="okButtonPressed:" destination="-1" eventType="touchUpInside" id="X6L-FX-Rju"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <point key="canvasLocation" x="300" y="329"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="iconUragiri" width="170" height="142"/>
+        <image name="imgBgDark" width="1920" height="1080"/>
+        <image name="imgPlayer" width="247" height="281"/>
+        <image name="imgPlayer1" width="247" height="281"/>
+        <image name="imgPlayer10" width="247" height="281"/>
+        <image name="imgPlayer11" width="247" height="281"/>
+        <image name="imgPlayer2" width="247" height="281"/>
+        <image name="imgPlayer3" width="247" height="281"/>
+        <image name="imgPlayer4" width="247" height="281"/>
+        <image name="imgPlayer5" width="247" height="281"/>
+        <image name="imgPlayer6" width="247" height="281"/>
+        <image name="imgPlayer7" width="247" height="281"/>
+        <image name="imgPlayer8" width="247" height="281"/>
+        <image name="imgPlayer9" width="247" height="281"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,32 +1,32 @@
 //
-//  VillagerViewController.m
+//  WerewolfViewController.m
 //  Werewolf
 //
-//  Created by semler on 2014/12/15.
+//  Created by semler on 2014/12/16.
 //  Copyright (c) 2014年 semler. All rights reserved.
 //
 
-#import "VillagerViewController.h"
+#import "WerewolfViewController.h"
 #import "GameStatus.h"
 #import "PlayerManager.h"
 
-@interface VillagerViewController ()
+@interface WerewolfViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *playerImage;
-@property (weak, nonatomic) IBOutlet UILabel *commentLabel;
+@property (weak, nonatomic) IBOutlet UILabel *comentLabel;
 
 @property (weak, nonatomic) IBOutlet UIView *subView;
-@property (weak, nonatomic) IBOutlet UIButton *player1Button;
-@property (weak, nonatomic) IBOutlet UIButton *player2Button;
-@property (weak, nonatomic) IBOutlet UIButton *player3Button;
-@property (weak, nonatomic) IBOutlet UIButton *player4Button;
-@property (weak, nonatomic) IBOutlet UIButton *player5Button;
-@property (weak, nonatomic) IBOutlet UIButton *player6Button;
-@property (weak, nonatomic) IBOutlet UIButton *player7Button;
-@property (weak, nonatomic) IBOutlet UIButton *player8Button;
-@property (weak, nonatomic) IBOutlet UIButton *player9Button;
-@property (weak, nonatomic) IBOutlet UIButton *player10Button;
-@property (weak, nonatomic) IBOutlet UIButton *player11Button;
+@property (weak, nonatomic) IBOutlet UIView *player1Button;
+@property (weak, nonatomic) IBOutlet UIView *player2Button;
+@property (weak, nonatomic) IBOutlet UIView *player3Button;
+@property (weak, nonatomic) IBOutlet UIView *player4Button;
+@property (weak, nonatomic) IBOutlet UIView *player5Button;
+@property (weak, nonatomic) IBOutlet UIView *player6Button;
+@property (weak, nonatomic) IBOutlet UIView *player7Button;
+@property (weak, nonatomic) IBOutlet UIView *player8Button;
+@property (weak, nonatomic) IBOutlet UIView *player9Button;
+@property (weak, nonatomic) IBOutlet UIView *player10Button;
+@property (weak, nonatomic) IBOutlet UIView *player11Button;
 @property (weak, nonatomic) IBOutlet UIButton *okButton;
 
 - (IBAction)player1ButtonPressed:(id)sender;
@@ -45,7 +45,7 @@
 
 @end
 
-@implementation VillagerViewController
+@implementation WerewolfViewController
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -55,28 +55,28 @@
         self.playerImage.image = [GameStatus sharedManager].currentPlayer.image;
         
         if ([GameStatus sharedManager].currentTurn == 0) {
-            self.commentLabel.text = @"村人です";
+            self.comentLabel.text = @"人狼です";
             self.subView.hidden = YES;
             self.okButton.enabled = YES;
         } else if ([GameStatus sharedManager].currentTurn == 1) {
-//            self.player1View.image = [PlayerManager sharedManager].player1.image;
-//            self.player2View.image = [PlayerManager sharedManager].player2.image;
-//            self.player3View.image = [PlayerManager sharedManager].player3.image;
-//            self.player4View.image = [PlayerManager sharedManager].player4.image;
-//            self.player5View.image = [PlayerManager sharedManager].player5.image;
-//            self.player6View.alpha = 0.3;
-//            self.player7View.alpha = 0.3;
-//            self.player8View.alpha = 0.3;
-//            self.player9View.alpha = 0.3;
-//            self.player10View.alpha = 0.3;
-//            self.player11View.alpha = 0.3;
-//            [self.player6Button setEnabled:NO];
-//            [self.player7Button setEnabled:NO];
-//            [self.player8Button setEnabled:NO];
-//            [self.player9Button setEnabled:NO];
-//            [self.player10Button setEnabled:NO];
-//            [self.player11Button setEnabled:NO];
-        
+            //            self.player1View.image = [PlayerManager sharedManager].player1.image;
+            //            self.player2View.image = [PlayerManager sharedManager].player2.image;
+            //            self.player3View.image = [PlayerManager sharedManager].player3.image;
+            //            self.player4View.image = [PlayerManager sharedManager].player4.image;
+            //            self.player5View.image = [PlayerManager sharedManager].player5.image;
+            //            self.player6View.alpha = 0.3;
+            //            self.player7View.alpha = 0.3;
+            //            self.player8View.alpha = 0.3;
+            //            self.player9View.alpha = 0.3;
+            //            self.player10View.alpha = 0.3;
+            //            self.player11View.alpha = 0.3;
+            //            [self.player6Button setEnabled:NO];
+            //            [self.player7Button setEnabled:NO];
+            //            [self.player8Button setEnabled:NO];
+            //            [self.player9Button setEnabled:NO];
+            //            [self.player10Button setEnabled:NO];
+            //            [self.player11Button setEnabled:NO];
+            
         }
         
         

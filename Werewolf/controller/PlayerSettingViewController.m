@@ -13,17 +13,6 @@
 
 @interface PlayerSettingViewController ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *player1Image;
-@property (weak, nonatomic) IBOutlet UIImageView *player2Image;
-@property (weak, nonatomic) IBOutlet UIImageView *player3Image;
-@property (weak, nonatomic) IBOutlet UIImageView *player4Image;
-@property (weak, nonatomic) IBOutlet UIImageView *player5Image;
-@property (weak, nonatomic) IBOutlet UIImageView *player6Image;
-@property (weak, nonatomic) IBOutlet UIImageView *player7Image;
-@property (weak, nonatomic) IBOutlet UIImageView *player8Image;
-@property (weak, nonatomic) IBOutlet UIImageView *player9Image;
-@property (weak, nonatomic) IBOutlet UIImageView *player10Image;
-@property (weak, nonatomic) IBOutlet UIImageView *player11Image;
 @property (weak, nonatomic) IBOutlet UIButton *player1Button;
 @property (weak, nonatomic) IBOutlet UIButton *player2Button;
 @property (weak, nonatomic) IBOutlet UIButton *player3Button;
@@ -66,53 +55,53 @@
         NSString *path5 = [NSString stringWithFormat:@"%@/%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"], @"player5.jpg"];
         
         if ([[NSFileManager defaultManager] fileExistsAtPath:path1]) {
-            [self.player1Image setImage:[UIImage imageWithContentsOfFile:path1]];
+            [self.player1Button setImage:[UIImage imageWithContentsOfFile:path1] forState:UIControlStateNormal];
             Player *player1 = [[Player alloc] init];
-            player1.image = self.player1Image.image;
+            player1.image = self.player1Button.currentImage;
             [PlayerManager sharedManager].player1 = player1;
         } else {
             //
         }
         if ([[NSFileManager defaultManager] fileExistsAtPath:path2]) {
-            [self.player2Image setImage:[UIImage imageWithContentsOfFile:path2]];
+            [self.player2Button setImage:[UIImage imageWithContentsOfFile:path2]  forState:UIControlStateNormal];
             Player *player2 = [[Player alloc] init];
-            player2.image = self.player2Image.image;
+            player2.image = self.player2Button.currentImage;
             [PlayerManager sharedManager].player2 = player2
             ;
         } else {
             //
         }
         if ([[NSFileManager defaultManager] fileExistsAtPath:path3]) {
-            [self.player3Image setImage:[UIImage imageWithContentsOfFile:path3]];
+            [self.player3Button setImage:[UIImage imageWithContentsOfFile:path3]  forState:UIControlStateNormal];
             Player *player4 = [[Player alloc] init];
-            player4.image = self.player3Image.image;
+            player4.image = self.player3Button.currentImage;
             [PlayerManager sharedManager].player3 = player4;
         } else {
             //
         }
         if ([[NSFileManager defaultManager] fileExistsAtPath:path4]) {
-            [self.player4Image setImage:[UIImage imageWithContentsOfFile:path4]];
+            [self.player4Button setImage:[UIImage imageWithContentsOfFile:path4]  forState:UIControlStateNormal];
             Player *player4 = [[Player alloc] init];
-            player4.image = self.player4Image.image;
+            player4.image = self.player4Button.currentImage;
             [PlayerManager sharedManager].player4 = player4;
         } else {
             //
         }
         if ([[NSFileManager defaultManager] fileExistsAtPath:path5]) {
-            [self.player5Image setImage:[UIImage imageWithContentsOfFile:path5]];
+            [self.player5Button setImage:[UIImage imageWithContentsOfFile:path5]  forState:UIControlStateNormal];
             Player *player5 = [[Player alloc] init];
-            player5.image = self.player5Image.image;
+            player5.image = self.player5Button.currentImage;
             [PlayerManager sharedManager].player5 = player5;
         } else {
             //
         }
         
-        self.player6Image.alpha = 0.3;
-        self.player7Image.alpha = 0.3;
-        self.player8Image.alpha = 0.3;
-        self.player9Image.alpha = 0.3;
-        self.player10Image.alpha = 0.3;
-        self.player11Image.alpha = 0.3;
+        self.player6Button.alpha = 0.3;
+        self.player7Button.alpha = 0.3;
+        self.player8Button.alpha = 0.3;
+        self.player9Button.alpha = 0.3;
+        self.player10Button.alpha = 0.3;
+        self.player11Button.alpha = 0.3;
         [self.player6Button setEnabled:NO];
         [self.player7Button setEnabled:NO];
         [self.player8Button setEnabled:NO];

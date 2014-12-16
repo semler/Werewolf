@@ -108,119 +108,108 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgBgDark" translatesAutoresizingMaskIntoConstraints="NO" id="KeF-Ug-vjL">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iF6-hG-Ooe">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iF6-hG-Ooe">
                                 <rect key="frame" x="10" y="70" width="83" height="90"/>
-                                <state key="normal">
+                                <state key="normal" backgroundImage="imgPlayer1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="player1ButttonPressed:" destination="0lW-LY-AcE" eventType="touchUpInside" id="CVP-zY-meX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFg-ZP-JJs">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFg-ZP-JJs">
                                 <rect key="frame" x="103" y="190" width="83" height="90"/>
-                                <state key="normal">
+                                <state key="normal" backgroundImage="imgPlayer8">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="player8ButttonPressed:" destination="0lW-LY-AcE" eventType="touchUpInside" id="m8Z-KG-HDt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDc-0Y-w6D">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDc-0Y-w6D">
                                 <rect key="frame" x="10" y="190" width="83" height="90"/>
-                                <state key="normal">
+                                <state key="normal" backgroundImage="imgPlayer7">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="player7ButttonPressed:" destination="0lW-LY-AcE" eventType="touchUpInside" id="G33-6S-Fia"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSe-o5-bLr">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSe-o5-bLr">
                                 <rect key="frame" x="289" y="190" width="83" height="90"/>
-                                <state key="normal">
+                                <state key="normal" backgroundImage="imgPlayer10">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="player10ButttonPressed:" destination="0lW-LY-AcE" eventType="touchUpInside" id="xGv-ar-246"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Mf-YU-ybl">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Mf-YU-ybl">
                                 <rect key="frame" x="196" y="190" width="83" height="90"/>
-                                <state key="normal">
+                                <state key="normal" backgroundImage="imgPlayer9">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="player9ButttonPressed:" destination="0lW-LY-AcE" eventType="touchUpInside" id="cWj-w8-m1b"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIx-oD-bo3">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIx-oD-bo3">
                                 <rect key="frame" x="382" y="190" width="83" height="90"/>
-                                <state key="normal">
+                                <state key="normal" backgroundImage="imgPlayer11">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="player11ButttonPressed:" destination="0lW-LY-AcE" eventType="touchUpInside" id="Ohk-qa-unK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rm-c2-FCQ">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rm-c2-FCQ">
                                 <rect key="frame" x="103" y="70" width="83" height="90"/>
-                                <state key="normal">
+                                <state key="normal" backgroundImage="imgPlayer2">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="player2ButttonPressed:" destination="0lW-LY-AcE" eventType="touchUpInside" id="Klo-oi-100"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHz-5L-PMY">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHz-5L-PMY">
                                 <rect key="frame" x="196" y="70" width="83" height="90"/>
-                                <state key="normal">
+                                <state key="normal" backgroundImage="imgPlayer4">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="player3ButttonPressed:" destination="0lW-LY-AcE" eventType="touchUpInside" id="8K0-fK-EkA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWp-jX-3X0">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWp-jX-3X0">
                                 <rect key="frame" x="289" y="70" width="83" height="90"/>
-                                <state key="normal">
+                                <state key="normal" backgroundImage="imgPlayer5">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="player4ButttonPressed:" destination="0lW-LY-AcE" eventType="touchUpInside" id="v4t-78-ppm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5O-wN-fOX">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5O-wN-fOX">
                                 <rect key="frame" x="382" y="70" width="83" height="90"/>
-                                <state key="normal">
+                                <state key="normal" backgroundImage="imgPlayer6">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="player5ButttonPressed:" destination="0lW-LY-AcE" eventType="touchUpInside" id="o51-jI-aDa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDB-FY-cXj">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDB-FY-cXj">
                                 <rect key="frame" x="475" y="70" width="83" height="90"/>
-                                <state key="normal">
+                                <state key="normal" backgroundImage="imgPlayer6">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="player6ButttonPressed:" destination="0lW-LY-AcE" eventType="touchUpInside" id="OMJ-pI-pYy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvJ-RI-DQz">
-                                <rect key="frame" x="476" y="250" width="80" height="30"/>
-                                <color key="backgroundColor" red="0.17786969389999999" green="1" blue="0.086271620679999994" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="START">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="startButtonPressed:" destination="0lW-LY-AcE" eventType="touchUpInside" id="b5p-22-Sj3"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AF-Kf-mKz">
                                 <rect key="frame" x="10" y="10" width="50" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.99517234386852971" blue="0.11088318339165837" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -235,39 +224,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer1" translatesAutoresizingMaskIntoConstraints="NO" id="9Ga-cb-b3A">
-                                <rect key="frame" x="10" y="70" width="83" height="90"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer7" translatesAutoresizingMaskIntoConstraints="NO" id="WqO-Op-1Sk">
-                                <rect key="frame" x="10" y="190" width="83" height="90"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer8" translatesAutoresizingMaskIntoConstraints="NO" id="oR4-p9-o0G">
-                                <rect key="frame" x="103" y="190" width="83" height="90"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer9" translatesAutoresizingMaskIntoConstraints="NO" id="Oj6-lH-Mva">
-                                <rect key="frame" x="196" y="190" width="83" height="90"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer10" translatesAutoresizingMaskIntoConstraints="NO" id="8g5-aX-mRl">
-                                <rect key="frame" x="289" y="190" width="83" height="90"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer11" translatesAutoresizingMaskIntoConstraints="NO" id="ERl-FR-mBu">
-                                <rect key="frame" x="382" y="190" width="83" height="90"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer3" translatesAutoresizingMaskIntoConstraints="NO" id="8Xq-73-ViR">
-                                <rect key="frame" x="196" y="70" width="83" height="90"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer4" translatesAutoresizingMaskIntoConstraints="NO" id="fon-Qa-yl8">
-                                <rect key="frame" x="289" y="70" width="83" height="90"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer5" translatesAutoresizingMaskIntoConstraints="NO" id="bhN-sW-60q">
-                                <rect key="frame" x="382" y="70" width="83" height="90"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer2" translatesAutoresizingMaskIntoConstraints="NO" id="pHQ-B8-LNY">
-                                <rect key="frame" x="103" y="70" width="83" height="90"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer6" translatesAutoresizingMaskIntoConstraints="NO" id="o70-Fx-QfQ">
-                                <rect key="frame" x="475" y="70" width="83" height="90"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvJ-RI-DQz">
+                                <rect key="frame" x="478" y="250" width="80" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="btnStart">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="0lW-LY-AcE" eventType="touchUpInside" id="b5p-22-Sj3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -275,27 +241,16 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="player10Button" destination="WSe-o5-bLr" id="ytv-zP-Cuk"/>
-                        <outlet property="player10Image" destination="8g5-aX-mRl" id="LGb-0O-Fbs"/>
                         <outlet property="player11Button" destination="qIx-oD-bo3" id="eSf-cC-yJq"/>
-                        <outlet property="player11Image" destination="ERl-FR-mBu" id="her-OS-I1O"/>
                         <outlet property="player1Button" destination="iF6-hG-Ooe" id="LxC-L6-Hbm"/>
-                        <outlet property="player1Image" destination="9Ga-cb-b3A" id="q3i-81-enb"/>
                         <outlet property="player2Button" destination="5Rm-c2-FCQ" id="P5l-Uc-Ac9"/>
-                        <outlet property="player2Image" destination="pHQ-B8-LNY" id="uRq-lA-i60"/>
                         <outlet property="player3Button" destination="qHz-5L-PMY" id="XjD-YL-ghY"/>
-                        <outlet property="player3Image" destination="8Xq-73-ViR" id="aF5-oh-xho"/>
                         <outlet property="player4Button" destination="aWp-jX-3X0" id="brI-1O-7Eu"/>
-                        <outlet property="player4Image" destination="fon-Qa-yl8" id="2em-f6-ntK"/>
                         <outlet property="player5Button" destination="y5O-wN-fOX" id="6rU-pN-fe8"/>
-                        <outlet property="player5Image" destination="bhN-sW-60q" id="KyV-mV-4tB"/>
                         <outlet property="player6Button" destination="YDB-FY-cXj" id="kIu-u4-GZ6"/>
-                        <outlet property="player6Image" destination="o70-Fx-QfQ" id="8pI-oS-N8U"/>
                         <outlet property="player7Button" destination="uDc-0Y-w6D" id="UK5-Qg-MlA"/>
-                        <outlet property="player7Image" destination="WqO-Op-1Sk" id="FbR-Gd-quM"/>
                         <outlet property="player8Button" destination="UFg-ZP-JJs" id="vhp-cd-kPD"/>
-                        <outlet property="player8Image" destination="oR4-p9-o0G" id="e7a-7M-LMW"/>
                         <outlet property="player9Button" destination="8Mf-YU-ybl" id="v4r-sd-Ll0"/>
-                        <outlet property="player9Image" destination="Oj6-lH-Mva" id="UNl-BV-Pd7"/>
                         <segue destination="vXZ-lx-hvc" kind="push" identifier="back" id="90V-dg-m9X"/>
                         <segue destination="tSh-G2-2Cb" kind="push" identifier="toCardSetting" id="jYq-8r-1UH"/>
                     </connections>
@@ -321,7 +276,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqF-ao-iWq">
                                 <rect key="frame" x="10" y="10" width="50" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.99517234389999998" blue="0.1108831834" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -572,84 +527,54 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgBgDark" translatesAutoresizingMaskIntoConstraints="NO" id="D1I-4V-rbl">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2s-e7-SJD">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2s-e7-SJD">
                                 <rect key="frame" x="243" y="0.0" width="83" height="90"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal">
+                                <state key="normal" backgroundImage="imgPlayer1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="player1ButtonPressed:" destination="zmd-JW-cng" eventType="touchUpInside" id="HEh-Ek-0gc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oce-El-vhI">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oce-El-vhI">
                                 <rect key="frame" x="351" y="230" width="83" height="90"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal">
+                                <state key="normal" backgroundImage="imgPlayer4">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="player1ButtonPressed:" destination="zmd-JW-cng" eventType="touchUpInside" id="cBI-NP-ENW"/>
                                     <action selector="player4ButtonPressed:" destination="zmd-JW-cng" eventType="touchUpInside" id="K2o-mc-bEl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2r9-XF-9UJ">
-                                <rect key="frame" x="485" y="115" width="83" height="90"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="player1ButtonPressed:" destination="zmd-JW-cng" eventType="touchUpInside" id="gov-Ks-F5e"/>
-                                    <action selector="player5ButtonPressed:" destination="zmd-JW-cng" eventType="touchUpInside" id="0aB-1D-7ok"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwY-xQ-iL1">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwY-xQ-iL1">
                                 <rect key="frame" x="0.0" y="115" width="83" height="90"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal">
+                                <state key="normal" backgroundImage="imgPlayer2">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="player1ButtonPressed:" destination="zmd-JW-cng" eventType="touchUpInside" id="a74-X2-Hmp"/>
                                     <action selector="player2ButtonPressed:" destination="zmd-JW-cng" eventType="touchUpInside" id="tzL-73-0VD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcX-VE-Xut">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcX-VE-Xut">
                                 <rect key="frame" x="134" y="230" width="83" height="90"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal">
+                                <state key="normal" backgroundImage="imgPlayer3">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="player1ButtonPressed:" destination="zmd-JW-cng" eventType="touchUpInside" id="fSM-td-qZX"/>
                                     <action selector="player3ButtonPressed:" destination="zmd-JW-cng" eventType="touchUpInside" id="EE6-22-jWt"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EQb-Xd-D6l">
-                                <rect key="frame" x="243" y="0.0" width="83" height="90"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7f4-SY-jnZ">
-                                <rect key="frame" x="134" y="230" width="83" height="90"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d1P-Aj-8R2">
-                                <rect key="frame" x="0.0" y="115" width="83" height="90"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aoV-Ge-I4M">
-                                <rect key="frame" x="485" y="115" width="83" height="90"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="役職を確認してください" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dv8-Ge-gZh">
                                 <rect key="frame" x="159" y="120" width="250" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconJinro" translatesAutoresizingMaskIntoConstraints="NO" id="VNP-93-cyX">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconMoon" translatesAutoresizingMaskIntoConstraints="NO" id="VNP-93-cyX">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CV-m7-yER">
                                 <rect key="frame" x="244" y="180" width="80" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.7732082133" blue="0.084366328460000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="OK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -659,20 +584,26 @@
                                     <action selector="okButtonPressed:" destination="zmd-JW-cng" eventType="touchUpInside" id="OdV-Vp-yT9"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2w-oi-UwE">
-                                <rect key="frame" x="351" y="230" width="83" height="90"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2r9-XF-9UJ">
+                                <rect key="frame" x="485" y="120" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer5">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="player5ButtonPressed:" destination="zmd-JW-cng" eventType="touchUpInside" id="0aB-1D-7ok"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="bdd-qN-d1l"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="player1View" destination="EQb-Xd-D6l" id="iPg-1w-agh"/>
-                        <outlet property="player2View" destination="d1P-Aj-8R2" id="xhl-cv-e4D"/>
-                        <outlet property="player3View" destination="7f4-SY-jnZ" id="SC8-an-1Zc"/>
-                        <outlet property="player4View" destination="c2w-oi-UwE" id="ap6-kc-4Nj"/>
-                        <outlet property="player5View" destination="aoV-Ge-I4M" id="1g8-lj-SrW"/>
+                        <outlet property="player1Button" destination="Z2s-e7-SJD" id="fey-4c-VZo"/>
+                        <outlet property="player2Button" destination="fwY-xQ-iL1" id="IUW-A8-vh0"/>
+                        <outlet property="player3Button" destination="FcX-VE-Xut" id="cRr-l7-y1R"/>
+                        <outlet property="player4Button" destination="oce-El-vhI" id="hHT-Yb-aeN"/>
+                        <outlet property="player5Button" destination="2r9-XF-9UJ" id="1VQ-ga-lme"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBB-KL-UIG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -705,6 +636,7 @@
         <image name="btnStart" width="688" height="158"/>
         <image name="iconGuard" width="119" height="146"/>
         <image name="iconJinro" width="128" height="163"/>
+        <image name="iconMoon" width="200" height="200"/>
         <image name="iconMurabito" width="170" height="128"/>
         <image name="iconReibai" width="98" height="155"/>
         <image name="iconUragiri" width="170" height="142"/>
