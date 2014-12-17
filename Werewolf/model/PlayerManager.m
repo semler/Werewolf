@@ -11,13 +11,13 @@
 
 @implementation PlayerManager
 
-static PlayerManager *playerStatus = nil;
+static PlayerManager *playerManager = nil;
 
 + (PlayerManager *)sharedManager{
-    if (!playerStatus) {
-        playerStatus = [[PlayerManager alloc] init];
+    if (!playerManager) {
+        playerManager = [[PlayerManager alloc] init];
     }
-    return playerStatus;
+    return playerManager;
 }
 
 - (id)init

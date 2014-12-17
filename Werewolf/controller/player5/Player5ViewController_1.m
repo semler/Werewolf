@@ -73,43 +73,118 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)player1ButtonPressed:(id)sender {
     if (self.discussFlg) {
-    
+        [GameStatus sharedManager].currentPlayer = [PlayerManager sharedManager].player1;
+        
+        if ([PlayerManager sharedManager].player1.position == 0) {
+            VillagerViewController *controller = [[VillagerViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        } else if ([PlayerManager sharedManager].player1.position == 1) {
+            WerewolfViewController *controller = [[WerewolfViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        } else if ([PlayerManager sharedManager].player1.position == 2) {
+            SeerViewController *controller = [[SeerViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        } else if ([PlayerManager sharedManager].player1.position == 3) {
+            BodyguardViewController *controller = [[BodyguardViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        } else if ([PlayerManager sharedManager].player1.position == 4) {
+            MadmanViewController *controller = [[MadmanViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        }
     }
 }
 
 - (IBAction)player2ButtonPressed:(id)sender {
     if (self.discussFlg) {
+        [GameStatus sharedManager].currentPlayer = [PlayerManager sharedManager].player2;
         
+        if ([PlayerManager sharedManager].player2.position == 0) {
+            VillagerViewController *controller = [[VillagerViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        } else if ([PlayerManager sharedManager].player2.position == 1) {
+            WerewolfViewController *controller = [[WerewolfViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        } else if ([PlayerManager sharedManager].player2.position == 2) {
+            SeerViewController *controller = [[SeerViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        } else if ([PlayerManager sharedManager].player2.position == 3) {
+            BodyguardViewController *controller = [[BodyguardViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        } else if ([PlayerManager sharedManager].player2.position == 4) {
+            MadmanViewController *controller = [[MadmanViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        }
     }
 }
 
 - (IBAction)player3ButtonPressed:(id)sender {
     if (self.discussFlg) {
+        [GameStatus sharedManager].currentPlayer = [PlayerManager sharedManager].player3;
         
+        if ([PlayerManager sharedManager].player3.position == 0) {
+            VillagerViewController *controller = [[VillagerViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        } else if ([PlayerManager sharedManager].player3.position == 1) {
+            WerewolfViewController *controller = [[WerewolfViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        } else if ([PlayerManager sharedManager].player3.position == 2) {
+            SeerViewController *controller = [[SeerViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        } else if ([PlayerManager sharedManager].player3.position == 3) {
+            BodyguardViewController *controller = [[BodyguardViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        } else if ([PlayerManager sharedManager].player3.position == 4) {
+            MadmanViewController *controller = [[MadmanViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        }
     }
 }
 
 - (IBAction)player4ButtonPressed:(id)sender {
     if (self.discussFlg) {
+        [GameStatus sharedManager].currentPlayer = [PlayerManager sharedManager].player4;
         
+        if ([PlayerManager sharedManager].player4.position == 0) {
+            VillagerViewController *controller = [[VillagerViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        } else if ([PlayerManager sharedManager].player4.position == 1) {
+            WerewolfViewController *controller = [[WerewolfViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        } else if ([PlayerManager sharedManager].player4.position == 2) {
+            SeerViewController *controller = [[SeerViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        } else if ([PlayerManager sharedManager].player4.position == 3) {
+            BodyguardViewController *controller = [[BodyguardViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        } else if ([PlayerManager sharedManager].player4.position == 4) {
+            MadmanViewController *controller = [[MadmanViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        }
     }
 }
 
 - (IBAction)player5ButtonPressed:(id)sender {
     if (self.discussFlg) {
+        [GameStatus sharedManager].currentPlayer = [PlayerManager sharedManager].player5;
         
+        if ([PlayerManager sharedManager].player5.position == 0) {
+            VillagerViewController *controller = [[VillagerViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        } else if ([PlayerManager sharedManager].player5.position == 1) {
+            WerewolfViewController *controller = [[WerewolfViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        } else if ([PlayerManager sharedManager].player5.position == 2) {
+            SeerViewController *controller = [[SeerViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        } else if ([PlayerManager sharedManager].player5.position == 3) {
+            BodyguardViewController *controller = [[BodyguardViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        } else if ([PlayerManager sharedManager].player5.position == 4) {
+            MadmanViewController *controller = [[MadmanViewController alloc] init];
+            [self presentViewController:controller animated:YES completion:nil];
+        }
     }
 }
 

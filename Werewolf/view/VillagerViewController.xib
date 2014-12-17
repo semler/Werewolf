@@ -53,7 +53,7 @@
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v7p-NP-7za">
                     <rect key="frame" x="10" y="120" width="548" height="190"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzY-F0-3EW">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzY-F0-3EW">
                             <rect key="frame" x="0.0" y="0.0" width="83" height="90"/>
                             <state key="normal" backgroundImage="imgPlayer1">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -62,7 +62,7 @@
                                 <action selector="player1ButtonPressed:" destination="-1" eventType="touchUpInside" id="7Ko-Zg-m51"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4p-Em-M70">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4p-Em-M70">
                             <rect key="frame" x="0.0" y="100" width="83" height="90"/>
                             <state key="normal" backgroundImage="imgPlayer7">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -71,7 +71,7 @@
                                 <action selector="player7ButtonPressed:" destination="-1" eventType="touchUpInside" id="DJW-Pb-SI6"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ce-c4-XWd">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ce-c4-XWd">
                             <rect key="frame" x="279" y="0.0" width="83" height="90"/>
                             <state key="normal" backgroundImage="imgPlayer4">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -80,7 +80,7 @@
                                 <action selector="player4ButtonPressed:" destination="-1" eventType="touchUpInside" id="M12-ml-eZ5"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKX-yi-bgH">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKX-yi-bgH">
                             <rect key="frame" x="279" y="100" width="83" height="90"/>
                             <state key="normal" backgroundImage="imgPlayer10">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -89,7 +89,7 @@
                                 <action selector="player10ButtonPressed:" destination="-1" eventType="touchUpInside" id="4ul-Jw-vMU"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTc-5q-sEg">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTc-5q-sEg">
                             <rect key="frame" x="93" y="0.0" width="83" height="90"/>
                             <state key="normal" backgroundImage="imgPlayer2">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -98,7 +98,7 @@
                                 <action selector="player2ButtonPressed:" destination="-1" eventType="touchUpInside" id="wBC-gT-5VL"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHY-pR-0HN">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHY-pR-0HN">
                             <rect key="frame" x="372" y="100" width="83" height="90"/>
                             <state key="normal" backgroundImage="imgPlayer11">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -107,7 +107,7 @@
                                 <action selector="player11ButtonPressed:" destination="-1" eventType="touchUpInside" id="ix4-KB-kXV"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoN-Rr-njZ">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoN-Rr-njZ">
                             <rect key="frame" x="93" y="100" width="83" height="90"/>
                             <state key="normal" backgroundImage="imgPlayer8">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -116,7 +116,7 @@
                                 <action selector="player8ButtonPressed:" destination="-1" eventType="touchUpInside" id="MpR-OA-q9w"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8x-Yz-vzx">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8x-Yz-vzx">
                             <rect key="frame" x="186" y="100" width="83" height="90"/>
                             <state key="normal" backgroundImage="imgPlayer9">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -125,7 +125,7 @@
                                 <action selector="player9ButtonPressed:" destination="-1" eventType="touchUpInside" id="Z0d-xg-6ti"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZz-Ve-uyJ">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZz-Ve-uyJ">
                             <rect key="frame" x="186" y="0.0" width="83" height="90"/>
                             <state key="normal" backgroundImage="imgPlayer3">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -134,7 +134,7 @@
                                 <action selector="player3ButtonPressed:" destination="-1" eventType="touchUpInside" id="zon-j9-o3g"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkD-zo-Dq6">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkD-zo-Dq6">
                             <rect key="frame" x="372" y="0.0" width="83" height="90"/>
                             <state key="normal" backgroundImage="imgPlayer5">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -143,7 +143,7 @@
                                 <action selector="player5ButtonPressed:" destination="-1" eventType="touchUpInside" id="W6m-1b-IVq"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0U0-Ix-bMf">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0U0-Ix-bMf">
                             <rect key="frame" x="465" y="0.0" width="83" height="90"/>
                             <state key="normal" backgroundImage="imgPlayer6">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>

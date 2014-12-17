@@ -18,5 +18,13 @@
 // 0:村人1:人狼2:預言者3:ボディガード4:狂人5:霊媒師
 @property (nonatomic) int position;
 
+// player番号
+@property (nonatomic) int playerNum;
+// 投票相手
+@property (nonatomic) int voteTo;
+// 票数
+@property (nonatomic) int voteCount;
+
+
 @end
 

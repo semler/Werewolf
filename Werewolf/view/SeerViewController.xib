@@ -8,17 +8,17 @@
             <connections>
                 <outlet property="commentLabel" destination="jSv-PN-Tux" id="zF2-Du-bB9"/>
                 <outlet property="okButton" destination="39s-Is-SAh" id="3Fr-4j-XUf"/>
-                <outlet property="player10View" destination="Zms-Yp-GE1" id="ntA-o3-cYJ"/>
-                <outlet property="player11View" destination="0AD-OK-yZc" id="tRK-xe-gsL"/>
-                <outlet property="player1View" destination="DO3-NB-qym" id="Tus-4e-mlp"/>
-                <outlet property="player2View" destination="kaI-9c-XsW" id="VXI-TO-Zos"/>
-                <outlet property="player3View" destination="h4z-1T-LCb" id="QMo-mY-oNE"/>
-                <outlet property="player4View" destination="vxV-gl-lMl" id="6xU-zu-CCd"/>
-                <outlet property="player5View" destination="Drf-a8-Okz" id="Wtt-gU-EWs"/>
-                <outlet property="player6View" destination="ymR-D0-uPd" id="u4d-cn-uRc"/>
-                <outlet property="player7View" destination="7nc-AM-8Hy" id="Xg8-nq-6ld"/>
-                <outlet property="player8View" destination="Bbk-r8-D06" id="ohb-wu-SDN"/>
-                <outlet property="player9View" destination="104-cm-ISv" id="U9k-3O-QUZ"/>
+                <outlet property="player10Button" destination="Zms-Yp-GE1" id="WoM-DX-94W"/>
+                <outlet property="player11Button" destination="0AD-OK-yZc" id="3ER-L7-b3U"/>
+                <outlet property="player1Button" destination="DO3-NB-qym" id="F0a-mz-7ob"/>
+                <outlet property="player2Button" destination="kaI-9c-XsW" id="98d-iG-snN"/>
+                <outlet property="player3Button" destination="h4z-1T-LCb" id="j0q-OH-uk7"/>
+                <outlet property="player4Button" destination="vxV-gl-lMl" id="i7y-7u-LpV"/>
+                <outlet property="player5Button" destination="Drf-a8-Okz" id="fja-Mp-BTJ"/>
+                <outlet property="player6Button" destination="ymR-D0-uPd" id="PC7-eA-6LF"/>
+                <outlet property="player7Button" destination="7nc-AM-8Hy" id="8Nx-B9-uPB"/>
+                <outlet property="player8Button" destination="Bbk-r8-D06" id="fxg-Bp-3gn"/>
+                <outlet property="player9Button" destination="104-cm-ISv" id="Vpz-tR-4Xa"/>
                 <outlet property="playerImage" destination="LaE-XN-9TH" id="Dhj-bq-Kvi"/>
                 <outlet property="subView" destination="sPf-Zc-VfH" id="sPq-zy-vd4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

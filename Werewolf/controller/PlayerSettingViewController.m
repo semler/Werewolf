@@ -58,6 +58,7 @@
             [self.player1Button setImage:[UIImage imageWithContentsOfFile:path1] forState:UIControlStateNormal];
             Player *player1 = [[Player alloc] init];
             player1.image = self.player1Button.currentImage;
+            player1.playerNum = 1;
             [PlayerManager sharedManager].player1 = player1;
         } else {
             //
@@ -66,6 +67,7 @@
             [self.player2Button setImage:[UIImage imageWithContentsOfFile:path2]  forState:UIControlStateNormal];
             Player *player2 = [[Player alloc] init];
             player2.image = self.player2Button.currentImage;
+            player2.playerNum = 2;
             [PlayerManager sharedManager].player2 = player2
             ;
         } else {
@@ -73,9 +75,10 @@
         }
         if ([[NSFileManager defaultManager] fileExistsAtPath:path3]) {
             [self.player3Button setImage:[UIImage imageWithContentsOfFile:path3]  forState:UIControlStateNormal];
-            Player *player4 = [[Player alloc] init];
-            player4.image = self.player3Button.currentImage;
-            [PlayerManager sharedManager].player3 = player4;
+            Player *player3 = [[Player alloc] init];
+            player3.image = self.player3Button.currentImage;
+            player3.playerNum = 3;
+            [PlayerManager sharedManager].player3 = player3;
         } else {
             //
         }
@@ -83,6 +86,7 @@
             [self.player4Button setImage:[UIImage imageWithContentsOfFile:path4]  forState:UIControlStateNormal];
             Player *player4 = [[Player alloc] init];
             player4.image = self.player4Button.currentImage;
+            player4.playerNum = 4;
             [PlayerManager sharedManager].player4 = player4;
         } else {
             //
@@ -91,17 +95,18 @@
             [self.player5Button setImage:[UIImage imageWithContentsOfFile:path5]  forState:UIControlStateNormal];
             Player *player5 = [[Player alloc] init];
             player5.image = self.player5Button.currentImage;
+            player5.playerNum = 5;
             [PlayerManager sharedManager].player5 = player5;
         } else {
             //
         }
         
-        self.player6Button.alpha = 0.3;
-        self.player7Button.alpha = 0.3;
-        self.player8Button.alpha = 0.3;
-        self.player9Button.alpha = 0.3;
-        self.player10Button.alpha = 0.3;
-        self.player11Button.alpha = 0.3;
+        self.player6Button.alpha = 0.5;
+        self.player7Button.alpha = 0.5;
+        self.player8Button.alpha = 0.5;
+        self.player9Button.alpha = 0.5;
+        self.player10Button.alpha = 0.5;
+        self.player11Button.alpha = 0.5;
         [self.player6Button setEnabled:NO];
         [self.player7Button setEnabled:NO];
         [self.player8Button setEnabled:NO];

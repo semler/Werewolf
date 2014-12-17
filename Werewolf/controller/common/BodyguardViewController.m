@@ -29,6 +29,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *player11Button;
 @property (weak, nonatomic) IBOutlet UIButton *okButton;
 
+@property (weak, nonatomic) Player *player;
+@property (nonatomic) int vote;
+
 - (IBAction)player1ButtonPressed:(id)sender;
 - (IBAction)player2ButtonPressed:(id)sender;
 - (IBAction)player3ButtonPressed:(id)sender;
@@ -49,44 +52,69 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    self.player = [GameStatus sharedManager].currentPlayer;
+    // player画像設定
+    self.playerImage.image = self.player.image;
+    
     if ([GameStatus sharedManager].playerCount == 5) {
-        // player画像設定
-        self.playerImage.image = [GameStatus sharedManager].currentPlayer.image;
         
         if ([GameStatus sharedManager].currentTurn == 0) {
             self.commentLabel.text = @"ボディガードです";
             self.subView.hidden = YES;
             self.okButton.enabled = YES;
-        } else if ([GameStatus sharedManager].currentTurn == 1) {
-            //            self.player1View.image = [PlayerManager sharedManager].player1.image;
-            //            self.player2View.image = [PlayerManager sharedManager].player2.image;
-            //            self.player3View.image = [PlayerManager sharedManager].player3.image;
-            //            self.player4View.image = [PlayerManager sharedManager].player4.image;
-            //            self.player5View.image = [PlayerManager sharedManager].player5.image;
-            //            self.player6View.alpha = 0.3;
-            //            self.player7View.alpha = 0.3;
-            //            self.player8View.alpha = 0.3;
-            //            self.player9View.alpha = 0.3;
-            //            self.player10View.alpha = 0.3;
-            //            self.player11View.alpha = 0.3;
-            //            [self.player6Button setEnabled:NO];
-            //            [self.player7Button setEnabled:NO];
-            //            [self.player8Button setEnabled:NO];
-            //            [self.player9Button setEnabled:NO];
-            //            [self.player10Button setEnabled:NO];
-            //            [self.player11Button setEnabled:NO];
+        } else {
+            self.commentLabel.text = @"投票してください";
+            self.subView.hidden = NO;
+            self.okButton.enabled = NO;
+            [self.player1Button setImage:[PlayerManager sharedManager].player1.image forState:UIControlStateNormal];
+            [self.player2Button setImage:[PlayerManager sharedManager].player2.image forState:UIControlStateNormal];
+            [self.player3Button setImage:[PlayerManager sharedManager].player3.image forState:UIControlStateNormal];
+            [self.player4Button setImage:[PlayerManager sharedManager].player4.image forState:UIControlStateNormal];
+            [self.player5Button setImage:[PlayerManager sharedManager].player5.image forState:UIControlStateNormal];
+            if (self.player.playerNum != [PlayerManager sharedManager].player1.playerNum) {
+                [self.player1Button setEnabled:YES];
+            } else {
+                [self.player1Button setEnabled:NO];
+                self.player1Button.alpha = 0.5;
+            }
+            if (self.player.playerNum != [PlayerManager sharedManager].player2.playerNum) {
+                [self.player2Button setEnabled:YES];
+            } else {
+                [self.player2Button setEnabled:NO];
+                self.player2Button.alpha = 0.5;
+            }
+            if (self.player.playerNum != [PlayerManager sharedManager].player3.playerNum) {
+                [self.player3Button setEnabled:YES];
+            } else {
+                [self.player3Button setEnabled:NO];
+                self.player3Button.alpha = 0.5;
+            }
+            if (self.player.playerNum != [PlayerManager sharedManager].player4.playerNum) {
+                [self.player4Button setEnabled:YES];
+            } else {
+                [self.player4Button setEnabled:NO];
+                self.player4Button.alpha = 0.5;
+            }
+            if (self.player.playerNum != [PlayerManager sharedManager].player5.playerNum) {
+                [self.player5Button setEnabled:YES];
+            } else {
+                [self.player5Button setEnabled:NO];
+                self.player5Button.alpha = 0.5;
+            }
+            self.player6Button.alpha = 0.5;
+            self.player7Button.alpha = 0.5;
+            self.player8Button.alpha = 0.5;
+            self.player9Button.alpha = 0.5;
+            self.player10Button.alpha = 0.5;
+            self.player11Button.alpha = 0.5;
+            [self.player6Button setEnabled:NO];
+            [self.player7Button setEnabled:NO];
+            [self.player8Button setEnabled:NO];
+            [self.player9Button setEnabled:NO];
+            [self.player10Button setEnabled:NO];
+            [self.player11Button setEnabled:NO];
             
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     }
 }
 
@@ -99,16 +127,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)player1ButtonPressed:(id)sender {
 }
@@ -145,6 +163,30 @@
 
 - (IBAction)okButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+    self.player.voteTo = self.vote;
+    if (self.vote == 1) {
+        [PlayerManager sharedManager].player1.voteCount ++;
+    } else if (self.vote == 2) {
+        [PlayerManager sharedManager].player2.voteCount ++;
+    } else if (self.vote == 3) {
+        [PlayerManager sharedManager].player3.voteCount ++;
+    } else if (self.vote == 4) {
+        [PlayerManager sharedManager].player4.voteCount ++;
+    } else if (self.vote == 5) {
+        [PlayerManager sharedManager].player5.voteCount ++;
+    } else if (self.vote == 6) {
+        [PlayerManager sharedManager].player6.voteCount ++;
+    } else if (self.vote == 7) {
+        [PlayerManager sharedManager].player7.voteCount ++;
+    } else if (self.vote == 8) {
+        [PlayerManager sharedManager].player8.voteCount ++;
+    } else if (self.vote == 9) {
+        [PlayerManager sharedManager].player9.voteCount ++;
+    } else if (self.vote == 10) {
+        [PlayerManager sharedManager].player10.voteCount ++;
+    } else if (self.vote == 11) {
+        [PlayerManager sharedManager].player11.voteCount ++;
+    }
 }
 
 @end

@@ -26,8 +26,6 @@
 
 
 
-
-
 + (GameStatus *)sharedManager;
 
 @end

@@ -13,6 +13,7 @@
 		4510A9DC1A2EBE7900063107 /* PlayerSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510A9DB1A2EBE7900063107 /* PlayerSettingViewController.m */; };
 		4544C2441A2EFF75001040E9 /* PlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4544C2431A2EFF75001040E9 /* PlayerManager.m */; };
 		4544C2491A2F48D1001040E9 /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4544C2471A2F48D1001040E9 /* PlayerViewController.xib */; };
+		454EBC721A41327700294E80 /* koukaon1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 454EBC711A41327700294E80 /* koukaon1.wav */; };
 		45A861761A30422F000124C4 /* GameStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A861751A30422F000124C4 /* GameStatus.m */; };
 		45B0C9901A3583E400E192A1 /* CardSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B0C98F1A3583E400E192A1 /* CardSettingViewController.m */; };
 		45BD0D8D1A3FBF070087B43F /* VillagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BD0D8C1A3FBF070087B43F /* VillagerViewController.m */; };
@@ -48,6 +49,7 @@
 		4544C2421A2EFF75001040E9 /* PlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerManager.h; sourceTree = "<group>"; };
 		4544C2431A2EFF75001040E9 /* PlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerManager.m; sourceTree = "<group>"; };
 		4544C2471A2F48D1001040E9 /* PlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerViewController.xib; sourceTree = "<group>"; };
+		454EBC711A41327700294E80 /* koukaon1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = koukaon1.wav; sourceTree = "<group>"; };
 		45A861741A30422F000124C4 /* GameStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStatus.h; sourceTree = "<group>"; };
 		45A861751A30422F000124C4 /* GameStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStatus.m; sourceTree = "<group>"; };
 		45B0C98E1A3583E400E192A1 /* CardSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardSettingViewController.h; sourceTree = "<group>"; };
@@ -169,6 +171,14 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		454EBC701A41327700294E80 /* media */ = {
+			isa = PBXGroup;
+			children = (
+				454EBC711A41327700294E80 /* koukaon1.wav */,
+			);
+			path = media;
+			sourceTree = "<group>";
+		};
 		45D98B7D1A2D6A2B00487E04 = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +198,7 @@
 		45D98B881A2D6A2B00487E04 /* Werewolf */ = {
 			isa = PBXGroup;
 			children = (
+				454EBC701A41327700294E80 /* media */,
 				4510A9D51A2EBD6100063107 /* controller */,
 				4510A9D81A2EBD6100063107 /* view */,
 				4510A9BC1A2EAA4000063107 /* model */,
@@ -268,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45BD0DB71A400C3C0087B43F /* MadmanViewController.xib in Resources */,
+				454EBC721A41327700294E80 /* koukaon1.wav in Resources */,
 				45BD0DA91A3FF5E50087B43F /* SeerViewController.xib in Resources */,
 				45BD0D921A3FBF210087B43F /* VillagerViewController.xib in Resources */,
 				45BD0DA21A3FF4F70087B43F /* WerewolfViewController.xib in Resources */,
