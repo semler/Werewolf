@@ -13,17 +13,20 @@
 
 // 写真
 @property (strong, nonatomic) UIImage *image;
-
 // 役職
 // 0:村人1:人狼2:預言者3:ボディガード4:狂人5:霊媒師
 @property (nonatomic) int position;
 
 // player番号
 @property (nonatomic) int playerNum;
-// 投票相手
+// 投票
 @property (nonatomic) int voteTo;
 // 票数
 @property (nonatomic) int voteCount;
+// 追放
+@property (nonatomic) BOOL isBanished;
+// 襲撃
+@property (nonatomic) BOOL isAttacked;
 
 
 @end

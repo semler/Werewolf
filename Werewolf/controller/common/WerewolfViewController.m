@@ -130,63 +130,73 @@
 }
 
 - (IBAction)player1ButtonPressed:(id)sender {
+    self.comentLabel.text = [NSString stringWithFormat:@"Player1に投票"];
+    self.okButton.enabled = YES;
+    self.vote = 1;
 }
 
 - (IBAction)player2ButtonPressed:(id)sender {
+    self.comentLabel.text = [NSString stringWithFormat:@"Player2に投票"];
+    self.okButton.enabled = YES;
+    self.vote = 2;
 }
 
 - (IBAction)player3ButtonPressed:(id)sender {
+    self.comentLabel.text = [NSString stringWithFormat:@"Player3に投票"];
+    self.okButton.enabled = YES;
+    self.vote = 3;
 }
 
 - (IBAction)player4ButtonPressed:(id)sender {
+    self.comentLabel.text = [NSString stringWithFormat:@"Player4に投票"];
+    self.okButton.enabled = YES;
+    self.vote = 4;
 }
 
 - (IBAction)player5ButtonPressed:(id)sender {
+    self.comentLabel.text = [NSString stringWithFormat:@"Player5に投票"];
+    self.okButton.enabled = YES;
+    self.vote = 5;
 }
 
 - (IBAction)player6ButtonPressed:(id)sender {
+    self.comentLabel.text = [NSString stringWithFormat:@"Player6に投票"];
+    self.okButton.enabled = YES;
+    self.vote = 6;
 }
 
 - (IBAction)player7ButtonPressed:(id)sender {
+    self.comentLabel.text = [NSString stringWithFormat:@"Player7に投票"];
+    self.okButton.enabled = YES;
+    self.vote = 7;
 }
 
 - (IBAction)player8ButtonPressed:(id)sender {
+    self.comentLabel.text = [NSString stringWithFormat:@"Player8に投票"];
+    self.okButton.enabled = YES;
+    self.vote = 8;
 }
 
 - (IBAction)player9ButtonPressed:(id)sender {
+    self.comentLabel.text = [NSString stringWithFormat:@"Player9に投票"];
+    self.okButton.enabled = YES;
+    self.vote = 9;
 }
 
 - (IBAction)player10ButtonPressed:(id)sender {
+    self.comentLabel.text = [NSString stringWithFormat:@"Player10に投票"];
+    self.okButton.enabled = YES;
+    self.vote = 10;
 }
 
 - (IBAction)player11ButtonPressed:(id)sender {
+    self.comentLabel.text = [NSString stringWithFormat:@"Player11に投票"];
+    self.okButton.enabled = YES;
+    self.vote = 11;
 }
 
 - (IBAction)okButtonPressed:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
     self.player.voteTo = self.vote;
-    if (self.vote == 1) {
-        [PlayerManager sharedManager].player1.voteCount ++;
-    } else if (self.vote == 2) {
-        [PlayerManager sharedManager].player2.voteCount ++;
-    } else if (self.vote == 3) {
-        [PlayerManager sharedManager].player3.voteCount ++;
-    } else if (self.vote == 4) {
-        [PlayerManager sharedManager].player4.voteCount ++;
-    } else if (self.vote == 5) {
-        [PlayerManager sharedManager].player5.voteCount ++;
-    } else if (self.vote == 6) {
-        [PlayerManager sharedManager].player6.voteCount ++;
-    } else if (self.vote == 7) {
-        [PlayerManager sharedManager].player7.voteCount ++;
-    } else if (self.vote == 8) {
-        [PlayerManager sharedManager].player8.voteCount ++;
-    } else if (self.vote == 9) {
-        [PlayerManager sharedManager].player9.voteCount ++;
-    } else if (self.vote == 10) {
-        [PlayerManager sharedManager].player10.voteCount ++;
-    } else if (self.vote == 11) {
-        [PlayerManager sharedManager].player11.voteCount ++;
-    }
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

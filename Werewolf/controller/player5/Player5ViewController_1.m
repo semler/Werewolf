@@ -15,6 +15,7 @@
 #import "SeerViewController.h"
 #import "BodyguardViewController.h"
 #import "MadmanViewController.h"
+#import "voteManager.h"
 
 @interface Player5ViewController_1 ()
 
@@ -196,5 +197,18 @@
 }
 
 - (IBAction)okButtonPressed:(id)sender {
+    
+    if ([[VoteManager sharedManager] banish]) {
+        if ([[VoteManager sharedManager] gameOverJudge]) {
+        
+        
+        } else {
+            [self performSegueWithIdentifier:@"toResult" sender:self];
+        }
+    } else {
+        // todo
+    }
+    
+    
 }
 @end

@@ -20,6 +20,7 @@
 //アラーム音声格納用
 @property (strong, nonatomic) NSString *alarmSound;
 @property (nonatomic,strong) AVAudioPlayer *player;
+@property (nonatomic) BOOL pickFlg;
 
 - (IBAction)startButtonPressed:(id)sender;
 - (IBAction)endButtonPressed:(id)sender;
@@ -33,6 +34,7 @@
     
     self.array = [NSMutableArray arrayWithObjects:@"５分", @"３分", @"１分", nil];
     self.discussTime = 300;
+    self.pickFlg = NO;
     // デリゲートを設定
     self.pickerView.delegate = self;
     // 選択インジケータを表示
@@ -101,12 +103,15 @@
  */
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    if ([pickerView selectedRowInComponent:0] == 0) {
-        self.discussTime = 300;
-    } else if ([pickerView selectedRowInComponent:0] == 1) {
-        self.discussTime = 180;
-    } else if ([pickerView selectedRowInComponent:0] == 2) {
-        self.discussTime = 60;
+    if (!self.pickFlg) {
+        if ([pickerView selectedRowInComponent:0] == 0) {
+            self.discussTime = 300;
+        } else if ([pickerView selectedRowInComponent:0] == 1) {
+            self.discussTime = 180;
+        } else if ([pickerView selectedRowInComponent:0] == 2) {
+            self.discussTime = 60;
+        }
+        self.pickFlg = YES;
     }
 }
 

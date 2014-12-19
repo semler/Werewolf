@@ -30,6 +30,8 @@
 		45BD0DBA1A40150A0087B43F /* Player5ViewController_1.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BD0DB91A40150A0087B43F /* Player5ViewController_1.m */; };
 		45BD0DBF1A4023E20087B43F /* AlermViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45BD0DBD1A4023E20087B43F /* AlermViewController.xib */; };
 		45BD0DC21A40242D0087B43F /* AlermViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BD0DC11A40242D0087B43F /* AlermViewController.m */; };
+		45D95C7F1A428299002B2DD3 /* VoteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D95C7E1A428299002B2DD3 /* VoteManager.m */; };
+		45D95C821A4283BF002B2DD3 /* VoteResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D95C811A4283BF002B2DD3 /* VoteResultViewController.m */; };
 		45D98B8C1A2D6A2B00487E04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D98B8B1A2D6A2B00487E04 /* main.m */; };
 		45D98B8F1A2D6A2B00487E04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D98B8E1A2D6A2B00487E04 /* AppDelegate.m */; };
 		45D98B951A2D6A2B00487E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D98B931A2D6A2B00487E04 /* Main.storyboard */; };
@@ -76,6 +78,10 @@
 		45BD0DBD1A4023E20087B43F /* AlermViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlermViewController.xib; sourceTree = "<group>"; };
 		45BD0DC01A40242D0087B43F /* AlermViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlermViewController.h; sourceTree = "<group>"; };
 		45BD0DC11A40242D0087B43F /* AlermViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlermViewController.m; sourceTree = "<group>"; };
+		45D95C7D1A428299002B2DD3 /* VoteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoteManager.h; sourceTree = "<group>"; };
+		45D95C7E1A428299002B2DD3 /* VoteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteManager.m; sourceTree = "<group>"; };
+		45D95C801A4283BF002B2DD3 /* VoteResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoteResultViewController.h; sourceTree = "<group>"; };
+		45D95C811A4283BF002B2DD3 /* VoteResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteResultViewController.m; sourceTree = "<group>"; };
 		45D98B861A2D6A2B00487E04 /* Werewolf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Werewolf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D98B8A1A2D6A2B00487E04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45D98B8B1A2D6A2B00487E04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -104,6 +110,8 @@
 				4503AA5E1A3BF2CA00F2FB67 /* Player5ViewController_0.m */,
 				45BD0DB81A40150A0087B43F /* Player5ViewController_1.h */,
 				45BD0DB91A40150A0087B43F /* Player5ViewController_1.m */,
+				45D95C801A4283BF002B2DD3 /* VoteResultViewController.h */,
+				45D95C811A4283BF002B2DD3 /* VoteResultViewController.m */,
 			);
 			path = player5;
 			sourceTree = "<group>";
@@ -136,6 +144,8 @@
 				4544C2431A2EFF75001040E9 /* PlayerManager.m */,
 				4510A9C01A2EAD2000063107 /* Player.h */,
 				4510A9C11A2EAD2000063107 /* Player.m */,
+				45D95C7D1A428299002B2DD3 /* VoteManager.h */,
+				45D95C7E1A428299002B2DD3 /* VoteManager.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -302,6 +312,7 @@
 				45D98B8F1A2D6A2B00487E04 /* AppDelegate.m in Sources */,
 				45BD0D9F1A3FC6C40087B43F /* WerewolfViewController.m in Sources */,
 				4503AA5F1A3BF2CA00F2FB67 /* Player5ViewController_0.m in Sources */,
+				45D95C7F1A428299002B2DD3 /* VoteManager.m in Sources */,
 				45BD0D8D1A3FBF070087B43F /* VillagerViewController.m in Sources */,
 				45BD0DC21A40242D0087B43F /* AlermViewController.m in Sources */,
 				4544C2441A2EFF75001040E9 /* PlayerManager.m in Sources */,
@@ -309,6 +320,7 @@
 				4510A9D91A2EBD6100063107 /* GameStartViewController.m in Sources */,
 				45D98B8C1A2D6A2B00487E04 /* main.m in Sources */,
 				4510A9DC1A2EBE7900063107 /* PlayerSettingViewController.m in Sources */,
+				45D95C821A4283BF002B2DD3 /* VoteResultViewController.m in Sources */,
 				45BD0DA61A3FF58B0087B43F /* SeerViewController.m in Sources */,
 				4510A9C21A2EAD2000063107 /* Player.m in Sources */,
 				45BD0DAD1A3FFF830087B43F /* BodyguardViewController.m in Sources */,

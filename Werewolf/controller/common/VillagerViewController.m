@@ -198,28 +198,5 @@
 - (IBAction)okButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
     self.player.voteTo = self.vote;
-    if (self.vote == 1) {
-        [PlayerManager sharedManager].player1.voteCount ++;
-    } else if (self.vote == 2) {
-        [PlayerManager sharedManager].player2.voteCount ++;
-    } else if (self.vote == 3) {
-        [PlayerManager sharedManager].player3.voteCount ++;
-    } else if (self.vote == 4) {
-        [PlayerManager sharedManager].player4.voteCount ++;
-    } else if (self.vote == 5) {
-        [PlayerManager sharedManager].player5.voteCount ++;
-    } else if (self.vote == 6) {
-        [PlayerManager sharedManager].player6.voteCount ++;
-    } else if (self.vote == 7) {
-        [PlayerManager sharedManager].player7.voteCount ++;
-    } else if (self.vote == 8) {
-        [PlayerManager sharedManager].player8.voteCount ++;
-    } else if (self.vote == 9) {
-        [PlayerManager sharedManager].player9.voteCount ++;
-    } else if (self.vote == 10) {
-        [PlayerManager sharedManager].player10.voteCount ++;
-    } else if (self.vote == 11) {
-        [PlayerManager sharedManager].player11.voteCount ++;
-    }
 }
 @end
