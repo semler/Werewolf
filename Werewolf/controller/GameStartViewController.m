@@ -8,6 +8,7 @@
 
 #import "GameStartViewController.h"
 #import "GameStatus.h"
+#import "PlayerManager.h"
 
 @interface GameStartViewController ()
 
@@ -25,6 +26,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    [[PlayerManager sharedManager] reset];
     
     self.playerCount = 5;
     self.playerLabel.text = [NSString stringWithFormat:@"%d", self.playerCount];
@@ -71,7 +74,7 @@
 - (IBAction)startButtonPressed:(id)sender {
     
     [GameStatus sharedManager].playerCount = self.playerCount;
-    
+    [GameStatus sharedManager].alivePlayerCount = self.playerCount;
     [self performSegueWithIdentifier:@"toPlayerSetting" sender:self];
     
 }

@@ -12,7 +12,15 @@
 
 + (VoteManager *)sharedManager;
 
+@property (strong, nonatomic) NSMutableArray *playerArray;
+@property (nonatomic) int toAttack;
+
 - (BOOL) banish;
 - (BOOL) gameOverJudge;
+- (BOOL) see:(int)num;
+- (BOOL) guard:(int)num;
+- (void) attack;
+- (void) reset;
+- (void) resetGuard;
 
 @end

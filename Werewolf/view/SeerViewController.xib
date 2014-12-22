@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6246"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SeerViewController">
@@ -20,6 +20,7 @@
                 <outlet property="player8Button" destination="Bbk-r8-D06" id="fxg-Bp-3gn"/>
                 <outlet property="player9Button" destination="104-cm-ISv" id="Vpz-tR-4Xa"/>
                 <outlet property="playerImage" destination="LaE-XN-9TH" id="Dhj-bq-Kvi"/>
+                <outlet property="seeButton" destination="Qly-AR-OeA" id="Lon-6D-2Ax"/>
                 <outlet property="subView" destination="sPf-Zc-VfH" id="sPq-zy-vd4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -163,6 +164,17 @@
                     </state>
                     <connections>
                         <action selector="okButtonPressed:" destination="-1" eventType="touchUpInside" id="AAR-Bh-e34"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qly-AR-OeA">
+                    <rect key="frame" x="478" y="240" width="80" height="30"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="予言">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="seeButtonPressed:" destination="-1" eventType="touchUpInside" id="lkG-dM-KBq"/>
                     </connections>
                 </button>
             </subviews>

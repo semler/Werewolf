@@ -12,6 +12,7 @@
 @interface GameStatus : NSObject
 
 @property (nonatomic) int playerCount;
+@property (nonatomic) int alivePlayerCount;
 @property (nonatomic) int currentPlayerInt;
 @property (strong, nonatomic) Player *currentPlayer;
 @property (nonatomic) int currentTurn;

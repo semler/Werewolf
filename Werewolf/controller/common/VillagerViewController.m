@@ -63,7 +63,7 @@
             self.commentLabel.text = @"村人です";
             self.subView.hidden = YES;
             self.okButton.enabled = YES;
-        } else {
+        } else if ([GameStatus sharedManager].currentTurn == 1) {
             self.commentLabel.text = @"投票してください";
             self.subView.hidden = NO;
             self.okButton.enabled = NO;
@@ -114,7 +114,11 @@
             [self.player9Button setEnabled:NO];
             [self.player10Button setEnabled:NO];
             [self.player11Button setEnabled:NO];
-        
+            [self setImage];
+        } else if ([GameStatus sharedManager].currentTurn == 2) {
+            self.commentLabel.text = @"村人です";
+            self.subView.hidden = YES;
+            self.okButton.enabled = YES;
         }
     }
 }
@@ -196,7 +200,112 @@
 }
 
 - (IBAction)okButtonPressed:(id)sender {
+    if ([GameStatus sharedManager].currentTurn == 1) {
+        //self.player.voteTo = self.vote;
+        if (self.vote == 1) {
+            [PlayerManager sharedManager].player1.voteCount ++;
+        } else if (self.vote == 2) {
+            [PlayerManager sharedManager].player2.voteCount ++;
+        } else if (self.vote == 3) {
+            [PlayerManager sharedManager].player3.voteCount ++;
+        } else if (self.vote == 4) {
+            [PlayerManager sharedManager].player4.voteCount ++;
+        } else if (self.vote == 5) {
+            [PlayerManager sharedManager].player5.voteCount ++;
+        }
+    }
     [self dismissViewControllerAnimated:YES completion:nil];
-    self.player.voteTo = self.vote;
 }
+
+- (void) setImage {
+    if ([PlayerManager sharedManager].player1.isBanished) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.player1Button.frame];
+        imageView = [self change: imageView];
+        UIImage *image = [UIImage imageNamed:@"iconExpulsion.png"];
+        imageView.image = image;
+        [self.view addSubview:imageView];
+        self.player1Button.enabled = NO;
+    }
+    if ([PlayerManager sharedManager].player2.isBanished) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.player2Button.frame];
+        imageView = [self change: imageView];
+        UIImage *image = [UIImage imageNamed:@"iconExpulsion.png"];
+        imageView.image = image;
+        [self.view addSubview:imageView];
+        self.player2Button.enabled = NO;
+    }
+    if ([PlayerManager sharedManager].player3.isBanished) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.player3Button.frame];
+        imageView = [self change: imageView];
+        UIImage *image = [UIImage imageNamed:@"iconExpulsion.png"];
+        imageView.image = image;
+        [self.view addSubview:imageView];
+        self.player3Button.enabled = NO;
+    }
+    if ([PlayerManager sharedManager].player4.isBanished) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.player4Button.frame];
+        imageView = [self change: imageView];
+        UIImage *image = [UIImage imageNamed:@"iconExpulsion.png"];
+        imageView.image = image;
+        [self.view addSubview:imageView];
+        self.player4Button.enabled = NO;
+    }
+    if ([PlayerManager sharedManager].player5.isBanished) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.player5Button.frame];
+        imageView = [self change: imageView];
+        UIImage *image = [UIImage imageNamed:@"iconExpulsion.png"];
+        imageView.image = image;
+        [self.view addSubview:imageView];
+        self.player5Button.enabled = NO;
+    }
+    
+    if ([PlayerManager sharedManager].player1.isAttacked) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.player1Button.frame];
+        imageView = [self change: imageView];
+        UIImage *image = [UIImage imageNamed:@"iconKilled.png"];
+        imageView.image = image;
+        [self.view addSubview:imageView];
+        self.player1Button.enabled = NO;
+    }
+    if ([PlayerManager sharedManager].player2.isAttacked) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.player2Button.frame];
+        imageView = [self change: imageView];
+        UIImage *image = [UIImage imageNamed:@"iconKilled.png"];
+        imageView.image = image;
+        [self.view addSubview:imageView];
+        self.player2Button.enabled = NO;
+    }
+    if ([PlayerManager sharedManager].player3.isAttacked) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.player3Button.frame];
+        imageView = [self change: imageView];
+        UIImage *image = [UIImage imageNamed:@"iconKilled.png"];
+        imageView.image = image;
+        [self.view addSubview:imageView];
+        self.player3Button.enabled = NO;
+    } else if ([PlayerManager sharedManager].player4.isAttacked) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.player4Button.frame];
+        imageView = [self change: imageView];
+        UIImage *image = [UIImage imageNamed:@"iconKilled.png"];
+        imageView.image = image;
+        [self.view addSubview:imageView];
+        self.player4Button.enabled = NO;
+    }
+    if ([PlayerManager sharedManager].player5.isAttacked) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.player5Button.frame];
+        imageView = [self change: imageView];
+        UIImage *image = [UIImage imageNamed:@"iconKilled.png"];
+        imageView.image = image;
+        [self.view addSubview:imageView];
+        self.player5Button.enabled = NO;
+    }
+}
+
+- (UIImageView *) change: (UIImageView *)imageView {
+    CGRect frame = imageView.frame;
+    frame.origin.x += 10;
+    frame.origin.y += 120;
+    imageView.frame = frame;
+    return imageView;
+}
+
 @end

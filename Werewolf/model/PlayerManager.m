@@ -111,8 +111,40 @@ static PlayerManager *playerManager = nil;
     }
 }
 
-
-
-
+- (void) reset {
+    self.player1.voteCount = 0;
+    self.player2.voteCount = 0;
+    self.player3.voteCount = 0;
+    self.player4.voteCount = 0;
+    self.player5.voteCount = 0;
+    self.player6.voteCount = 0;
+    self.player7.voteCount = 0;
+    self.player8.voteCount = 0;
+    self.player9.voteCount = 0;
+    self.player10.voteCount = 0;
+    self.player11.voteCount = 0;
+    self.player1.isAttacked = NO;
+    self.player2.isAttacked = NO;
+    self.player3.isAttacked = NO;
+    self.player4.isAttacked = NO;
+    self.player5.isAttacked = NO;
+    self.player6.isAttacked = NO;
+    self.player7.isAttacked = NO;
+    self.player8.isAttacked = NO;
+    self.player9.isAttacked = NO;
+    self.player10.isAttacked = NO;
+    self.player11.isAttacked = NO;
+    self.player1.isBanished = NO;
+    self.player2.isBanished = NO;
+    self.player3.isBanished = NO;
+    self.player4.isBanished = NO;
+    self.player5.isBanished = NO;
+    self.player6.isBanished = NO;
+    self.player7.isBanished = NO;
+    self.player8.isBanished = NO;
+    self.player9.isBanished = NO;
+    self.player10.isBanished = NO;
+    self.player11.isBanished = NO;
+}
 
 @end

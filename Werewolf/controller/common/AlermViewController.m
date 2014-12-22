@@ -55,6 +55,7 @@
 }
 
 - (IBAction)endButtonPressed:(id)sender {
+    [self.player stop];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

@@ -29,4 +29,6 @@
 
 - (void) gacha;
 
+- (void) reset;
+
 @end

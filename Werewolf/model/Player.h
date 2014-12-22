@@ -20,14 +20,16 @@
 // player番号
 @property (nonatomic) int playerNum;
 // 投票
-@property (nonatomic) int voteTo;
+//@property (nonatomic) int voteTo;
 // 票数
 @property (nonatomic) int voteCount;
 // 追放
 @property (nonatomic) BOOL isBanished;
 // 襲撃
 @property (nonatomic) BOOL isAttacked;
-
+// 守られる
+@property (nonatomic) BOOL isGuarded;
+@property (nonatomic) BOOL isGuardedLast;
 
 @end
 

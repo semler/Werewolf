@@ -9,6 +9,7 @@
 #import "BodyguardViewController.h"
 #import "GameStatus.h"
 #import "PlayerManager.h"
+#import "VoteManager.h"
 
 @interface BodyguardViewController ()
 
@@ -31,6 +32,7 @@
 
 @property (weak, nonatomic) Player *player;
 @property (nonatomic) int vote;
+@property (nonatomic) int guard;
 
 - (IBAction)player1ButtonPressed:(id)sender;
 - (IBAction)player2ButtonPressed:(id)sender;
@@ -62,7 +64,7 @@
             self.commentLabel.text = @"ボディガードです";
             self.subView.hidden = YES;
             self.okButton.enabled = YES;
-        } else {
+        } else if ([GameStatus sharedManager].currentTurn == 1) {
             self.commentLabel.text = @"投票してください";
             self.subView.hidden = NO;
             self.okButton.enabled = NO;
@@ -113,7 +115,59 @@
             [self.player9Button setEnabled:NO];
             [self.player10Button setEnabled:NO];
             [self.player11Button setEnabled:NO];
-            
+            [self setImage];
+        } else if ([GameStatus sharedManager].currentTurn == 2) {
+            self.commentLabel.text = @"守りたいプレイヤーを選んでください";
+            self.subView.hidden = NO;
+            self.okButton.enabled = NO;
+            [self.player1Button setImage:[PlayerManager sharedManager].player1.image forState:UIControlStateNormal];
+            [self.player2Button setImage:[PlayerManager sharedManager].player2.image forState:UIControlStateNormal];
+            [self.player3Button setImage:[PlayerManager sharedManager].player3.image forState:UIControlStateNormal];
+            [self.player4Button setImage:[PlayerManager sharedManager].player4.image forState:UIControlStateNormal];
+            [self.player5Button setImage:[PlayerManager sharedManager].player5.image forState:UIControlStateNormal];
+            if (self.player.playerNum != [PlayerManager sharedManager].player1.playerNum) {
+                [self.player1Button setEnabled:YES];
+            } else {
+                [self.player1Button setEnabled:NO];
+                self.player1Button.alpha = 0.5;
+            }
+            if (self.player.playerNum != [PlayerManager sharedManager].player2.playerNum) {
+                [self.player2Button setEnabled:YES];
+            } else {
+                [self.player2Button setEnabled:NO];
+                self.player2Button.alpha = 0.5;
+            }
+            if (self.player.playerNum != [PlayerManager sharedManager].player3.playerNum) {
+                [self.player3Button setEnabled:YES];
+            } else {
+                [self.player3Button setEnabled:NO];
+                self.player3Button.alpha = 0.5;
+            }
+            if (self.player.playerNum != [PlayerManager sharedManager].player4.playerNum) {
+                [self.player4Button setEnabled:YES];
+            } else {
+                [self.player4Button setEnabled:NO];
+                self.player4Button.alpha = 0.5;
+            }
+            if (self.player.playerNum != [PlayerManager sharedManager].player5.playerNum) {
+                [self.player5Button setEnabled:YES];
+            } else {
+                [self.player5Button setEnabled:NO];
+                self.player5Button.alpha = 0.5;
+            }
+            self.player6Button.alpha = 0.5;
+            self.player7Button.alpha = 0.5;
+            self.player8Button.alpha = 0.5;
+            self.player9Button.alpha = 0.5;
+            self.player10Button.alpha = 0.5;
+            self.player11Button.alpha = 0.5;
+            [self.player6Button setEnabled:NO];
+            [self.player7Button setEnabled:NO];
+            [self.player8Button setEnabled:NO];
+            [self.player9Button setEnabled:NO];
+            [self.player10Button setEnabled:NO];
+            [self.player11Button setEnabled:NO];
+            [self setImage];
         }
     }
 }
@@ -129,33 +183,63 @@
 }
 
 - (IBAction)player1ButtonPressed:(id)sender {
-    self.commentLabel.text = [NSString stringWithFormat:@"Player1に投票"];
-    self.okButton.enabled = YES;
-    self.vote = 1;
+    if ([GameStatus sharedManager].currentTurn == 1) {
+        self.commentLabel.text = [NSString stringWithFormat:@"Player1に投票"];
+        self.okButton.enabled = YES;
+        self.vote = 1;
+    } else if ([GameStatus sharedManager].currentTurn == 2){
+        self.commentLabel.text = [NSString stringWithFormat:@"Player1を守る"];
+        self.okButton.enabled = YES;
+        self.guard = 1;
+    }
 }
 
 - (IBAction)player2ButtonPressed:(id)sender {
-    self.commentLabel.text = [NSString stringWithFormat:@"Player2に投票"];
-    self.okButton.enabled = YES;
-    self.vote = 2;
+    if ([GameStatus sharedManager].currentTurn == 1) {
+        self.commentLabel.text = [NSString stringWithFormat:@"Player2に投票"];
+        self.okButton.enabled = YES;
+        self.vote = 2;
+    } else if ([GameStatus sharedManager].currentTurn == 2){
+        self.commentLabel.text = [NSString stringWithFormat:@"Player2を守る"];
+        self.okButton.enabled = YES;
+        self.guard = 2;
+    }
 }
 
 - (IBAction)player3ButtonPressed:(id)sender {
-    self.commentLabel.text = [NSString stringWithFormat:@"Player3に投票"];
-    self.okButton.enabled = YES;
-    self.vote = 3;
+    if ([GameStatus sharedManager].currentTurn == 1) {
+        self.commentLabel.text = [NSString stringWithFormat:@"Player3に投票"];
+        self.okButton.enabled = YES;
+        self.vote = 3;
+    } else if ([GameStatus sharedManager].currentTurn == 2){
+        self.commentLabel.text = [NSString stringWithFormat:@"Player3を守る"];
+        self.okButton.enabled = YES;
+        self.guard = 3;
+    }
 }
 
 - (IBAction)player4ButtonPressed:(id)sender {
-    self.commentLabel.text = [NSString stringWithFormat:@"Player4に投票"];
-    self.okButton.enabled = YES;
-    self.vote = 4;
+    if ([GameStatus sharedManager].currentTurn == 1) {
+        self.commentLabel.text = [NSString stringWithFormat:@"Player4に投票"];
+        self.okButton.enabled = YES;
+        self.vote = 4;
+    } else if ([GameStatus sharedManager].currentTurn == 2){
+        self.commentLabel.text = [NSString stringWithFormat:@"Player4を守る"];
+        self.okButton.enabled = YES;
+        self.guard = 4;
+    }
 }
 
 - (IBAction)player5ButtonPressed:(id)sender {
-    self.commentLabel.text = [NSString stringWithFormat:@"Player5に投票"];
-    self.okButton.enabled = YES;
-    self.vote = 5;
+    if ([GameStatus sharedManager].currentTurn == 1) {
+        self.commentLabel.text = [NSString stringWithFormat:@"Player5に投票"];
+        self.okButton.enabled = YES;
+        self.vote = 5;
+    } else if ([GameStatus sharedManager].currentTurn == 2){
+        self.commentLabel.text = [NSString stringWithFormat:@"Player5を守る"];
+        self.okButton.enabled = YES;
+        self.guard = 5;
+    }
 }
 
 - (IBAction)player6ButtonPressed:(id)sender {
@@ -195,8 +279,117 @@
 }
 
 - (IBAction)okButtonPressed:(id)sender {
-    self.player.voteTo = self.vote;
+    if ([GameStatus sharedManager].currentTurn == 1) {
+        //self.player.voteTo = self.vote;
+        if (self.vote == 1) {
+            [PlayerManager sharedManager].player1.voteCount ++;
+        } else if (self.vote == 2) {
+            [PlayerManager sharedManager].player2.voteCount ++;
+        } else if (self.vote == 3) {
+            [PlayerManager sharedManager].player3.voteCount ++;
+        } else if (self.vote == 4) {
+            [PlayerManager sharedManager].player4.voteCount ++;
+        } else if (self.vote == 5) {
+            [PlayerManager sharedManager].player5.voteCount ++;
+        }
+    } else if ([GameStatus sharedManager].currentTurn == 2) {
+        [[VoteManager sharedManager] resetGuard];
+        if (![[VoteManager sharedManager] guard:self.guard]) {
+            self.commentLabel.text = @"他のプレイヤーを選んでください！";
+            return;
+        }
+    }
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void) setImage {
+    if ([PlayerManager sharedManager].player1.isBanished) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.player1Button.frame];
+        imageView = [self change: imageView];
+        UIImage *image = [UIImage imageNamed:@"iconExpulsion.png"];
+        imageView.image = image;
+        [self.view addSubview:imageView];
+        self.player1Button.enabled = NO;
+    }
+    if ([PlayerManager sharedManager].player2.isBanished) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.player2Button.frame];
+        imageView = [self change: imageView];
+        UIImage *image = [UIImage imageNamed:@"iconExpulsion.png"];
+        imageView.image = image;
+        [self.view addSubview:imageView];
+        self.player2Button.enabled = NO;
+    }
+    if ([PlayerManager sharedManager].player3.isBanished) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.player3Button.frame];
+        imageView = [self change: imageView];
+        UIImage *image = [UIImage imageNamed:@"iconExpulsion.png"];
+        imageView.image = image;
+        [self.view addSubview:imageView];
+        self.player3Button.enabled = NO;
+    }
+    if ([PlayerManager sharedManager].player4.isBanished) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.player4Button.frame];
+        imageView = [self change: imageView];
+        UIImage *image = [UIImage imageNamed:@"iconExpulsion.png"];
+        imageView.image = image;
+        [self.view addSubview:imageView];
+        self.player4Button.enabled = NO;
+    }
+    if ([PlayerManager sharedManager].player5.isBanished) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.player5Button.frame];
+        imageView = [self change: imageView];
+        UIImage *image = [UIImage imageNamed:@"iconExpulsion.png"];
+        imageView.image = image;
+        [self.view addSubview:imageView];
+        self.player5Button.enabled = NO;
+    }
+    
+    if ([PlayerManager sharedManager].player1.isAttacked) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.player1Button.frame];
+        imageView = [self change: imageView];
+        UIImage *image = [UIImage imageNamed:@"iconKilled.png"];
+        imageView.image = image;
+        [self.view addSubview:imageView];
+        self.player1Button.enabled = NO;
+    }
+    if ([PlayerManager sharedManager].player2.isAttacked) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.player2Button.frame];
+        imageView = [self change: imageView];
+        UIImage *image = [UIImage imageNamed:@"iconKilled.png"];
+        imageView.image = image;
+        [self.view addSubview:imageView];
+        self.player2Button.enabled = NO;
+    }
+    if ([PlayerManager sharedManager].player3.isAttacked) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.player3Button.frame];
+        imageView = [self change: imageView];
+        UIImage *image = [UIImage imageNamed:@"iconKilled.png"];
+        imageView.image = image;
+        [self.view addSubview:imageView];
+        self.player3Button.enabled = NO;
+    } else if ([PlayerManager sharedManager].player4.isAttacked) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.player4Button.frame];
+        imageView = [self change: imageView];
+        UIImage *image = [UIImage imageNamed:@"iconKilled.png"];
+        imageView.image = image;
+        [self.view addSubview:imageView];
+        self.player4Button.enabled = NO;
+    }
+    if ([PlayerManager sharedManager].player5.isAttacked) {
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.player5Button.frame];
+        imageView = [self change: imageView];
+        UIImage *image = [UIImage imageNamed:@"iconKilled.png"];
+        imageView.image = image;
+        [self.view addSubview:imageView];
+        self.player5Button.enabled = NO;
+    }
+}
+
+- (UIImageView *) change: (UIImageView *)imageView {
+    CGRect frame = imageView.frame;
+    frame.origin.x += 10;
+    frame.origin.y += 120;
+    imageView.frame = frame;
+    return imageView;
+}
 @end
