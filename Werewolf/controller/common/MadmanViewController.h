@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface MadmanViewController : UIViewController
+@interface MadmanViewController : BaseViewController
 
 @end

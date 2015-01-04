@@ -219,6 +219,7 @@
         
     }
     
+    //[[PlayerManager sharedManager].playerList addObject: [PlayerManager sharedManager].player1];
 }
 
 - (void)viewDidLoad {

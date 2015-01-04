@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface VillagerViewController : UIViewController
+@interface VillagerViewController : BaseViewController
 
 @end

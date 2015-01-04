@@ -1,27 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6246"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WerewolfViewController">
             <connections>
-                <outlet property="comentLabel" destination="fUC-zB-IHH" id="ovP-Zb-fuW"/>
-                <outlet property="okButton" destination="vLr-LB-H43" id="Ewi-Ph-ORI"/>
-                <outlet property="player10Button" destination="Zqf-0g-qOF" id="fbx-yb-8yg"/>
-                <outlet property="player11Button" destination="Fm1-w7-SHk" id="pJk-u8-MhL"/>
-                <outlet property="player1Button" destination="xhd-t8-YlD" id="URO-pa-zcm"/>
-                <outlet property="player2Button" destination="8DX-vy-gQ5" id="dVo-m7-4q2"/>
-                <outlet property="player3Button" destination="4Y8-ll-Vdt" id="qD5-RK-Mzp"/>
-                <outlet property="player4Button" destination="poh-yf-t88" id="ijm-tW-waK"/>
-                <outlet property="player5Button" destination="VwO-bn-eN6" id="SBL-pj-d7u"/>
-                <outlet property="player6Button" destination="EYh-8e-R8G" id="vQU-16-7Xi"/>
-                <outlet property="player7Button" destination="YMw-p5-Gte" id="Kug-ez-l4e"/>
-                <outlet property="player8Button" destination="MSh-m4-dpx" id="KQE-PS-MAt"/>
-                <outlet property="player9Button" destination="agg-ks-zas" id="CQR-lq-BXx"/>
-                <outlet property="playerImage" destination="3ea-gG-IjJ" id="Ush-tQ-FIN"/>
-                <outlet property="subView" destination="ucR-md-OQQ" id="iZR-it-11H"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="commentLabel" destination="fUC-zB-IHH" id="T8d-Yn-eyb"/>
+                <outlet property="playerImageView" destination="3ea-gG-IjJ" id="XNk-Q3-kac"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="CqS-tN-q6R"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -59,7 +46,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="player1ButtonPressed:" destination="-1" eventType="touchUpInside" id="i25-DT-31g"/>
+                                <action selector="playerButtonsPressed:" destination="-1" eventType="touchUpInside" id="sY8-TF-450"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSh-m4-dpx">
@@ -68,7 +55,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="player8ButtonPressed:" destination="-1" eventType="touchUpInside" id="9IT-qz-AYX"/>
+                                <action selector="playerButtonsPressed:" destination="-1" eventType="touchUpInside" id="8lS-x3-MCl"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agg-ks-zas">
@@ -77,7 +64,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="player9ButtonPressed:" destination="-1" eventType="touchUpInside" id="syt-2f-wc9"/>
+                                <action selector="playerButtonsPressed:" destination="-1" eventType="touchUpInside" id="F1H-yK-Z7S"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fm1-w7-SHk">
@@ -86,7 +73,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="player11ButtonPressed:" destination="-1" eventType="touchUpInside" id="bxA-HO-FEF"/>
+                                <action selector="playerButtonsPressed:" destination="-1" eventType="touchUpInside" id="3NA-04-Z6A"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwO-bn-eN6">
@@ -95,7 +82,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="player5ButtonPressed:" destination="-1" eventType="touchUpInside" id="qTn-OI-lqp"/>
+                                <action selector="playerButtonsPressed:" destination="-1" eventType="touchUpInside" id="cYC-dS-qNW"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poh-yf-t88">
@@ -104,7 +91,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="player4ButtonPressed:" destination="-1" eventType="touchUpInside" id="KA6-Mf-627"/>
+                                <action selector="playerButtonsPressed:" destination="-1" eventType="touchUpInside" id="yAx-we-6e3"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Y8-ll-Vdt">
@@ -113,7 +100,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="player3ButtonPressed:" destination="-1" eventType="touchUpInside" id="EXZ-Pk-pgN"/>
+                                <action selector="playerButtonsPressed:" destination="-1" eventType="touchUpInside" id="smQ-kp-1qw"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8DX-vy-gQ5">
@@ -122,7 +109,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="player2ButtonPressed:" destination="-1" eventType="touchUpInside" id="Nun-Ht-J8g"/>
+                                <action selector="playerButtonsPressed:" destination="-1" eventType="touchUpInside" id="ibK-MH-wcN"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMw-p5-Gte">
@@ -131,7 +118,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="player7ButtonPressed:" destination="-1" eventType="touchUpInside" id="TcT-h3-nXu"/>
+                                <action selector="playerButtonsPressed:" destination="-1" eventType="touchUpInside" id="gWQ-cG-k4e"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYh-8e-R8G">
@@ -140,7 +127,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="player6ButtonPressed:" destination="-1" eventType="touchUpInside" id="Fuf-9B-5pG"/>
+                                <action selector="playerButtonsPressed:" destination="-1" eventType="touchUpInside" id="Ykh-NV-uoE"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zqf-0g-qOF">
@@ -149,7 +136,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="player10ButtonPressed:" destination="-1" eventType="touchUpInside" id="E8P-Ag-MsQ"/>
+                                <action selector="playerButtonsPressed:" destination="-1" eventType="touchUpInside" id="0aN-xD-jHt"/>
                             </connections>
                         </button>
                     </subviews>
@@ -162,7 +149,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="okButtonPressed:" destination="-1" eventType="touchUpInside" id="pQA-Cp-Xgn"/>
+                        <action selector="okButtonPressed:" destination="-1" eventType="touchUpInside" id="nfD-9t-3df"/>
                     </connections>
                 </button>
             </subviews>

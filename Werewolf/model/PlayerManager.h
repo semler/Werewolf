@@ -24,6 +24,7 @@
 @property (strong, nonatomic) Player *player11;
 
 @property (strong, nonatomic) NSMutableArray *position;
+@property (strong, nonatomic) NSMutableArray *playerList;
 
 + (PlayerManager *)sharedManager;
 

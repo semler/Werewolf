@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface BodyguardViewController : UIViewController
+@interface BodyguardViewController : BaseViewController
 
 @end

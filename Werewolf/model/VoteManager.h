@@ -13,7 +13,7 @@
 + (VoteManager *)sharedManager;
 
 @property (strong, nonatomic) NSMutableArray *playerArray;
-@property (nonatomic) int toAttack;
+@property (nonatomic) long toAttack;
 
 - (BOOL) banish;
 - (BOOL) gameOverJudge;

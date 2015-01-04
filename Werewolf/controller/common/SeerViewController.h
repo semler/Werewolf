@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface SeerViewController : UIViewController
+@interface SeerViewController : BaseViewController
 
 @end

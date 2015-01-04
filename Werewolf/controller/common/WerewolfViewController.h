@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface WerewolfViewController : UIViewController
+@interface WerewolfViewController : BaseViewController
 
 @end
