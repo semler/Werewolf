@@ -17,8 +17,7 @@
 
 - (BOOL) banish;
 - (BOOL) gameOverJudge;
-- (BOOL) see:(int)num;
-- (BOOL) guard:(int)num;
+- (BOOL) guard:(long)num;
 - (void) attack;
 - (void) reset;
 - (void) resetGuard;

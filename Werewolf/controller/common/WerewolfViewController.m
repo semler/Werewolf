@@ -46,11 +46,11 @@
     UIButton *button = (UIButton *)sender;
     
     if ([GameStatus sharedManager].currentTurn == 1) {
-        self.commentLabel.text = [NSString stringWithFormat:@"Player1に投票"];
+        self.commentLabel.text = [NSString stringWithFormat:@"Player%ldに投票", button.tag + 1];
         self.okButton.enabled = YES;
         self.vote = 1;
     } else if ([GameStatus sharedManager].currentTurn == 2) {
-        self.commentLabel.text = [NSString stringWithFormat:@"Player1を襲撃"];
+        self.commentLabel.text = [NSString stringWithFormat:@"Player%ldを襲撃", button.tag + 1];
         self.okButton.enabled = YES;
         self.attack = button.tag;
     }

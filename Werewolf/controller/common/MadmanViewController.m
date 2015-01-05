@@ -47,7 +47,7 @@
     UIButton *button = (UIButton *)sender;
     
     if ([GameStatus sharedManager].currentTurn == 1) {
-        self.commentLabel.text = [NSString stringWithFormat:@"Player1に投票"];
+        self.commentLabel.text = [NSString stringWithFormat:@"Player%ldに投票", button.tag + 1];
         self.okButton.enabled = YES;
         self.vote = button.tag;
     }

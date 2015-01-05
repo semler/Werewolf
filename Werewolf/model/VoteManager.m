@@ -155,16 +155,7 @@ static VoteManager *voteManager = nil;
     return NO;
 }
 
-- (BOOL) see:(int)num {
-    Player *player = [self.array objectAtIndex:num];
-    if (player.position == 1) {
-        return YES;
-    } else {
-        return NO;
-    }
-}
-
-- (BOOL) guard:(int)num {
+- (BOOL) guard:(long)num {
     Player *player;
     if (num == 1) {
         player = [PlayerManager sharedManager].player1;
