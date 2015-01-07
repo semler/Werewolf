@@ -67,28 +67,18 @@
         
         if (player.isBanished) {
             imageView = [[UIImageView alloc] initWithFrame:button.frame];
-            imageView = [self resetFrame: imageView];
             image = [UIImage imageNamed:@"iconExpulsion.png"];
             imageView.image = image;
-            [self.view addSubview:imageView];
+            [self.subView addSubview:imageView];
             button.enabled = NO;
         } else if (player.isAttacked) {
             imageView = [[UIImageView alloc] initWithFrame:button.frame];
-            imageView = [self resetFrame: imageView];
             image = [UIImage imageNamed:@"iconKilled.png"];
             imageView.image = image;
-            [self.view addSubview:imageView];
+            [self.subView addSubview:imageView];
             button.enabled = NO;
         }
     }
-}
-
-- (UIImageView *) resetFrame: (UIImageView *)imageView {
-    CGRect frame = imageView.frame;
-    frame.origin.x += 10;
-    frame.origin.y += 120;
-    imageView.frame = frame;
-    return imageView;
 }
 
 @end

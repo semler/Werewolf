@@ -46,12 +46,12 @@
         
         UIImageView *imageView;
         if (player.isBanished) {
-            imageView = [[UIImageView alloc] initWithFrame:imageView.frame];
+            imageView = [[UIImageView alloc] initWithFrame:button.frame];
             UIImage *image = [UIImage imageNamed:@"iconExpulsion.png"];
             imageView.image = image;
             [self.view addSubview:imageView];
         } else if (player.isAttacked) {
-            imageView = [[UIImageView alloc] initWithFrame:imageView.frame];
+            imageView = [[UIImageView alloc] initWithFrame:button.frame];
             UIImage *image = [UIImage imageNamed:@"iconKilled.png"];
             imageView.image = image;
             [self.view addSubview:imageView];

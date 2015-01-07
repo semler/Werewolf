@@ -48,7 +48,7 @@
     if ([GameStatus sharedManager].currentTurn == 1) {
         self.commentLabel.text = [NSString stringWithFormat:@"Player%ldに投票", button.tag + 1];
         self.okButton.enabled = YES;
-        self.vote = 1;
+        self.vote = button.tag;
     } else if ([GameStatus sharedManager].currentTurn == 2) {
         self.commentLabel.text = [NSString stringWithFormat:@"Player%ldを襲撃", button.tag + 1];
         self.okButton.enabled = YES;

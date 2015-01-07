@@ -27,8 +27,8 @@
     } else if ([GameStatus sharedManager].currentTurn == 1) {
     } else if ([GameStatus sharedManager].currentTurn == 2) {
         self.commentLabel.text = @"ボディガードです!";
-        self.subView.hidden = YES;
-        self.okButton.enabled = YES;
+        self.subView.hidden = NO;
+        self.okButton.enabled = NO;
     }
 }
 

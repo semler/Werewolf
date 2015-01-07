@@ -38,7 +38,7 @@
             imageView2.image = image;
             [self.view addSubview:imageView2];
         } else if (player.isAttacked) {
-            imageView2 = [[UIImageView alloc] initWithFrame:imageView2.frame];
+            imageView2 = [[UIImageView alloc] initWithFrame:imageView.frame];
             UIImage *image = [UIImage imageNamed:@"iconKilled.png"];
             imageView2.image = image;
             [self.view addSubview:imageView2];
