@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Player5ViewController_1 : UIViewController
+@interface DayViewController : UIViewController
 
 @end

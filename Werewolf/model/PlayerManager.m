@@ -89,11 +89,11 @@ static PlayerManager *playerManager = nil;
         }
     }
     
-    [PlayerManager sharedManager].player1.position = [self.position[0] intValue];
-    [PlayerManager sharedManager].player2.position = [self.position[1] intValue];
-    [PlayerManager sharedManager].player3.position = [self.position[2] intValue];
-    [PlayerManager sharedManager].player4.position = [self.position[3] intValue];
-    [PlayerManager sharedManager].player5.position = [self.position[4] intValue];
+    Player *player;
+    for (int i = 0; i < [GameStatus sharedManager].playerCount; i ++) {
+        player = [self.playerList objectAtIndex:i];
+        player.position = [self.position[i] intValue];
+    }
 }
 
 - (void) random:(NSMutableArray*) array subArray:(NSMutableArray*) subArray {
@@ -112,39 +112,17 @@ static PlayerManager *playerManager = nil;
 }
 
 - (void) reset {
-    self.player1.voteCount = 0;
-    self.player2.voteCount = 0;
-    self.player3.voteCount = 0;
-    self.player4.voteCount = 0;
-    self.player5.voteCount = 0;
-    self.player6.voteCount = 0;
-    self.player7.voteCount = 0;
-    self.player8.voteCount = 0;
-    self.player9.voteCount = 0;
-    self.player10.voteCount = 0;
-    self.player11.voteCount = 0;
-    self.player1.isAttacked = NO;
-    self.player2.isAttacked = NO;
-    self.player3.isAttacked = NO;
-    self.player4.isAttacked = NO;
-    self.player5.isAttacked = NO;
-    self.player6.isAttacked = NO;
-    self.player7.isAttacked = NO;
-    self.player8.isAttacked = NO;
-    self.player9.isAttacked = NO;
-    self.player10.isAttacked = NO;
-    self.player11.isAttacked = NO;
-    self.player1.isBanished = NO;
-    self.player2.isBanished = NO;
-    self.player3.isBanished = NO;
-    self.player4.isBanished = NO;
-    self.player5.isBanished = NO;
-    self.player6.isBanished = NO;
-    self.player7.isBanished = NO;
-    self.player8.isBanished = NO;
-    self.player9.isBanished = NO;
-    self.player10.isBanished = NO;
-    self.player11.isBanished = NO;
+    for (Player *player in self.playerList) {
+        player.voteCount = 0;
+        player.isBanished = NO;
+        player.isAttacked = NO;
+    }
+}
+
+- (void) resetVote {
+    for (Player *player in self.playerList) {
+        player.voteCount = 0;
+    }
 }
 
 @end

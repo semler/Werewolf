@@ -18,9 +18,7 @@
 @property (nonatomic) int position;
 
 // player番号
-@property (nonatomic) int playerNum;
-// 投票
-//@property (nonatomic) int voteTo;
+@property (nonatomic) long playerNum;
 // 票数
 @property (nonatomic) int voteCount;
 // 追放

@@ -49,7 +49,7 @@
         player = [[PlayerManager sharedManager].playerList objectAtIndex:button.tag];
         [button setImage:player.image forState:UIControlStateNormal];
         
-        if (player != nil && player.playerNum != self.player.playerNum) {
+        if (player != nil && player.playerNum != self.player.playerNum && player.playerNum < [GameStatus sharedManager].playerCount) {
             [button setEnabled:YES];
         } else {
             [button setEnabled:NO];

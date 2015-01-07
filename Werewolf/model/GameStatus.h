@@ -13,7 +13,7 @@
 
 @property (nonatomic) int playerCount;
 @property (nonatomic) int alivePlayerCount;
-@property (nonatomic) int currentPlayerInt;
+@property (nonatomic) long currentPlayerInt;
 @property (strong, nonatomic) Player *currentPlayer;
 @property (nonatomic) int currentTurn;
 
@@ -24,9 +24,8 @@
 @property (nonatomic) int madmanCount;
 @property (nonatomic) int mediumCount;
 
-
-
-
 + (GameStatus *)sharedManager;
+
+- (BOOL) gameOverJudge;
 
 @end

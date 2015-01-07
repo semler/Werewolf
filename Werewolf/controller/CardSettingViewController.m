@@ -18,18 +18,29 @@
 @property (nonatomic) int bodyguardCount;
 @property (nonatomic) int madmanCount;
 @property (nonatomic) int mediumCount;
+
 @property (weak, nonatomic) IBOutlet UILabel *villageLabal;
 @property (weak, nonatomic) IBOutlet UILabel *werewolfLabal;
 @property (weak, nonatomic) IBOutlet UILabel *seerLabal;
 @property (weak, nonatomic) IBOutlet UILabel *bodyguardLabal;
 @property (weak, nonatomic) IBOutlet UILabel *madmanLabal;
 @property (weak, nonatomic) IBOutlet UILabel *mediumLabal;
+@property (weak, nonatomic) IBOutlet UIButton *minusWerewolfButton;
+@property (weak, nonatomic) IBOutlet UIButton *plusWerewolfButton;
+@property (weak, nonatomic) IBOutlet UIButton *minusSeerButton;
+@property (weak, nonatomic) IBOutlet UIButton *plusSeerButton;
+@property (weak, nonatomic) IBOutlet UIButton *minusBodyguardButton;
+@property (weak, nonatomic) IBOutlet UIButton *plusBodyguardButton;
+@property (weak, nonatomic) IBOutlet UIButton *minusMadmanButton;
+@property (weak, nonatomic) IBOutlet UIButton *plusMadmanButton;
+@property (weak, nonatomic) IBOutlet UIButton *minusMediumButton;
+@property (weak, nonatomic) IBOutlet UIButton *plusMediumButton;
 
 - (IBAction)minusWerewolfButtonPressed:(id)sender;
 - (IBAction)plusWerewolfButtonPressed:(id)sender;
 - (IBAction)minusSeerButtonPressed:(id)sender;
 - (IBAction)plusSeerButtonPressed:(id)sender;
-- (IBAction)minusbodyguardButtonPressed:(id)sender;
+- (IBAction)minusBodyguardButtonPressed:(id)sender;
 - (IBAction)plusBodyguardButtonPressed:(id)sender;
 - (IBAction)minusMadmanButtonPressed:(id)sender;
 - (IBAction)plusMadmanButtonPressed:(id)sender;
@@ -80,6 +91,40 @@
     self.bodyguardLabal.text = [NSString stringWithFormat:@"%d", self.bodyguardCount];
     self.madmanLabal.text = [NSString stringWithFormat:@"%d", self.madmanCount];
     self.mediumLabal.text = [NSString stringWithFormat:@"%d", self.mediumCount];
+    
+    if ([GameStatus sharedManager].playerCount == 5) {
+        self.minusWerewolfButton.enabled = NO;
+        self.plusWerewolfButton.enabled = NO;
+        if (self.seerCount == 0) {
+            self.minusSeerButton.enabled = NO;
+            self.plusSeerButton.enabled = YES;
+        } else if (self.seerCount == 1) {
+            self.minusSeerButton.enabled = YES;
+            self.plusSeerButton.enabled = NO;
+        }
+        if (self.bodyguardCount == 0) {
+            self.minusBodyguardButton.enabled = NO;
+            self.plusBodyguardButton.enabled = YES;
+        } else if (self.bodyguardCount == 1) {
+            self.minusBodyguardButton.enabled = YES;
+            self.plusBodyguardButton.enabled = NO;
+        }
+        if (self.madmanCount == 0) {
+            self.minusMadmanButton.enabled = NO;
+            self.plusMadmanButton.enabled = YES;
+        } else if (self.madmanCount == 1) {
+            self.minusMadmanButton.enabled = YES;
+            self.plusMadmanButton.enabled = NO;
+        }
+        self.minusMediumButton.enabled = NO;
+        self.plusMediumButton.enabled = NO;
+    } else if ([GameStatus sharedManager].playerCount == 6) {
+    } else if ([GameStatus sharedManager].playerCount == 7) {
+    } else if ([GameStatus sharedManager].playerCount == 8) {
+    } else if ([GameStatus sharedManager].playerCount == 9) {
+    } else if ([GameStatus sharedManager].playerCount == 10) {
+    } else if ([GameStatus sharedManager].playerCount == 11) {
+    }
 }
 
 - (IBAction)minusWerewolfButtonPressed:(id)sender {
@@ -144,7 +189,7 @@
     [self updateLabel];
 }
 
-- (IBAction)minusbodyguardButtonPressed:(id)sender {
+- (IBAction)minusBodyguardButtonPressed:(id)sender {
     if ([GameStatus sharedManager].playerCount == 5) {
         if (self.bodyguardCount > 0) {
             self.bodyguardCount --;

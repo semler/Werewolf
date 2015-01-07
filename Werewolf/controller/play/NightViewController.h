@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Player5ViewController_2 : UIViewController
+@interface NightViewController : UIViewController
 
 @end

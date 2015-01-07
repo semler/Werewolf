@@ -17,7 +17,7 @@
 + (PlayerManager *)sharedManager;
 
 - (void) gacha;
-
 - (void) reset;
+- (void) resetVote;
 
 @end

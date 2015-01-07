@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6246"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MadmanViewController">
             <connections>
                 <outlet property="commentLabel" destination="OqP-0A-CYl" id="9sH-QG-nZj"/>
                 <outlet property="playerImageView" destination="YUW-VP-l0g" id="VrY-kx-xze"/>
+                <outlet property="subView" destination="0mm-jC-obp" id="VQ6-np-QXr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="playerButtons" destination="HJr-JY-l5a" id="zOZ-Fl-DA9"/>
+                <outletCollection property="playerButtons" destination="me1-b8-Vvm" id="nzn-R8-GvT"/>
+                <outletCollection property="playerButtons" destination="7zg-MX-9sb" id="r2E-BU-hbA"/>
+                <outletCollection property="playerButtons" destination="bX1-VT-4u1" id="Mb2-FX-Gjx"/>
+                <outletCollection property="playerButtons" destination="NzK-RA-uk3" id="BGM-0g-f5J"/>
+                <outletCollection property="playerButtons" destination="bID-ol-Ju2" id="p9B-ux-aSq"/>
+                <outletCollection property="playerButtons" destination="wJH-Mu-L4s" id="UZp-CY-Dyv"/>
+                <outletCollection property="playerButtons" destination="t4C-97-9BX" id="gpy-Yg-YoR"/>
+                <outletCollection property="playerButtons" destination="HB2-b3-9j7" id="2GX-Hs-dvT"/>
+                <outletCollection property="playerButtons" destination="rNs-4d-Vvr" id="dC9-GL-RHg"/>
+                <outletCollection property="playerButtons" destination="oBi-Ui-2WQ" id="6J0-jC-gGl"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -50,7 +62,7 @@
                                 <action selector="playerButtonsPressed:" destination="-1" eventType="touchUpInside" id="94g-i5-vMS"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNs-4d-Vvr">
+                        <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNs-4d-Vvr">
                             <rect key="frame" x="93" y="100" width="83" height="90"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" backgroundImage="imgPlayer8">
@@ -60,7 +72,7 @@
                                 <action selector="playerButtonsPressed:" destination="-1" eventType="touchUpInside" id="SAU-0U-9tL"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HB2-b3-9j7">
+                        <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HB2-b3-9j7">
                             <rect key="frame" x="186" y="100" width="83" height="90"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" backgroundImage="imgPlayer9">
@@ -70,7 +82,7 @@
                                 <action selector="playerButtonsPressed:" destination="-1" eventType="touchUpInside" id="U4i-Pw-fGt"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4C-97-9BX">
+                        <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4C-97-9BX">
                             <rect key="frame" x="279" y="100" width="83" height="90"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" backgroundImage="imgPlayer10">
@@ -80,7 +92,7 @@
                                 <action selector="playerButtonsPressed:" destination="-1" eventType="touchUpInside" id="GGN-UX-jSi"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJH-Mu-L4s">
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJH-Mu-L4s">
                             <rect key="frame" x="372" y="100" width="83" height="90"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" backgroundImage="imgPlayer11">
@@ -90,7 +102,7 @@
                                 <action selector="playerButtonsPressed:" destination="-1" eventType="touchUpInside" id="dnQ-Ob-S5z"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="me1-b8-Vvm">
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="me1-b8-Vvm">
                             <rect key="frame" x="93" y="0.0" width="83" height="90"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" backgroundImage="imgPlayer2">
@@ -100,7 +112,7 @@
                                 <action selector="playerButtonsPressed:" destination="-1" eventType="touchUpInside" id="j1a-5y-lst"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zg-MX-9sb">
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7zg-MX-9sb">
                             <rect key="frame" x="186" y="0.0" width="83" height="90"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" backgroundImage="imgPlayer3">
@@ -110,7 +122,7 @@
                                 <action selector="playerButtonsPressed:" destination="-1" eventType="touchUpInside" id="PTq-DZ-BK6"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bX1-VT-4u1">
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bX1-VT-4u1">
                             <rect key="frame" x="279" y="0.0" width="83" height="90"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" backgroundImage="imgPlayer4">
@@ -120,7 +132,7 @@
                                 <action selector="playerButtonsPressed:" destination="-1" eventType="touchUpInside" id="laM-6K-p2V"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzK-RA-uk3">
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzK-RA-uk3">
                             <rect key="frame" x="372" y="0.0" width="83" height="90"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" backgroundImage="imgPlayer5">
@@ -130,7 +142,7 @@
                                 <action selector="playerButtonsPressed:" destination="-1" eventType="touchUpInside" id="ehu-V5-g9Z"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bID-ol-Ju2">
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bID-ol-Ju2">
                             <rect key="frame" x="465" y="0.0" width="83" height="90"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" backgroundImage="imgPlayer6">
@@ -140,7 +152,7 @@
                                 <action selector="playerButtonsPressed:" destination="-1" eventType="touchUpInside" id="EMK-FQ-vUu"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBi-Ui-2WQ">
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBi-Ui-2WQ">
                             <rect key="frame" x="0.0" y="100" width="83" height="90"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" backgroundImage="imgPlayer7">

@@ -29,6 +29,7 @@
     if ([GameStatus sharedManager].currentTurn == 0) {
         self.commentLabel.text = @"預言者です!";
     } else if ([GameStatus sharedManager].currentTurn == 1) {
+        self.seeButton.enabled = NO;
     } else if ([GameStatus sharedManager].currentTurn == 2) {
         self.commentLabel.text = @"預言者です!";
         self.subView.hidden = NO;

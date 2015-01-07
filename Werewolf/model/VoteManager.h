@@ -16,10 +16,8 @@
 @property (nonatomic) long toAttack;
 
 - (BOOL) banish;
-- (BOOL) gameOverJudge;
 - (BOOL) guard:(long)num;
 - (void) attack;
-- (void) reset;
 - (void) resetGuard;
 
 @end

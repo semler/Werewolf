@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Player5ViewController_0 : UIViewController
+@interface CheckPositionViewController : UIViewController
 
 @end

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6246"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VillagerViewController">
@@ -9,7 +9,7 @@
                 <outlet property="commentLabel" destination="cP1-Ou-vWl" id="jWX-rx-MSw"/>
                 <outlet property="okButton" destination="ab3-hh-Yv5" id="hvb-EL-PuM"/>
                 <outlet property="playerImageView" destination="dXh-8W-kGP" id="mhK-Yj-WTZ"/>
-                <outlet property="subView" destination="v7p-NP-7za" id="mWl-UU-0ip"/>
+                <outlet property="subView" destination="v7p-NP-7za" id="iG7-Xd-2Li"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="playerButtons" destination="B4p-Em-M70" id="luR-VG-9rc"/>
                 <outletCollection property="playerButtons" destination="BzY-F0-3EW" id="c8u-5W-kqV"/>

@@ -15,6 +15,8 @@
 @property (nonatomic) int playerCount;
 @property (weak, nonatomic) IBOutlet UILabel *playerLabel;
 @property (strong, nonatomic) IBOutlet UIView *view;
+@property (weak, nonatomic) IBOutlet UIButton *minusButton;
+@property (weak, nonatomic) IBOutlet UIButton *plusButton;
 
 - (IBAction)minusButtonPressed:(id)sender;
 - (IBAction)plusButtonPressed:(id)sender;
@@ -28,9 +30,8 @@
     [super viewWillAppear:animated];
     
     [[PlayerManager sharedManager] reset];
-    
     self.playerCount = 5;
-    self.playerLabel.text = [NSString stringWithFormat:@"%d", self.playerCount];
+    [self updateLabel];
     // ナビゲーションバー非表示
     [self.navigationController setNavigationBarHidden:YES];
 }
@@ -61,14 +62,28 @@
     if (self.playerCount > 5) {
         self.playerCount --;
     }
-    self.playerLabel.text = [NSString stringWithFormat:@"%d", self.playerCount];
+    [self updateLabel];
 }
 
 - (IBAction)plusButtonPressed:(id)sender {
     if (self.playerCount < 11) {
         self.playerCount ++;
     }
+    [self updateLabel];
+}
+
+- (void) updateLabel {
     self.playerLabel.text = [NSString stringWithFormat:@"%d", self.playerCount];
+    if (self.playerCount == 5) {
+        self.minusButton.enabled = NO;
+        self.plusButton.enabled = YES;
+    } else if (self.playerCount == 11) {
+        self.minusButton.enabled = YES;
+        self.plusButton.enabled = NO;
+    } else {
+        self.minusButton.enabled = YES;
+        self.plusButton.enabled = YES;
+    }
 }
 
 - (IBAction)startButtonPressed:(id)sender {

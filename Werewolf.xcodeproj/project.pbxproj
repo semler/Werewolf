@@ -29,9 +29,9 @@
 		45BD0DBF1A4023E20087B43F /* AlermViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45BD0DBD1A4023E20087B43F /* AlermViewController.xib */; };
 		45BD0DC21A40242D0087B43F /* AlermViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BD0DC11A40242D0087B43F /* AlermViewController.m */; };
 		45CDE67C1A510B5D00415F59 /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CDE6731A510B5D00415F59 /* GameOverViewController.m */; };
-		45CDE67D1A510B5D00415F59 /* Player5ViewController_0.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CDE6751A510B5D00415F59 /* Player5ViewController_0.m */; };
-		45CDE67E1A510B5D00415F59 /* Player5ViewController_1.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CDE6771A510B5D00415F59 /* Player5ViewController_1.m */; };
-		45CDE67F1A510B5D00415F59 /* Player5ViewController_2.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CDE6791A510B5D00415F59 /* Player5ViewController_2.m */; };
+		45CDE67D1A510B5D00415F59 /* CheckPositionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CDE6751A510B5D00415F59 /* CheckPositionViewController.m */; };
+		45CDE67E1A510B5D00415F59 /* DayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CDE6771A510B5D00415F59 /* DayViewController.m */; };
+		45CDE67F1A510B5D00415F59 /* NightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CDE6791A510B5D00415F59 /* NightViewController.m */; };
 		45CDE6801A510B5D00415F59 /* VoteResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CDE67B1A510B5D00415F59 /* VoteResultViewController.m */; };
 		45D95C7F1A428299002B2DD3 /* VoteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D95C7E1A428299002B2DD3 /* VoteManager.m */; };
 		45D98B8C1A2D6A2B00487E04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D98B8B1A2D6A2B00487E04 /* main.m */; };
@@ -79,12 +79,12 @@
 		45BD0DC11A40242D0087B43F /* AlermViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlermViewController.m; sourceTree = "<group>"; };
 		45CDE6721A510B5D00415F59 /* GameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
 		45CDE6731A510B5D00415F59 /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
-		45CDE6741A510B5D00415F59 /* Player5ViewController_0.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player5ViewController_0.h; sourceTree = "<group>"; };
-		45CDE6751A510B5D00415F59 /* Player5ViewController_0.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player5ViewController_0.m; sourceTree = "<group>"; };
-		45CDE6761A510B5D00415F59 /* Player5ViewController_1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player5ViewController_1.h; sourceTree = "<group>"; };
-		45CDE6771A510B5D00415F59 /* Player5ViewController_1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player5ViewController_1.m; sourceTree = "<group>"; };
-		45CDE6781A510B5D00415F59 /* Player5ViewController_2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player5ViewController_2.h; sourceTree = "<group>"; };
-		45CDE6791A510B5D00415F59 /* Player5ViewController_2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player5ViewController_2.m; sourceTree = "<group>"; };
+		45CDE6741A510B5D00415F59 /* CheckPositionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckPositionViewController.h; sourceTree = "<group>"; };
+		45CDE6751A510B5D00415F59 /* CheckPositionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckPositionViewController.m; sourceTree = "<group>"; };
+		45CDE6761A510B5D00415F59 /* DayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayViewController.h; sourceTree = "<group>"; };
+		45CDE6771A510B5D00415F59 /* DayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayViewController.m; sourceTree = "<group>"; };
+		45CDE6781A510B5D00415F59 /* NightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NightViewController.h; sourceTree = "<group>"; };
+		45CDE6791A510B5D00415F59 /* NightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NightViewController.m; sourceTree = "<group>"; };
 		45CDE67A1A510B5D00415F59 /* VoteResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoteResultViewController.h; sourceTree = "<group>"; };
 		45CDE67B1A510B5D00415F59 /* VoteResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteResultViewController.m; sourceTree = "<group>"; };
 		45D95C7D1A428299002B2DD3 /* VoteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoteManager.h; sourceTree = "<group>"; };
@@ -190,16 +190,16 @@
 		45CDE6711A510B5D00415F59 /* play */ = {
 			isa = PBXGroup;
 			children = (
-				45CDE6721A510B5D00415F59 /* GameOverViewController.h */,
-				45CDE6731A510B5D00415F59 /* GameOverViewController.m */,
-				45CDE6741A510B5D00415F59 /* Player5ViewController_0.h */,
-				45CDE6751A510B5D00415F59 /* Player5ViewController_0.m */,
-				45CDE6761A510B5D00415F59 /* Player5ViewController_1.h */,
-				45CDE6771A510B5D00415F59 /* Player5ViewController_1.m */,
-				45CDE6781A510B5D00415F59 /* Player5ViewController_2.h */,
-				45CDE6791A510B5D00415F59 /* Player5ViewController_2.m */,
+				45CDE6741A510B5D00415F59 /* CheckPositionViewController.h */,
+				45CDE6751A510B5D00415F59 /* CheckPositionViewController.m */,
+				45CDE6761A510B5D00415F59 /* DayViewController.h */,
+				45CDE6771A510B5D00415F59 /* DayViewController.m */,
 				45CDE67A1A510B5D00415F59 /* VoteResultViewController.h */,
 				45CDE67B1A510B5D00415F59 /* VoteResultViewController.m */,
+				45CDE6781A510B5D00415F59 /* NightViewController.h */,
+				45CDE6791A510B5D00415F59 /* NightViewController.m */,
+				45CDE6721A510B5D00415F59 /* GameOverViewController.h */,
+				45CDE6731A510B5D00415F59 /* GameOverViewController.m */,
 			);
 			path = play;
 			sourceTree = "<group>";
@@ -325,10 +325,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				45CDE67C1A510B5D00415F59 /* GameOverViewController.m in Sources */,
-				45CDE67D1A510B5D00415F59 /* Player5ViewController_0.m in Sources */,
+				45CDE67D1A510B5D00415F59 /* CheckPositionViewController.m in Sources */,
 				45D98B8F1A2D6A2B00487E04 /* AppDelegate.m in Sources */,
 				45BD0D9F1A3FC6C40087B43F /* WerewolfViewController.m in Sources */,
-				45CDE67F1A510B5D00415F59 /* Player5ViewController_2.m in Sources */,
+				45CDE67F1A510B5D00415F59 /* NightViewController.m in Sources */,
 				45D95C7F1A428299002B2DD3 /* VoteManager.m in Sources */,
 				45BD0D8D1A3FBF070087B43F /* VillagerViewController.m in Sources */,
 				45BD0DC21A40242D0087B43F /* AlermViewController.m in Sources */,
@@ -338,7 +338,7 @@
 				4510A9DC1A2EBE7900063107 /* PlayerSettingViewController.m in Sources */,
 				45DCC6FA1A4E859C00E39D13 /* BaseViewController.m in Sources */,
 				45BD0DA61A3FF58B0087B43F /* SeerViewController.m in Sources */,
-				45CDE67E1A510B5D00415F59 /* Player5ViewController_1.m in Sources */,
+				45CDE67E1A510B5D00415F59 /* DayViewController.m in Sources */,
 				45CDE6801A510B5D00415F59 /* VoteResultViewController.m in Sources */,
 				4510A9C21A2EAD2000063107 /* Player.m in Sources */,
 				45BD0DAD1A3FFF830087B43F /* BodyguardViewController.m in Sources */,

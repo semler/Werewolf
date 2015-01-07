@@ -35,16 +35,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)callCamera:(id)sender {
     // カメラ起動
     UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -76,45 +66,10 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 }
 
 - (IBAction)okButtonPressed:(id)sender {
-    NSString *fileName;
-    
-    Player *player = [[Player alloc] init];
+    Player *player = [[PlayerManager sharedManager].playerList objectAtIndex:[GameStatus sharedManager].currentPlayerInt];
     player.image = self.imageView.image;
     
-    if ([GameStatus sharedManager].currentPlayerInt == 1) {
-        fileName = @"player1.jpg";
-        [PlayerManager sharedManager].player1 = player;
-    } else if ([GameStatus sharedManager].currentPlayerInt == 2) {
-        fileName = @"player2.jpg";
-        [PlayerManager sharedManager].player2 = player;
-    } else if ([GameStatus sharedManager].currentPlayerInt == 3) {
-        fileName = @"player3.jpg";
-        [PlayerManager sharedManager].player3 = player;
-    } else if ([GameStatus sharedManager].currentPlayerInt == 4) {
-        fileName = @"player4.jpg";
-        [PlayerManager sharedManager].player4 = player;
-    } else if ([GameStatus sharedManager].currentPlayerInt == 5) {
-        fileName = @"player5.jpg";
-        [PlayerManager sharedManager].player5 = player;
-    } else if ([GameStatus sharedManager].currentPlayerInt == 6) {
-        fileName = @"player6.jpg";
-        [PlayerManager sharedManager].player6 = player;
-    } else if ([GameStatus sharedManager].currentPlayerInt == 7) {
-        fileName = @"player7.jpg";
-        [PlayerManager sharedManager].player7 = player;
-    } else if ([GameStatus sharedManager].currentPlayerInt == 8) {
-        fileName = @"player8.jpg";
-        [PlayerManager sharedManager].player8 = player;
-    } else if ([GameStatus sharedManager].currentPlayerInt == 9) {
-        fileName = @"player9.jpg";
-        [PlayerManager sharedManager].player9 = player;
-    } else if ([GameStatus sharedManager].currentPlayerInt == 10) {
-        fileName = @"player10.jpg";
-        [PlayerManager sharedManager].player10 = player;
-    } else if ([GameStatus sharedManager].currentPlayerInt == 11) {
-        fileName = @"player11.jpg";
-        [PlayerManager sharedManager].player11 = player;
-    }
+    NSString *fileName = [NSString stringWithFormat:@"player%ld.jpg", [GameStatus sharedManager].currentPlayerInt];
     
     // 写真の保存
     // JPEGのデータとしてNSDataを作成します

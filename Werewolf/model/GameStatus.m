@@ -28,4 +28,15 @@ static GameStatus *gameStatus = nil;
     return self;
 }
 
+- (BOOL) gameOverJudge {
+    if(self.werewolfCount == 0) {
+        return YES;
+    }
+    
+    if (self.alivePlayerCount <= self.werewolfCount * 2) {
+        return YES;
+    }
+    return NO;
+}
+
 @end
