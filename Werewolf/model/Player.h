@@ -28,6 +28,8 @@
 // 守られる
 @property (nonatomic) BOOL isGuarded;
 @property (nonatomic) BOOL isGuardedLast;
+// 人狼襲撃
+@property (nonatomic) long attack;
 
 @end
 

@@ -64,14 +64,26 @@
         self.bodyguardCount = 1;
         self.madmanCount = 1;
         self.mediumCount = 0;
-        [self updateLabel];
     } else if ([GameStatus sharedManager].playerCount == 6) {
+        self.villageCount = 2;
+        self.werewolfCount = 2;
+        self.seerCount = 1;
+        self.bodyguardCount = 1;
+        self.madmanCount = 0;
+        self.mediumCount = 0;
     } else if ([GameStatus sharedManager].playerCount == 7) {
+        self.villageCount = 3;
+        self.werewolfCount = 2;
+        self.seerCount = 1;
+        self.bodyguardCount = 1;
+        self.madmanCount = 0;
+        self.mediumCount = 0;
     } else if ([GameStatus sharedManager].playerCount == 8) {
     } else if ([GameStatus sharedManager].playerCount == 9) {
     } else if ([GameStatus sharedManager].playerCount == 10) {
     } else if ([GameStatus sharedManager].playerCount == 11) {
     }
+    [self updateLabel];
 }
 
 - (void)viewDidLoad {
@@ -119,7 +131,27 @@
         self.minusMediumButton.enabled = NO;
         self.plusMediumButton.enabled = NO;
     } else if ([GameStatus sharedManager].playerCount == 6) {
+        self.minusWerewolfButton.enabled = NO;
+        self.plusWerewolfButton.enabled = NO;
+        self.minusSeerButton.enabled = NO;
+        self.plusSeerButton.enabled = NO;
+        self.minusBodyguardButton.enabled = NO;
+        self.plusBodyguardButton.enabled = NO;
+        self.minusMadmanButton.enabled = NO;
+        self.plusMadmanButton.enabled = NO;
+        self.minusMediumButton.enabled = NO;
+        self.plusMediumButton.enabled = NO;
     } else if ([GameStatus sharedManager].playerCount == 7) {
+        self.minusWerewolfButton.enabled = NO;
+        self.plusWerewolfButton.enabled = NO;
+        self.minusSeerButton.enabled = NO;
+        self.plusSeerButton.enabled = NO;
+        self.minusBodyguardButton.enabled = NO;
+        self.plusBodyguardButton.enabled = NO;
+        self.minusMadmanButton.enabled = NO;
+        self.plusMadmanButton.enabled = NO;
+        self.minusMediumButton.enabled = NO;
+        self.plusMediumButton.enabled = NO;
     } else if ([GameStatus sharedManager].playerCount == 8) {
     } else if ([GameStatus sharedManager].playerCount == 9) {
     } else if ([GameStatus sharedManager].playerCount == 10) {

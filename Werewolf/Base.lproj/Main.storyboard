@@ -518,6 +518,7 @@
                         <segue destination="0lW-LY-AcE" kind="push" identifier="back" id="ahJ-Ed-w4O"/>
                         <segue destination="zmd-JW-cng" kind="push" identifier="startGame5" id="guV-TS-H5p"/>
                         <segue destination="Bav-YS-rrl" kind="push" identifier="startGame6" id="z7r-U2-CMf"/>
+                        <segue destination="Zic-jL-kVl" kind="push" identifier="startGame7" id="bpm-Zt-9iT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVw-Tx-tYF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -578,15 +579,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconMoon" translatesAutoresizingMaskIntoConstraints="NO" id="VNP-93-cyX">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                             </imageView>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2r9-XF-9UJ">
-                                <rect key="frame" x="485" y="120" width="83" height="90"/>
-                                <state key="normal" backgroundImage="imgPlayer5">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="playerButtonsPressed:" destination="zmd-JW-cng" eventType="touchUpInside" id="x20-OO-ELp"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="adB-yk-mKp">
                                 <rect key="frame" x="83" y="90" width="402" height="140"/>
                                 <subviews>
@@ -604,11 +596,20 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="okButtonPressed:" destination="zmd-JW-cng" eventType="touchUpInside" id="OdV-Vp-yT9"/>
+                                            <action selector="nextButtonPressed:" destination="zmd-JW-cng" eventType="touchUpInside" id="yca-fK-aW5"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </view>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2r9-XF-9UJ">
+                                <rect key="frame" x="485" y="115" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer5">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="zmd-JW-cng" eventType="touchUpInside" id="x20-OO-ELp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -620,7 +621,7 @@
                         <outletCollection property="playerButtons" destination="FcX-VE-Xut" id="FYA-Au-jd2"/>
                         <outletCollection property="playerButtons" destination="oce-El-vhI" id="mgS-jE-1kk"/>
                         <outletCollection property="playerButtons" destination="2r9-XF-9UJ" id="hzf-TM-3D4"/>
-                        <segue destination="0ZZ-P2-8CM" kind="push" identifier="toStep1" id="iaH-ig-0D7"/>
+                        <segue destination="0ZZ-P2-8CM" kind="push" identifier="toDay" id="iaH-ig-0D7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBB-KL-UIG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -709,7 +710,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="okButtonPressed:" destination="0ZZ-P2-8CM" eventType="touchUpInside" id="cHc-2b-uGb"/>
+                                            <action selector="nextButtonPressed:" destination="0ZZ-P2-8CM" eventType="touchUpInside" id="DjH-bU-NUQ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -731,7 +732,7 @@
                     <connections>
                         <outlet property="commentLabel" destination="CpO-fj-5MG" id="3Gi-wX-q46"/>
                         <outlet property="discussButton" destination="G18-9D-yCd" id="5Ya-D4-cRZ"/>
-                        <outlet property="okButton" destination="mBI-EF-fPp" id="k1r-mW-Yei"/>
+                        <outlet property="nextButton" destination="mBI-EF-fPp" id="Ngm-pv-VrY"/>
                         <outletCollection property="playerButtons" destination="X7W-UT-gQU" id="DVv-Ex-pbr"/>
                         <outletCollection property="playerButtons" destination="7df-vX-X4G" id="UeR-Zs-a6U"/>
                         <outletCollection property="playerButtons" destination="ssp-6m-KeX" id="GXL-Jf-9ON"/>
@@ -744,6 +745,424 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcO-4f-Lun" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1768" y="1088"/>
+        </scene>
+        <!--Day View Controller-->
+        <scene sceneID="gkT-Xm-6QH">
+            <objects>
+                <viewController id="Kal-yG-H6V" customClass="DayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sKw-le-s8I"/>
+                        <viewControllerLayoutGuide type="bottom" id="WUu-A7-jQ5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QhC-ii-oUc">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgBgDark" translatesAutoresizingMaskIntoConstraints="NO" id="8fs-ls-QKl">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconSun" translatesAutoresizingMaskIntoConstraints="NO" id="Sow-BT-gON">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJI-7h-xYy">
+                                <rect key="frame" x="134" y="0.0" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="Kal-yG-H6V" eventType="touchUpInside" id="3e1-Vh-p9b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTM-g6-Gha">
+                                <rect key="frame" x="351" y="0.0" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer6">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="Kal-yG-H6V" eventType="touchUpInside" id="WsB-6V-tRx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6be-c7-sIm">
+                                <rect key="frame" x="134" y="230" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer3">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="Kal-yG-H6V" eventType="touchUpInside" id="DUg-25-oXq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNd-qt-6fW">
+                                <rect key="frame" x="0.0" y="115" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="Kal-yG-H6V" eventType="touchUpInside" id="Yhd-aK-fbh"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TTq-WT-msW">
+                                <rect key="frame" x="83" y="90" width="402" height="140"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="朝になりました、議論開始" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAG-ca-33B">
+                                        <rect key="frame" x="51" y="20" width="300" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="men-vq-aZm">
+                                        <rect key="frame" x="111" y="90" width="80" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="議論">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="discussButtonPressed:" destination="Kal-yG-H6V" eventType="touchUpInside" id="w0B-7Q-F6C"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTL-hx-LAZ">
+                                        <rect key="frame" x="211" y="90" width="80" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="次へ">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextButtonPressed:" destination="Kal-yG-H6V" eventType="touchUpInside" id="rtt-94-8Hv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rd0-R6-dtX">
+                                <rect key="frame" x="351" y="230" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer4">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="Kal-yG-H6V" eventType="touchUpInside" id="m6W-f5-JYA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="es9-3Y-cvA">
+                                <rect key="frame" x="485" y="115" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer5">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="Kal-yG-H6V" eventType="touchUpInside" id="x2d-iK-qAC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0G7-aP-F0g"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="commentLabel" destination="DAG-ca-33B" id="sVc-Ac-vqP"/>
+                        <outlet property="discussButton" destination="men-vq-aZm" id="Teu-Rp-xNA"/>
+                        <outlet property="nextButton" destination="WTL-hx-LAZ" id="Fxd-rB-byS"/>
+                        <outletCollection property="playerButtons" destination="HJI-7h-xYy" id="paA-In-c4J"/>
+                        <outletCollection property="playerButtons" destination="GTM-g6-Gha" id="yCw-5g-p19"/>
+                        <outletCollection property="playerButtons" destination="6be-c7-sIm" id="EAn-GA-i4W"/>
+                        <outletCollection property="playerButtons" destination="bNd-qt-6fW" id="oqn-9E-eON"/>
+                        <outletCollection property="playerButtons" destination="es9-3Y-cvA" id="RnF-BO-4a9"/>
+                        <outletCollection property="playerButtons" destination="Rd0-R6-dtX" id="Fh1-W1-Ovu"/>
+                        <segue destination="Hah-vO-Vrs" kind="push" identifier="toResult" id="Kpc-g6-exD"/>
+                        <segue destination="mcT-Th-o9T" kind="push" identifier="gameOver" id="y2s-Ki-ByN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="79z-cm-CZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1192" y="1088"/>
+        </scene>
+        <!--Vote Result View Controller-->
+        <scene sceneID="cN3-DZ-lJZ">
+            <objects>
+                <viewController id="Hah-vO-Vrs" customClass="VoteResultViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g43-vL-vAr"/>
+                        <viewControllerLayoutGuide type="bottom" id="NLF-Tn-hbh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gry-QA-ZaQ">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgBgDark" translatesAutoresizingMaskIntoConstraints="NO" id="tXe-8e-Mlq">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rs9-t4-bw2">
+                                <rect key="frame" x="83" y="90" width="402" height="140"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="一人が追放されました" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCh-wh-Sxg">
+                                        <rect key="frame" x="51" y="20" width="300" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HY2-u0-3d8">
+                                        <rect key="frame" x="161" y="90" width="80" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="次へ">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextButtonPressed:" destination="Hah-vO-Vrs" eventType="touchUpInside" id="p4X-5b-lVB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconSun" translatesAutoresizingMaskIntoConstraints="NO" id="VqN-zb-ZWm">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer1" translatesAutoresizingMaskIntoConstraints="NO" id="g7h-IU-yjE">
+                                <rect key="frame" x="134" y="0.0" width="83" height="90"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer6" translatesAutoresizingMaskIntoConstraints="NO" id="RE9-0W-lkm">
+                                <rect key="frame" x="351" y="0.0" width="83" height="90"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer3" translatesAutoresizingMaskIntoConstraints="NO" id="SOq-VL-Kq0">
+                                <rect key="frame" x="134" y="230" width="83" height="90"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer2" translatesAutoresizingMaskIntoConstraints="NO" id="s8Z-oc-xcn">
+                                <rect key="frame" x="0.0" y="115" width="83" height="90"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer4" translatesAutoresizingMaskIntoConstraints="NO" id="gpX-fC-TTq">
+                                <rect key="frame" x="351" y="230" width="83" height="90"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer5" translatesAutoresizingMaskIntoConstraints="NO" id="1Mp-Rk-HkN">
+                                <rect key="frame" x="485" y="115" width="83" height="90"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YOt-6P-NfQ"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outletCollection property="playerImages" destination="g7h-IU-yjE" id="orc-ZU-lr5"/>
+                        <outletCollection property="playerImages" destination="RE9-0W-lkm" id="Qxz-6c-QQ7"/>
+                        <outletCollection property="playerImages" destination="SOq-VL-Kq0" id="nlS-kt-M57"/>
+                        <outletCollection property="playerImages" destination="s8Z-oc-xcn" id="Jn9-SL-zqH"/>
+                        <outletCollection property="playerImages" destination="1Mp-Rk-HkN" id="YYB-Kc-mud"/>
+                        <outletCollection property="playerImages" destination="gpX-fC-TTq" id="g3a-db-taV"/>
+                        <segue destination="DCG-KZ-iAh" kind="push" identifier="toNight" id="de7-bE-bk4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k2C-m3-lz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1192" y="1548"/>
+        </scene>
+        <!--Night View Controller-->
+        <scene sceneID="hZV-N1-J1n">
+            <objects>
+                <viewController id="DCG-KZ-iAh" customClass="NightViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dzQ-Ee-xAB"/>
+                        <viewControllerLayoutGuide type="bottom" id="TkO-hm-LnQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VOf-ac-Dh6">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgBgDark" translatesAutoresizingMaskIntoConstraints="NO" id="RKC-oj-Seh">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L31-bJ-gfS">
+                                <rect key="frame" x="83" y="90" width="402" height="140"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="夜になりました" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avF-me-cW8">
+                                        <rect key="frame" x="51" y="20" width="300" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umA-YY-cOY">
+                                        <rect key="frame" x="161" y="90" width="80" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="次へ">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextButtonPressed:" destination="DCG-KZ-iAh" eventType="touchUpInside" id="xfe-YK-1Mh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconMoon" translatesAutoresizingMaskIntoConstraints="NO" id="hnQ-nv-Gec">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIq-12-jNl">
+                                <rect key="frame" x="134" y="0.0" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="DCG-KZ-iAh" eventType="touchUpInside" id="Uwm-vN-GnS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8g-tt-qV8">
+                                <rect key="frame" x="351" y="0.0" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer6">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="DCG-KZ-iAh" eventType="touchUpInside" id="LFh-8k-kMT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4W-bO-e0O">
+                                <rect key="frame" x="134" y="230" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer3">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="DCG-KZ-iAh" eventType="touchUpInside" id="dzj-5t-92k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWk-uW-pKx">
+                                <rect key="frame" x="485" y="115" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer5">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="DCG-KZ-iAh" eventType="touchUpInside" id="H79-2f-rNZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cef-eO-09H">
+                                <rect key="frame" x="0.0" y="115" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="DCG-KZ-iAh" eventType="touchUpInside" id="6gq-j5-C9m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1S-Hw-07Q">
+                                <rect key="frame" x="351" y="230" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer4">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="DCG-KZ-iAh" eventType="touchUpInside" id="t1L-nU-ngJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zRv-YA-rmh"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outletCollection property="playerButtons" destination="EIq-12-jNl" id="5Ei-dg-OsK"/>
+                        <outletCollection property="playerButtons" destination="Cef-eO-09H" id="CA4-J8-2TR"/>
+                        <outletCollection property="playerButtons" destination="f4W-bO-e0O" id="6iK-E2-stz"/>
+                        <outletCollection property="playerButtons" destination="q1S-Hw-07Q" id="qkG-de-Dmh"/>
+                        <outletCollection property="playerButtons" destination="VWk-uW-pKx" id="oNq-qM-Yn9"/>
+                        <outletCollection property="playerButtons" destination="K8g-tt-qV8" id="e3m-6w-OJt"/>
+                        <segue destination="Kal-yG-H6V" kind="push" identifier="toDay" id="2bP-kA-sR5"/>
+                        <segue destination="mcT-Th-o9T" kind="push" identifier="gameOver" id="GLi-bP-nW2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ejo-b5-ZCn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1192" y="1993"/>
+        </scene>
+        <!--Game Over View Controller-->
+        <scene sceneID="OsW-aj-YwL">
+            <objects>
+                <viewController id="mcT-Th-o9T" customClass="GameOverViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LtV-pb-X8M"/>
+                        <viewControllerLayoutGuide type="bottom" id="eHi-W0-aaL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S9l-8P-HAw">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgBgDark" translatesAutoresizingMaskIntoConstraints="NO" id="cFM-5b-mSh">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HiC-sY-W2Q">
+                                <rect key="frame" x="301" y="0.0" width="50" height="50"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rAa-Rw-8m5">
+                                <rect key="frame" x="83" y="90" width="402" height="140"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ゲーム終了" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMD-5g-zae">
+                                        <rect key="frame" x="51" y="20" width="300" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dve-Fc-5GC">
+                                        <rect key="frame" x="161" y="90" width="80" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="終了">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="endButtonPressed:" destination="mcT-Th-o9T" eventType="touchUpInside" id="4zX-KE-phU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer1" translatesAutoresizingMaskIntoConstraints="NO" id="KyV-UF-hIZ">
+                                <rect key="frame" x="134" y="0.0" width="83" height="90"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer6" translatesAutoresizingMaskIntoConstraints="NO" id="ds6-fz-xLP">
+                                <rect key="frame" x="351" y="0.0" width="83" height="90"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer4" translatesAutoresizingMaskIntoConstraints="NO" id="hEi-0b-RJJ">
+                                <rect key="frame" x="351" y="230" width="83" height="90"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer3" translatesAutoresizingMaskIntoConstraints="NO" id="NK5-LP-DJ9">
+                                <rect key="frame" x="134" y="230" width="83" height="90"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer5" translatesAutoresizingMaskIntoConstraints="NO" id="pPp-nt-GZB">
+                                <rect key="frame" x="485" y="115" width="83" height="90"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer2" translatesAutoresizingMaskIntoConstraints="NO" id="2du-zP-2vJ">
+                                <rect key="frame" x="0.0" y="115" width="83" height="90"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wpz-Up-dyj">
+                                <rect key="frame" x="485" y="65" width="50" height="50"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BqP-tc-kBf">
+                                <rect key="frame" x="83" y="230" width="50" height="50"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kZ0-Fg-ALd">
+                                <rect key="frame" x="0.0" y="65" width="50" height="50"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aeq-Hj-LWs">
+                                <rect key="frame" x="301" y="230" width="50" height="50"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IWg-VE-eMA">
+                                <rect key="frame" x="83" y="0.0" width="50" height="50"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9gM-Wf-XPD"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="label" destination="yMD-5g-zae" id="ifS-Je-poR"/>
+                        <outletCollection property="positionImages" destination="HiC-sY-W2Q" id="EQ3-Ej-yVv"/>
+                        <outletCollection property="playerImages" destination="KyV-UF-hIZ" id="fPT-8q-XTg"/>
+                        <outletCollection property="playerImages" destination="ds6-fz-xLP" id="52H-WT-2Vd"/>
+                        <outletCollection property="playerImages" destination="hEi-0b-RJJ" id="MqE-dq-ij2"/>
+                        <outletCollection property="playerImages" destination="NK5-LP-DJ9" id="5Uk-f4-aEb"/>
+                        <outletCollection property="playerImages" destination="pPp-nt-GZB" id="twJ-s6-jAc"/>
+                        <outletCollection property="playerImages" destination="2du-zP-2vJ" id="h08-Te-5Dr"/>
+                        <outletCollection property="positionImages" destination="wpz-Up-dyj" id="qKT-8H-i9H"/>
+                        <outletCollection property="positionImages" destination="BqP-tc-kBf" id="eBJ-gq-mnF"/>
+                        <outletCollection property="positionImages" destination="kZ0-Fg-ALd" id="51I-TR-hBW"/>
+                        <outletCollection property="positionImages" destination="aeq-Hj-LWs" id="QO1-c6-aWk"/>
+                        <outletCollection property="positionImages" destination="IWg-VE-eMA" id="khb-Df-jzh"/>
+                        <segue destination="vXZ-lx-hvc" kind="push" identifier="theEnd" id="KrA-Ok-FoT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4F5-A5-NOi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-899" y="2450"/>
         </scene>
         <!--Vote Result View Controller-->
         <scene sceneID="Upb-8F-3jJ">
@@ -811,7 +1230,7 @@
                         <outletCollection property="playerImages" destination="e1I-cR-FSa" id="TzB-2I-3xJ"/>
                         <outletCollection property="playerImages" destination="n8S-g0-hnF" id="ELx-17-pRJ"/>
                         <outletCollection property="playerImages" destination="Tmq-vc-uym" id="AmZ-KV-5gF"/>
-                        <segue destination="cLN-Gc-ilT" kind="push" identifier="toStep2" id="s8L-w9-lxb"/>
+                        <segue destination="cLN-Gc-ilT" kind="push" identifier="toNight" id="s8L-w9-lxb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HTH-HG-A5m" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -915,7 +1334,7 @@
                         <outletCollection property="playerButtons" destination="kcq-OA-Pdi" id="1mO-BE-X61"/>
                         <outletCollection property="playerButtons" destination="cAy-K9-8DO" id="99q-gs-rSu"/>
                         <segue destination="nVC-KQ-ZgF" kind="push" identifier="gameOver" id="uoc-O7-dCe"/>
-                        <segue destination="0ZZ-P2-8CM" kind="push" identifier="toStep1" id="TtO-2y-XDW"/>
+                        <segue destination="0ZZ-P2-8CM" kind="push" identifier="toDay" id="TtO-2y-XDW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zXF-vU-Y5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1011,12 +1430,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="306-RP-XUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1127" y="1791"/>
+            <point key="canvasLocation" x="-1475" y="2450"/>
         </scene>
-        <!--View Controller-->
+        <!--Check Position View Controller-->
         <scene sceneID="NeY-yG-x17">
             <objects>
-                <viewController id="Bav-YS-rrl" sceneMemberID="viewController">
+                <viewController id="Bav-YS-rrl" customClass="CheckPositionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dxR-3r-NGe"/>
                         <viewControllerLayoutGuide type="bottom" id="vOw-P6-gq6"/>
@@ -1024,14 +1443,571 @@
                     <view key="view" contentMode="scaleToFill" id="Iwh-JK-2oh">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgBgDark" translatesAutoresizingMaskIntoConstraints="NO" id="i9C-i1-mzI">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRh-3z-Tn7">
+                                <rect key="frame" x="134" y="0.0" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="Bav-YS-rrl" eventType="touchUpInside" id="vBT-8d-D0J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i3h-bf-Bha">
+                                <rect key="frame" x="0.0" y="115" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="Bav-YS-rrl" eventType="touchUpInside" id="jMo-Vr-Zfa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIZ-Ve-C7T">
+                                <rect key="frame" x="134" y="230" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer3">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="Bav-YS-rrl" eventType="touchUpInside" id="ApE-ad-1TF"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconMoon" translatesAutoresizingMaskIntoConstraints="NO" id="LS7-lR-8kU">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            </imageView>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3B2-kU-fKj">
+                                <rect key="frame" x="485" y="115" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer5">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="Bav-YS-rrl" eventType="touchUpInside" id="cLy-No-gxK"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Um2-lH-frb">
+                                <rect key="frame" x="83" y="90" width="402" height="140"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="役職を確認してください" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGG-Hm-JP8">
+                                        <rect key="frame" x="76" y="20" width="250" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hb-WY-iSS">
+                                        <rect key="frame" x="161" y="90" width="80" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="次へ">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextButtonPressed:" destination="Bav-YS-rrl" eventType="touchUpInside" id="u4W-t6-DE3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgZ-WU-PDD">
+                                <rect key="frame" x="351" y="230" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer4">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="Bav-YS-rrl" eventType="touchUpInside" id="PU4-hj-53m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zor-Dc-U3U">
+                                <rect key="frame" x="351" y="0.0" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer6">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="Bav-YS-rrl" eventType="touchUpInside" id="ynr-od-VgO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="24X-DT-oNU"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outletCollection property="playerButtons" destination="nRh-3z-Tn7" id="Zti-iz-uro"/>
+                        <outletCollection property="playerButtons" destination="RgZ-WU-PDD" id="1cX-1l-z2N"/>
+                        <outletCollection property="playerButtons" destination="i3h-bf-Bha" id="qnX-6N-W9Y"/>
+                        <outletCollection property="playerButtons" destination="vIZ-Ve-C7T" id="5Js-8U-Ank"/>
+                        <outletCollection property="playerButtons" destination="3B2-kU-fKj" id="YDR-iL-7KJ"/>
+                        <outletCollection property="playerButtons" destination="zor-Dc-U3U" id="pYp-fp-PRG"/>
+                        <segue destination="Kal-yG-H6V" kind="push" identifier="toDay" id="eMG-pv-Fmp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6t-g1-rCP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1083" y="622"/>
+            <point key="canvasLocation" x="-1192" y="627"/>
+        </scene>
+        <!--Check Position View Controller-->
+        <scene sceneID="20A-nV-WdJ">
+            <objects>
+                <viewController id="Zic-jL-kVl" customClass="CheckPositionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BOp-CO-PT9"/>
+                        <viewControllerLayoutGuide type="bottom" id="3nh-fY-oja"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hCA-he-yeh">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgBgDark" translatesAutoresizingMaskIntoConstraints="NO" id="yIi-kT-fq9">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                            </imageView>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2s-di-p6s">
+                                <rect key="frame" x="351" y="0.0" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer7">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="Zic-jL-kVl" eventType="touchUpInside" id="R4x-6i-cjB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfh-Go-Oc4">
+                                <rect key="frame" x="143" y="0.0" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="Zic-jL-kVl" eventType="touchUpInside" id="i90-7T-2DC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbF-3y-vDc">
+                                <rect key="frame" x="485" y="115" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer6">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="Zic-jL-kVl" eventType="touchUpInside" id="QYj-Ny-bpX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gp-2I-V1O">
+                                <rect key="frame" x="0.0" y="115" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="Zic-jL-kVl" eventType="touchUpInside" id="lbw-Gg-W5y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdv-FV-VlG">
+                                <rect key="frame" x="80" y="230" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer3">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="Zic-jL-kVl" eventType="touchUpInside" id="wIp-8M-8qt"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconMoon" translatesAutoresizingMaskIntoConstraints="NO" id="JsW-ct-c7Z">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            </imageView>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dsu-77-AQd">
+                                <rect key="frame" x="405" y="230" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer5">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="Zic-jL-kVl" eventType="touchUpInside" id="T8m-fB-xgH"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rOB-Ci-Otw">
+                                <rect key="frame" x="83" y="90" width="402" height="140"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="役職を確認してください" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kH-tf-hca">
+                                        <rect key="frame" x="76" y="20" width="250" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvn-sa-hxv">
+                                        <rect key="frame" x="161" y="90" width="80" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="次へ">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextButtonPressed:" destination="Zic-jL-kVl" eventType="touchUpInside" id="aw6-Zy-jM8"/>
+                                            <action selector="okButtonPressed:" destination="Zic-jL-kVl" eventType="touchUpInside" id="7Ys-X6-IzZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3l-9c-f6K">
+                                <rect key="frame" x="243" y="230" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer4">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="Zic-jL-kVl" eventType="touchUpInside" id="dkw-aY-fC0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JK8-MA-nS2"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outletCollection property="playerButtons" destination="P2s-di-p6s" id="PNX-2c-pzP"/>
+                        <outletCollection property="playerButtons" destination="Zfh-Go-Oc4" id="kbp-eO-GkR"/>
+                        <outletCollection property="playerButtons" destination="RbF-3y-vDc" id="LEH-wb-dRJ"/>
+                        <outletCollection property="playerButtons" destination="q3l-9c-f6K" id="fgs-3W-1hM"/>
+                        <outletCollection property="playerButtons" destination="3gp-2I-V1O" id="a7Z-Wd-bTO"/>
+                        <outletCollection property="playerButtons" destination="cdv-FV-VlG" id="doZ-CH-Ku1"/>
+                        <outletCollection property="playerButtons" destination="Dsu-77-AQd" id="kB6-XF-csE"/>
+                        <segue destination="OSa-pD-IBs" kind="push" identifier="toDay" id="1y9-5E-96H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T4o-o1-aM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-615" y="627"/>
+        </scene>
+        <!--Day View Controller-->
+        <scene sceneID="36h-J0-tcr">
+            <objects>
+                <viewController id="OSa-pD-IBs" customClass="DayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5ep-TQ-cU4"/>
+                        <viewControllerLayoutGuide type="bottom" id="UCV-HS-S7U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QeJ-3p-Znb">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgBgDark" translatesAutoresizingMaskIntoConstraints="NO" id="EJk-kC-gTo">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconSun" translatesAutoresizingMaskIntoConstraints="NO" id="mfa-H4-ZfI">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            </imageView>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OsG-ng-kOy">
+                                <rect key="frame" x="351" y="0.0" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer7">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="OSa-pD-IBs" eventType="touchUpInside" id="rI7-gu-s5o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FV2-zb-1Pp">
+                                <rect key="frame" x="80" y="230" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer3">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="OSa-pD-IBs" eventType="touchUpInside" id="cit-vS-pLr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuM-1l-Mlf">
+                                <rect key="frame" x="0.0" y="115" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="OSa-pD-IBs" eventType="touchUpInside" id="ecM-va-Uib"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRc-qJ-5rx">
+                                <rect key="frame" x="405" y="230" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer5">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="OSa-pD-IBs" eventType="touchUpInside" id="DhF-At-xd9"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gJO-lf-dnn">
+                                <rect key="frame" x="83" y="90" width="402" height="140"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="朝になりました、議論開始" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4y-Up-tSm">
+                                        <rect key="frame" x="51" y="20" width="300" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0z-Xp-Suk">
+                                        <rect key="frame" x="111" y="90" width="80" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="議論">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="discussButtonPressed:" destination="OSa-pD-IBs" eventType="touchUpInside" id="KMU-e3-rXX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PI9-Vc-ygr">
+                                        <rect key="frame" x="211" y="90" width="80" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="次へ">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextButtonPressed:" destination="Kal-yG-H6V" eventType="touchUpInside" id="Wxi-aR-ywG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jna-qG-uGd">
+                                <rect key="frame" x="143" y="0.0" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="OSa-pD-IBs" eventType="touchUpInside" id="LuZ-zp-eXK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wp0-nL-val">
+                                <rect key="frame" x="485" y="115" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer6">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="OSa-pD-IBs" eventType="touchUpInside" id="mJR-4Q-T6C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7O-Qs-MpB">
+                                <rect key="frame" x="243" y="230" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer4">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="OSa-pD-IBs" eventType="touchUpInside" id="bEZ-Ai-Q0y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DtB-ne-lce"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="commentLabel" destination="k4y-Up-tSm" id="BKh-00-j0H"/>
+                        <outlet property="discussButton" destination="I0z-Xp-Suk" id="F42-a9-hCE"/>
+                        <outlet property="nextButton" destination="PI9-Vc-ygr" id="tYF-qa-TAL"/>
+                        <outletCollection property="playerButtons" destination="jna-qG-uGd" id="8vz-n8-eYz"/>
+                        <outletCollection property="playerButtons" destination="OsG-ng-kOy" id="aoX-qK-zjm"/>
+                        <outletCollection property="playerButtons" destination="FV2-zb-1Pp" id="DJh-Or-Z6h"/>
+                        <outletCollection property="playerButtons" destination="wuM-1l-Mlf" id="cqR-VO-WwV"/>
+                        <outletCollection property="playerButtons" destination="ZRc-qJ-5rx" id="v1r-Hc-XZc"/>
+                        <outletCollection property="playerButtons" destination="e7O-Qs-MpB" id="Xox-x1-5wx"/>
+                        <outletCollection property="playerButtons" destination="wp0-nL-val" id="MX8-pw-LgD"/>
+                        <segue destination="ChD-xN-so4" kind="push" identifier="toResult" id="06E-BI-9qo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9sQ-eD-dDQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-615" y="1088"/>
+        </scene>
+        <!--Vote Result View Controller-->
+        <scene sceneID="hwB-gQ-ebw">
+            <objects>
+                <viewController id="ChD-xN-so4" customClass="VoteResultViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cty-6t-HUo"/>
+                        <viewControllerLayoutGuide type="bottom" id="ORE-uZ-jdz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="idi-rx-ZQr">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgBgDark" translatesAutoresizingMaskIntoConstraints="NO" id="0PH-iI-GOx">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="00P-PE-z3D">
+                                <rect key="frame" x="83" y="90" width="402" height="140"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="一人が追放されました" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdy-T4-9L4">
+                                        <rect key="frame" x="51" y="20" width="300" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tj7-rE-yZB">
+                                        <rect key="frame" x="161" y="90" width="80" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="次へ">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextButtonPressed:" destination="ChD-xN-so4" eventType="touchUpInside" id="bXh-bG-Ofb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconSun" translatesAutoresizingMaskIntoConstraints="NO" id="3E1-2v-3DE">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer1" translatesAutoresizingMaskIntoConstraints="NO" id="03W-iI-Uyk">
+                                <rect key="frame" x="143" y="0.0" width="83" height="90"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer7" translatesAutoresizingMaskIntoConstraints="NO" id="Eaa-zP-oAT">
+                                <rect key="frame" x="351" y="0.0" width="83" height="90"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer6" translatesAutoresizingMaskIntoConstraints="NO" id="K7V-7X-it3">
+                                <rect key="frame" x="485" y="115" width="83" height="90"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer3" translatesAutoresizingMaskIntoConstraints="NO" id="vgo-Qh-VFy">
+                                <rect key="frame" x="0.0" y="115" width="83" height="90"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer2" translatesAutoresizingMaskIntoConstraints="NO" id="mWN-rB-l10">
+                                <rect key="frame" x="80" y="230" width="83" height="90"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer5" translatesAutoresizingMaskIntoConstraints="NO" id="gvu-Vv-P7g">
+                                <rect key="frame" x="405" y="230" width="83" height="90"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgPlayer4" translatesAutoresizingMaskIntoConstraints="NO" id="L0v-Lo-Va4">
+                                <rect key="frame" x="243" y="230" width="83" height="90"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WQq-jC-b9z"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outletCollection property="playerImages" destination="03W-iI-Uyk" id="rpT-bU-Zyj"/>
+                        <outletCollection property="playerImages" destination="Eaa-zP-oAT" id="wAa-Kq-7eW"/>
+                        <outletCollection property="playerImages" destination="K7V-7X-it3" id="zyc-kJ-R18"/>
+                        <outletCollection property="playerImages" destination="vgo-Qh-VFy" id="tv7-pC-NF5"/>
+                        <outletCollection property="playerImages" destination="mWN-rB-l10" id="ze2-4U-j0T"/>
+                        <outletCollection property="playerImages" destination="gvu-Vv-P7g" id="4ef-om-nUw"/>
+                        <outletCollection property="playerImages" destination="L0v-Lo-Va4" id="c6H-5R-g2o"/>
+                        <segue destination="s9r-wQ-q2m" kind="push" identifier="toNight" id="Pzg-RN-LiQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g4g-3u-hjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-615" y="1548"/>
+        </scene>
+        <!--Night View Controller-->
+        <scene sceneID="9Tm-Ze-s9D">
+            <objects>
+                <viewController id="s9r-wQ-q2m" customClass="NightViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jS4-c6-1Qf"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZjD-Ab-zti"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d1T-WS-q21">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgBgDark" translatesAutoresizingMaskIntoConstraints="NO" id="GC3-5n-aBR">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MZU-W5-kUF">
+                                <rect key="frame" x="83" y="90" width="402" height="140"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="夜になりました" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBX-QF-uW5">
+                                        <rect key="frame" x="51" y="20" width="300" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FI9-IJ-eBt">
+                                        <rect key="frame" x="161" y="90" width="80" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="次へ">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextButtonPressed:" destination="s9r-wQ-q2m" eventType="touchUpInside" id="c7N-y4-i4V"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconMoon" translatesAutoresizingMaskIntoConstraints="NO" id="LjY-1X-6zn">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCh-XN-R5L">
+                                <rect key="frame" x="143" y="0.0" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="s9r-wQ-q2m" eventType="touchUpInside" id="90q-gs-Yu6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4a3-hd-kCv">
+                                <rect key="frame" x="80" y="230" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer3">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="s9r-wQ-q2m" eventType="touchUpInside" id="rAF-j8-sQ8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaF-M1-Ued">
+                                <rect key="frame" x="405" y="230" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer5">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="s9r-wQ-q2m" eventType="touchUpInside" id="mak-UN-kb2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6U-GE-Cyl">
+                                <rect key="frame" x="0.0" y="115" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="s9r-wQ-q2m" eventType="touchUpInside" id="ejk-OE-5vI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSe-z5-C1l">
+                                <rect key="frame" x="243" y="230" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer4">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="s9r-wQ-q2m" eventType="touchUpInside" id="j3a-ML-mdO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbt-um-C1w">
+                                <rect key="frame" x="485" y="115" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer6">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="s9r-wQ-q2m" eventType="touchUpInside" id="Eh2-VI-yQE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqn-ZW-R3R">
+                                <rect key="frame" x="351" y="0.0" width="83" height="90"/>
+                                <state key="normal" backgroundImage="imgPlayer7">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playerButtonsPressed:" destination="s9r-wQ-q2m" eventType="touchUpInside" id="C3u-yh-qZg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Uub-fM-mko"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outletCollection property="playerButtons" destination="OCh-XN-R5L" id="qp8-4I-w98"/>
+                        <outletCollection property="playerButtons" destination="q6U-GE-Cyl" id="brm-oy-6Xd"/>
+                        <outletCollection property="playerButtons" destination="4a3-hd-kCv" id="DVl-ce-i3M"/>
+                        <outletCollection property="playerButtons" destination="RSe-z5-C1l" id="IDx-hy-0Zc"/>
+                        <outletCollection property="playerButtons" destination="WaF-M1-Ued" id="5ts-sX-nFg"/>
+                        <outletCollection property="playerButtons" destination="Pbt-um-C1w" id="aPS-4F-X9h"/>
+                        <outletCollection property="playerButtons" destination="iqn-ZW-R3R" id="Y66-lK-MNf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hJb-Pz-4hH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-615" y="1993"/>
         </scene>
     </scenes>
     <resources>
@@ -1067,9 +2043,11 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="2bP-kA-sR5"/>
+        <segue reference="y2s-Ki-ByN"/>
+        <segue reference="KrA-Ok-FoT"/>
+        <segue reference="IHb-cG-fr5"/>
         <segue reference="TtO-2y-XDW"/>
-        <segue reference="Vz4-g6-Jk4"/>
-        <segue reference="90V-dg-m9X"/>
-        <segue reference="ahJ-Ed-w4O"/>
+        <segue reference="uoc-O7-dCe"/>
     </inferredMetricsTieBreakers>
 </document>

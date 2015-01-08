@@ -22,11 +22,11 @@
 @property (strong, nonatomic) IBOutletCollection (UIButton) NSArray *playerButtons;
 @property (weak, nonatomic) IBOutlet UILabel *commentLabel;
 @property (weak, nonatomic) IBOutlet UIButton *discussButton;
-@property (weak, nonatomic) IBOutlet UIButton *okButton;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
 
 - (IBAction)playerButtonsPressed:(id)sender;
 - (IBAction)discussButtonPressed:(id)sender;
-- (IBAction)okButtonPressed:(id)sender;
+- (IBAction)nextButtonPressed:(id)sender;
 
 @property (nonatomic) BOOL discussFlg;
 
@@ -60,11 +60,11 @@
     
     if (!self.discussFlg) {
         self.discussButton.enabled = YES;
-        self.okButton.enabled = NO;
+        self.nextButton.enabled = NO;
         self.commentLabel.text = @"朝になりました、議論開始";
     } else {
         self.discussButton.enabled = NO;
-        self.okButton.enabled = YES;
+        self.nextButton.enabled = YES;
         self.commentLabel.text = @"議論終了、投票してください";
     }
 }
@@ -112,7 +112,7 @@
     [self presentViewController:controller animated:YES completion:nil];
 }
 
-- (IBAction)okButtonPressed:(id)sender {
+- (IBAction)nextButtonPressed:(id)sender {
     
     if ([[VoteManager sharedManager] banish]) {
         if ([[GameStatus sharedManager] gameOverJudge]) {

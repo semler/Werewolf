@@ -91,7 +91,7 @@
     if ([[GameStatus sharedManager] gameOverJudge]) {
         [self performSegueWithIdentifier:@"gameOver" sender:self];
     } else {
-        [self performSegueWithIdentifier:@"toStep1" sender:self];
+        [self performSegueWithIdentifier:@"toDay" sender:self];
     }
 }
 

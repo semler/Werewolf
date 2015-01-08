@@ -53,6 +53,6 @@
 }
 
 - (IBAction)nextButtonPressed:(id)sender {
-    [self performSegueWithIdentifier:@"toStep2" sender:self];
+    [self performSegueWithIdentifier:@"toNight" sender:self];
 }
 @end

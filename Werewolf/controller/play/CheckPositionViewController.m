@@ -20,7 +20,7 @@
 @property (strong, nonatomic) IBOutletCollection (UIButton) NSArray *playerButtons;
 
 - (IBAction)playerButtonsPressed:(id)sender;
-- (IBAction)okButtonPressed:(id)sender;
+- (IBAction)nextButtonPressed:(id)sender;
 
 @end
 
@@ -84,7 +84,7 @@
     }
 }
 
-- (IBAction)okButtonPressed:(id)sender {
-    [self performSegueWithIdentifier:@"toStep1" sender:self];
+- (IBAction)nextButtonPressed:(id)sender {
+    [self performSegueWithIdentifier:@"toDay" sender:self];
 }
 @end

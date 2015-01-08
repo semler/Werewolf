@@ -31,6 +31,7 @@
     for (int i = 0; i < 11; i ++) {
         Player *player = [[Player alloc] init];
         player.playerNum = i;
+        player.image = [UIImage imageNamed:[NSString stringWithFormat:@"imgPlayer%d", i + 1]];
         [[PlayerManager sharedManager].playerList addObject:player];
     }
     
@@ -45,16 +46,12 @@
             player.image = [UIImage imageWithContentsOfFile:path];
         }
         
-        if ([GameStatus sharedManager].playerCount == 5) {
-            if (button.tag > 4) {
-                button.alpha = 0.5;
-                button.enabled = NO;
-            } else {
-                button.alpha = 1;
-                button.enabled = YES;
-            }
-        } else if ([GameStatus sharedManager].playerCount == 6) {
-            //
+        if (button.tag < [GameStatus sharedManager].playerCount) {
+            button.alpha = 1;
+            button.enabled = YES;
+        } else {
+            button.alpha = 0.5;
+            button.enabled = NO;
         }
     }
 }
