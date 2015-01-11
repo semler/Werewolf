@@ -14,6 +14,7 @@
 
 @property (strong, nonatomic) NSMutableArray *playerArray;
 @property (nonatomic) long toAttack;
+@property (nonatomic) long lastDead;
 
 - (BOOL) banish;
 - (BOOL) guard:(long)num;

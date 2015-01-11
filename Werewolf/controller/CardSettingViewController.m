@@ -79,9 +79,33 @@
         self.madmanCount = 0;
         self.mediumCount = 0;
     } else if ([GameStatus sharedManager].playerCount == 8) {
+        self.villageCount = 2;
+        self.werewolfCount = 2;
+        self.seerCount = 1;
+        self.bodyguardCount = 1;
+        self.madmanCount = 1;
+        self.mediumCount = 1;
     } else if ([GameStatus sharedManager].playerCount == 9) {
+        self.villageCount = 3;
+        self.werewolfCount = 2;
+        self.seerCount = 1;
+        self.bodyguardCount = 1;
+        self.madmanCount = 1;
+        self.mediumCount = 1;
     } else if ([GameStatus sharedManager].playerCount == 10) {
+        self.villageCount = 4;
+        self.werewolfCount = 2;
+        self.seerCount = 1;
+        self.bodyguardCount = 1;
+        self.madmanCount = 1;
+        self.mediumCount = 1;
     } else if ([GameStatus sharedManager].playerCount == 11) {
+        self.villageCount = 4;
+        self.werewolfCount = 3;
+        self.seerCount = 1;
+        self.bodyguardCount = 1;
+        self.madmanCount = 1;
+        self.mediumCount = 1;
     }
     [self updateLabel];
 }
@@ -153,9 +177,99 @@
         self.minusMediumButton.enabled = NO;
         self.plusMediumButton.enabled = NO;
     } else if ([GameStatus sharedManager].playerCount == 8) {
+        self.minusWerewolfButton.enabled = NO;
+        self.plusWerewolfButton.enabled = NO;
+        self.minusSeerButton.enabled = NO;
+        self.plusSeerButton.enabled = NO;
+        self.minusBodyguardButton.enabled = NO;
+        self.plusBodyguardButton.enabled = NO;
+        if (self.madmanCount == 0) {
+            self.minusMadmanButton.enabled = NO;
+            self.plusMadmanButton.enabled = YES;
+        } else if (self.madmanCount == 1) {
+            self.minusMadmanButton.enabled = YES;
+            self.plusMadmanButton.enabled = NO;
+        }
+        if (self.mediumCount == 0) {
+            self.minusMediumButton.enabled = NO;
+            self.plusMediumButton.enabled = YES;
+        } else if (self.mediumCount == 1) {
+            self.minusMediumButton.enabled = YES;
+            self.plusMediumButton.enabled = NO;
+        }
     } else if ([GameStatus sharedManager].playerCount == 9) {
+        if (self.werewolfCount == 2) {
+            self.minusMadmanButton.enabled = NO;
+            self.plusMadmanButton.enabled = YES;
+        } else if (self.werewolfCount == 3) {
+            self.minusMadmanButton.enabled = YES;
+            self.plusMadmanButton.enabled = NO;
+        }
+        self.minusSeerButton.enabled = NO;
+        self.plusSeerButton.enabled = NO;
+        self.minusBodyguardButton.enabled = NO;
+        self.plusBodyguardButton.enabled = NO;
+        if (self.madmanCount == 0) {
+            self.minusMadmanButton.enabled = NO;
+            self.plusMadmanButton.enabled = YES;
+        } else if (self.madmanCount == 1) {
+            self.minusMadmanButton.enabled = YES;
+            self.plusMadmanButton.enabled = NO;
+        }
+        if (self.mediumCount == 0) {
+            self.minusMediumButton.enabled = NO;
+            self.plusMediumButton.enabled = YES;
+        } else if (self.mediumCount == 1) {
+            self.minusMediumButton.enabled = YES;
+            self.plusMediumButton.enabled = NO;
+        }
     } else if ([GameStatus sharedManager].playerCount == 10) {
+        if (self.werewolfCount == 2) {
+            self.minusMadmanButton.enabled = NO;
+            self.plusMadmanButton.enabled = YES;
+        } else if (self.werewolfCount == 3) {
+            self.minusMadmanButton.enabled = YES;
+            self.plusMadmanButton.enabled = NO;
+        }
+        self.minusSeerButton.enabled = NO;
+        self.plusSeerButton.enabled = NO;
+        self.minusBodyguardButton.enabled = NO;
+        self.plusBodyguardButton.enabled = NO;
+        if (self.madmanCount == 0) {
+            self.minusMadmanButton.enabled = NO;
+            self.plusMadmanButton.enabled = YES;
+        } else if (self.madmanCount == 1) {
+            self.minusMadmanButton.enabled = YES;
+            self.plusMadmanButton.enabled = NO;
+        }
+        if (self.mediumCount == 0) {
+            self.minusMediumButton.enabled = NO;
+            self.plusMediumButton.enabled = YES;
+        } else if (self.mediumCount == 1) {
+            self.minusMediumButton.enabled = YES;
+            self.plusMediumButton.enabled = NO;
+        }
     } else if ([GameStatus sharedManager].playerCount == 11) {
+        self.minusWerewolfButton.enabled = NO;
+        self.plusWerewolfButton.enabled = NO;
+        self.minusSeerButton.enabled = NO;
+        self.plusSeerButton.enabled = NO;
+        self.minusBodyguardButton.enabled = NO;
+        self.plusBodyguardButton.enabled = NO;
+        if (self.madmanCount == 0) {
+            self.minusMadmanButton.enabled = NO;
+            self.plusMadmanButton.enabled = YES;
+        } else if (self.madmanCount == 1) {
+            self.minusMadmanButton.enabled = YES;
+            self.plusMadmanButton.enabled = NO;
+        }
+        if (self.mediumCount == 0) {
+            self.minusMediumButton.enabled = NO;
+            self.plusMediumButton.enabled = YES;
+        } else if (self.mediumCount == 1) {
+            self.minusMediumButton.enabled = YES;
+            self.plusMediumButton.enabled = NO;
+        }
     }
 }
 
@@ -166,7 +280,15 @@
     } else if ([GameStatus sharedManager].playerCount == 7) {
     } else if ([GameStatus sharedManager].playerCount == 8) {
     } else if ([GameStatus sharedManager].playerCount == 9) {
+        if (self.werewolfCount > 2) {
+            self.werewolfCount --;
+            self.villageCount ++;
+        }
     } else if ([GameStatus sharedManager].playerCount == 10) {
+        if (self.werewolfCount > 2) {
+            self.werewolfCount --;
+            self.villageCount ++;
+        }
     } else if ([GameStatus sharedManager].playerCount == 11) {
     }
     
@@ -180,7 +302,15 @@
     } else if ([GameStatus sharedManager].playerCount == 7) {
     } else if ([GameStatus sharedManager].playerCount == 8) {
     } else if ([GameStatus sharedManager].playerCount == 9) {
+        if (self.werewolfCount < 3) {
+            self.werewolfCount ++;
+            self.villageCount --;
+        }
     } else if ([GameStatus sharedManager].playerCount == 10) {
+        if (self.werewolfCount < 3) {
+            self.werewolfCount ++;
+            self.villageCount --;
+        }
     } else if ([GameStatus sharedManager].playerCount == 11) {
     }
     
@@ -264,9 +394,25 @@
     } else if ([GameStatus sharedManager].playerCount == 6) {
     } else if ([GameStatus sharedManager].playerCount == 7) {
     } else if ([GameStatus sharedManager].playerCount == 8) {
+        if (self.madmanCount > 0) {
+            self.madmanCount --;
+            self.villageCount ++;
+        }
     } else if ([GameStatus sharedManager].playerCount == 9) {
+        if (self.madmanCount > 0) {
+            self.madmanCount --;
+            self.villageCount ++;
+        }
     } else if ([GameStatus sharedManager].playerCount == 10) {
+        if (self.madmanCount > 0) {
+            self.madmanCount --;
+            self.villageCount ++;
+        }
     } else if ([GameStatus sharedManager].playerCount == 11) {
+        if (self.madmanCount > 0) {
+            self.madmanCount --;
+            self.villageCount ++;
+        }
     }
     
     [self updateLabel];
@@ -281,9 +427,25 @@
     } else if ([GameStatus sharedManager].playerCount == 6) {
     } else if ([GameStatus sharedManager].playerCount == 7) {
     } else if ([GameStatus sharedManager].playerCount == 8) {
+        if (self.madmanCount < 1) {
+            self.madmanCount ++;
+            self.villageCount --;
+        }
     } else if ([GameStatus sharedManager].playerCount == 9) {
+        if (self.madmanCount < 1) {
+            self.madmanCount ++;
+            self.villageCount --;
+        }
     } else if ([GameStatus sharedManager].playerCount == 10) {
+        if (self.madmanCount < 1) {
+            self.madmanCount ++;
+            self.villageCount --;
+        }
     } else if ([GameStatus sharedManager].playerCount == 11) {
+        if (self.madmanCount < 1) {
+            self.madmanCount ++;
+            self.villageCount --;
+        }
     }
     
     [self updateLabel];
@@ -295,9 +457,25 @@
     } else if ([GameStatus sharedManager].playerCount == 6) {
     } else if ([GameStatus sharedManager].playerCount == 7) {
     } else if ([GameStatus sharedManager].playerCount == 8) {
+        if (self.mediumCount > 0) {
+            self.mediumCount --;
+            self.villageCount ++;
+        }
     } else if ([GameStatus sharedManager].playerCount == 9) {
+        if (self.mediumCount > 0) {
+            self.mediumCount --;
+            self.villageCount ++;
+        }
     } else if ([GameStatus sharedManager].playerCount == 10) {
+        if (self.mediumCount > 0) {
+            self.mediumCount --;
+            self.villageCount ++;
+        }
     } else if ([GameStatus sharedManager].playerCount == 11) {
+        if (self.mediumCount > 0) {
+            self.mediumCount --;
+            self.villageCount ++;
+        }
     }
     
     [self updateLabel];
@@ -309,9 +487,25 @@
     } else if ([GameStatus sharedManager].playerCount == 6) {
     } else if ([GameStatus sharedManager].playerCount == 7) {
     } else if ([GameStatus sharedManager].playerCount == 8) {
+        if (self.mediumCount < 1) {
+            self.mediumCount ++;
+            self.villageCount --;
+        }
     } else if ([GameStatus sharedManager].playerCount == 9) {
+        if (self.mediumCount < 1) {
+            self.mediumCount ++;
+            self.villageCount --;
+        }
     } else if ([GameStatus sharedManager].playerCount == 10) {
+        if (self.mediumCount < 1) {
+            self.mediumCount ++;
+            self.villageCount --;
+        }
     } else if ([GameStatus sharedManager].playerCount == 11) {
+        if (self.mediumCount < 1) {
+            self.mediumCount ++;
+            self.villageCount --;
+        }
     }
     
     [self updateLabel];

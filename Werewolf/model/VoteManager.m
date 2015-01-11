@@ -60,6 +60,10 @@ static VoteManager *voteManager = nil;
         player = [players objectAtIndex:0];
         player.isBanished = YES;
         [GameStatus sharedManager].alivePlayerCount --;
+        if (player.position == 1) {
+            [GameStatus sharedManager].werewolfCount --;
+        }
+        self.lastDead = player.position;
         return YES;
     } else {
         for (int i = 0; i < [players count]; i ++) {
@@ -85,6 +89,7 @@ static VoteManager *voteManager = nil;
     if (!player.isGuarded) {
         player.isAttacked = YES;
         [GameStatus sharedManager].alivePlayerCount --;
+        self.lastDead = player.position;
     }
 }
 

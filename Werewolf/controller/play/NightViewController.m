@@ -14,6 +14,7 @@
 #import "SeerViewController.h"
 #import "BodyguardViewController.h"
 #import "MadmanViewController.h"
+#import "MediumViewController.h"
 #import "VoteManager.h"
 
 @interface NightViewController ()
@@ -39,11 +40,13 @@
         
         UIImageView *imageView;
         if (player.isBanished) {
+            button.enabled = NO;
             imageView = [[UIImageView alloc] initWithFrame:button.frame];
             UIImage *image = [UIImage imageNamed:@"iconExpulsion.png"];
             imageView.image = image;
             [self.view addSubview:imageView];
         } else if (player.isAttacked) {
+            button.enabled = NO;
             imageView = [[UIImageView alloc] initWithFrame:button.frame];
             UIImage *image = [UIImage imageNamed:@"iconKilled.png"];
             imageView.image = image;
@@ -82,6 +85,9 @@
         [self presentViewController:controller animated:YES completion:nil];
     } else if (player.position == 4) {
         MadmanViewController *controller = [[MadmanViewController alloc] init];
+        [self presentViewController:controller animated:YES completion:nil];
+    } else if (player.position == 5) {
+        MediumViewController *controller = [[MediumViewController alloc] init];
         [self presentViewController:controller animated:YES completion:nil];
     }
 }

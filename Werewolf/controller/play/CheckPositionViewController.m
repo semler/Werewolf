@@ -14,6 +14,7 @@
 #import "SeerViewController.h"
 #import "BodyguardViewController.h"
 #import "MadmanViewController.h"
+#import "MediumViewController.h"
 
 @interface CheckPositionViewController ()
 
@@ -80,6 +81,9 @@
         [self presentViewController:controller animated:YES completion:nil];
     } else if (player.position == 4) {
         MadmanViewController *controller = [[MadmanViewController alloc] init];
+        [self presentViewController:controller animated:YES completion:nil];
+    } else if (player.position == 5) {
+        MediumViewController *controller = [[MediumViewController alloc] init];
         [self presentViewController:controller animated:YES completion:nil];
     }
 }

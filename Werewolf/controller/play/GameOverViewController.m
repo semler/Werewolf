@@ -78,6 +78,8 @@
             imageView.image = [UIImage imageNamed:@"iconGuard.png"];
         } else if (player.position == 4) {
             imageView.image = [UIImage imageNamed:@"iconUragiri.png"];
+        } else if (player.position == 5) {
+            imageView.image = [UIImage imageNamed:@"iconReibai.png"];
         }
     }
 }

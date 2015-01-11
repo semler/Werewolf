@@ -39,6 +39,7 @@ static PlayerManager *playerManager = nil;
     NSMutableArray *array2 = [NSMutableArray array];
     NSMutableArray *array3 = [NSMutableArray array];
     NSMutableArray *array4 = [NSMutableArray array];
+    NSMutableArray *array5 = [NSMutableArray array];
 
     for (int i = 0; i < [GameStatus sharedManager].villageCount; i ++) {
         [self random: array subArray:array0];
@@ -54,6 +55,9 @@ static PlayerManager *playerManager = nil;
     }
     for (int i = 0; i < [GameStatus sharedManager].madmanCount; i ++) {
         [self random: array subArray:array4];
+    }
+    for (int i = 0; i < [GameStatus sharedManager].mediumCount; i ++) {
+        [self random: array subArray:array5];
     }
     
     for (int i = 0; i < [GameStatus sharedManager].playerCount; i ++) {
@@ -84,6 +88,12 @@ static PlayerManager *playerManager = nil;
         for (int j = 0; j < array4.count; j ++) {
             if ([array4[j] integerValue] == i) {
                 [self.position addObject:@(4)];
+                break;
+            }
+        }
+        for (int j = 0; j < array5.count; j ++) {
+            if ([array5[j] integerValue] == i) {
+                [self.position addObject:@(5)];
                 break;
             }
         }

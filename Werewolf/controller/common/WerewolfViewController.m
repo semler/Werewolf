@@ -52,12 +52,23 @@
         } else {
             NSString *attack = [[NSString alloc] init];
             for (Player *player in self.partner) {
-                if (!player.isBanished) {
-                    if (player.attack != 0)
+                if (!player.isBanished && player.attack != 0) {
                     attack = [NSString stringWithFormat: @"%@Player%ld ", attack, player.attack];
                 }
             }
-            self.commentLabel.text = [NSString stringWithFormat: @"仲間は %@を襲撃", attack];
+            if (attack.length != 0) {
+                self.commentLabel.text = [NSString stringWithFormat: @"仲間は %@を襲撃", attack];
+            } else {
+                self.commentLabel.text = @"襲撃したいプレイヤーを選んでください";
+            }
+            // 仲間のボタンを非活性
+            for (UIButton *button in self.playerButtons) {
+                for (Player *player in self.partner) {
+                    if (button.tag == player.playerNum) {
+                        [button setEnabled:NO];
+                    }
+                }
+            }
         }
     }
 }

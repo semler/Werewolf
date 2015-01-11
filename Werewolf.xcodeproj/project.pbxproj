@@ -13,6 +13,8 @@
 		4544C2441A2EFF75001040E9 /* PlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4544C2431A2EFF75001040E9 /* PlayerManager.m */; };
 		4544C2491A2F48D1001040E9 /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4544C2471A2F48D1001040E9 /* PlayerViewController.xib */; };
 		454EBC721A41327700294E80 /* koukaon1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 454EBC711A41327700294E80 /* koukaon1.wav */; };
+		456DD4AF1A628B620041A708 /* MediumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 456DD4AD1A628B620041A708 /* MediumViewController.m */; };
+		456DD4B01A628B620041A708 /* MediumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 456DD4AE1A628B620041A708 /* MediumViewController.xib */; };
 		45A861761A30422F000124C4 /* GameStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A861751A30422F000124C4 /* GameStatus.m */; };
 		45B0C9901A3583E400E192A1 /* CardSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B0C98F1A3583E400E192A1 /* CardSettingViewController.m */; };
 		45BD0D8D1A3FBF070087B43F /* VillagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BD0D8C1A3FBF070087B43F /* VillagerViewController.m */; };
@@ -53,6 +55,9 @@
 		4544C2431A2EFF75001040E9 /* PlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerManager.m; sourceTree = "<group>"; };
 		4544C2471A2F48D1001040E9 /* PlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerViewController.xib; sourceTree = "<group>"; };
 		454EBC711A41327700294E80 /* koukaon1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = koukaon1.wav; sourceTree = "<group>"; };
+		456DD4AC1A628B620041A708 /* MediumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MediumViewController.h; path = ../../view/MediumViewController.h; sourceTree = "<group>"; };
+		456DD4AD1A628B620041A708 /* MediumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MediumViewController.m; path = ../../view/MediumViewController.m; sourceTree = "<group>"; };
+		456DD4AE1A628B620041A708 /* MediumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediumViewController.xib; sourceTree = "<group>"; };
 		45A861741A30422F000124C4 /* GameStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStatus.h; sourceTree = "<group>"; };
 		45A861751A30422F000124C4 /* GameStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStatus.m; sourceTree = "<group>"; };
 		45B0C98E1A3583E400E192A1 /* CardSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardSettingViewController.h; sourceTree = "<group>"; };
@@ -127,6 +132,8 @@
 				45BD0DAB1A3FFF830087B43F /* BodyguardViewController.m */,
 				45BD0DB11A400C1E0087B43F /* MadmanViewController.h */,
 				45BD0DB21A400C1E0087B43F /* MadmanViewController.m */,
+				456DD4AC1A628B620041A708 /* MediumViewController.h */,
+				456DD4AD1A628B620041A708 /* MediumViewController.m */,
 				45BD0DC01A40242D0087B43F /* AlermViewController.h */,
 				45BD0DC11A40242D0087B43F /* AlermViewController.m */,
 			);
@@ -174,6 +181,7 @@
 				45BD0DA81A3FF5E50087B43F /* SeerViewController.xib */,
 				45BD0DAF1A3FFFA70087B43F /* BodyguardViewController.xib */,
 				45BD0DB61A400C3C0087B43F /* MadmanViewController.xib */,
+				456DD4AE1A628B620041A708 /* MediumViewController.xib */,
 				45BD0DBD1A4023E20087B43F /* AlermViewController.xib */,
 			);
 			path = view;
@@ -312,6 +320,7 @@
 				45BD0DB01A3FFFA70087B43F /* BodyguardViewController.xib in Resources */,
 				45BD0DBF1A4023E20087B43F /* AlermViewController.xib in Resources */,
 				4544C2491A2F48D1001040E9 /* PlayerViewController.xib in Resources */,
+				456DD4B01A628B620041A708 /* MediumViewController.xib in Resources */,
 				45D98B9A1A2D6A2B00487E04 /* LaunchScreen.xib in Resources */,
 				45D98B971A2D6A2B00487E04 /* Images.xcassets in Resources */,
 			);
@@ -326,6 +335,7 @@
 			files = (
 				45CDE67C1A510B5D00415F59 /* GameOverViewController.m in Sources */,
 				45CDE67D1A510B5D00415F59 /* CheckPositionViewController.m in Sources */,
+				456DD4AF1A628B620041A708 /* MediumViewController.m in Sources */,
 				45D98B8F1A2D6A2B00487E04 /* AppDelegate.m in Sources */,
 				45BD0D9F1A3FC6C40087B43F /* WerewolfViewController.m in Sources */,
 				45CDE67F1A510B5D00415F59 /* NightViewController.m in Sources */,
