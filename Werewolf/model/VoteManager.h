@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Player.h"
 
 @interface VoteManager : NSObject
 
@@ -14,7 +15,7 @@
 
 @property (strong, nonatomic) NSMutableArray *playerArray;
 @property (nonatomic) long toAttack;
-@property (nonatomic) long lastDead;
+@property (strong, nonatomic) Player *lastDead;
 
 - (BOOL) banish;
 - (BOOL) guard:(long)num;

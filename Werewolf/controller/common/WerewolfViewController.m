@@ -35,20 +35,22 @@
     
     if ([GameStatus sharedManager].currentTurn == 0) {
         if ([GameStatus sharedManager].werewolfCount == 1) {
-            self.commentLabel.text = [NSString stringWithFormat: @"人狼です!"];
+            self.commentLabel.text = [NSString stringWithFormat: @"役職確認"];
         } else {
             NSString *partner = [[NSString alloc] init];
             for (Player *player in self.partner) {
                 partner = [NSString stringWithFormat: @"%@Player%ld ", partner, player.playerNum + 1];
             }
-            self.commentLabel.text = [NSString stringWithFormat: @"%@は仲間!", partner];
+            self.commentLabel.text = [NSString stringWithFormat: @"役職確認。%@は仲間です！", partner];
         }
+        self.positionText.text = @"人狼は毎晩目を覚まし、村の人間を1人ずつ選んで喰い殺していきます。\n人狼同士で協力して人間を喰いつくし、村を全滅させてしまいましょう。\n人狼が正体を見破られないためには、時に予言者などの他の役職を演じて村人たちを欺くことも必要です。";
     } else if ([GameStatus sharedManager].currentTurn == 1) {
     } else if ([GameStatus sharedManager].currentTurn == 2) {
         self.subView.hidden = NO;
         self.okButton.enabled = NO;
+        self.positionText.hidden = YES;
         if ([GameStatus sharedManager].werewolfCount == 1) {    
-            self.commentLabel.text = @"襲撃したいプレイヤーを選んでください";
+            self.commentLabel.text = @"襲撃したいプレイヤーの画像を押してください。";
         } else {
             NSString *attack = [[NSString alloc] init];
             for (Player *player in self.partner) {
@@ -57,9 +59,9 @@
                 }
             }
             if (attack.length != 0) {
-                self.commentLabel.text = [NSString stringWithFormat: @"仲間は %@を襲撃", attack];
+                self.commentLabel.text = [NSString stringWithFormat: @"仲間は %@を襲撃する。", attack];
             } else {
-                self.commentLabel.text = @"襲撃したいプレイヤーを選んでください";
+                self.commentLabel.text = @"襲撃したいプレイヤーの画像を押してください。";
             }
             // 仲間のボタンを非活性
             for (UIButton *button in self.playerButtons) {

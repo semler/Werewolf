@@ -15,6 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *playerImageView;
 @property (weak, nonatomic) IBOutlet UILabel *commentLabel;
+@property (weak, nonatomic) IBOutlet UITextView *positionText;
 @property (weak, nonatomic) IBOutlet UIView *subView;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *playerButtons;
 @property (weak, nonatomic) IBOutlet UIButton *okButton;

@@ -13,8 +13,7 @@
 
 @interface PlayerViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
-//@property (weak, nonatomic) IBOutlet UITextField *name;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;    
 
 - (IBAction)callCamera:(id)sender;
 - (IBAction)callLibrary:(id)sender;
@@ -24,6 +23,10 @@
 @end
 
 @implementation PlayerViewController
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -95,4 +98,5 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 - (IBAction)cacelButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 @end

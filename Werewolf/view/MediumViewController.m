@@ -21,17 +21,19 @@
     [super viewWillAppear:animated];
     
     if ([GameStatus sharedManager].currentTurn == 0) {
-        self.commentLabel.text = @"霊媒師です!";
+        self.commentLabel.text = @"役職確認";
+        self.positionText.text = @"霊媒師は毎晩目を覚まし、その日の昼のターン処刑によって殺された人物が人狼だったのかそうでなかったのかを、司会者から教えてもらえます。\n昼のターンに処刑された人物の本性を知ることができるのは、霊の声が聞けるあなたしかいないのです。";
     } else if ([GameStatus sharedManager].currentTurn == 1) {
     } else if ([GameStatus sharedManager].currentTurn == 2) {
-        long a = [VoteManager sharedManager].lastDead;
-        if ([VoteManager sharedManager].lastDead == 1) {
+        Player *player = [VoteManager sharedManager].lastDead;
+        if (player.position == 1) {
             self.commentLabel.text = @"昼追放されたのは人狼です！";
         } else {
             self.commentLabel.text = @"昼追放されたのは人間です！";
         }
         self.subView.hidden = YES;
         self.okButton.enabled = YES;
+        self.positionText.hidden = YES;
     }
 }
 

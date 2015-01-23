@@ -17,8 +17,11 @@
 #import "MadmanViewController.h"
 #import "MediumViewController.h"
 #import "voteManager.h"
+#import "MarqueeLabel.h"
 
 @interface DayViewController ()
+
+@property (weak, nonatomic) IBOutlet MarqueeLabel *label;
 
 @property (strong, nonatomic) IBOutletCollection (UIButton) NSArray *playerButtons;
 @property (weak, nonatomic) IBOutlet UILabel *commentLabel;
@@ -61,20 +64,30 @@
         }
     }
     
+    // アニメーションラベル
+    self.label.marqueeType = MLContinuous;
+    self.label.scrollDuration = 10.0f;
+    self.label.fadeLength = 10.0f;
+    self.label.trailingBuffer = 30.0f;
     if (!self.discussFlg) {
         self.discussButton.enabled = YES;
         self.nextButton.enabled = NO;
-        self.commentLabel.text = @"朝になりました、議論開始";
+        self.label.text = @"朝になりました。「議論」ボタンを押して、議論してください。";
     } else {
         self.discussButton.enabled = NO;
         self.nextButton.enabled = YES;
-        self.commentLabel.text = @"議論終了、投票してください";
+        self.label.text = @"議論終了。プレイヤーの画像を押して、投票を行ってください、全員投票が終わったら「次へ」進んでください。";
     }
+    
+    self.label.userInteractionEnabled = YES; // Don't forget this, otherwise the gesture recognizer will fail (UILabel has this as NO by default)
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pauseTap:)];
+    tapRecognizer.numberOfTapsRequired = 1;
+    tapRecognizer.numberOfTouchesRequired = 1;
+    [self.label addGestureRecognizer:tapRecognizer];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -128,7 +141,7 @@
         }
     } else {
         NSString *players = [[VoteManager sharedManager].playerArray componentsJoinedByString:@","];
-        self.commentLabel.text = [NSString stringWithFormat:@"%@の得票数が同じ", players];
+        self.commentLabel.text = [NSString stringWithFormat:@"%@の得票数が同じです。もう一度投票を行ってください。", players];
         for (UIButton *button in self.playerButtons) {
             button.enabled = YES;
         }
@@ -136,5 +149,17 @@
     }
     
     [[PlayerManager sharedManager] resetVote];
+}
+
+- (void)pauseTap:(UITapGestureRecognizer *)recognizer {
+    MarqueeLabel *label = (MarqueeLabel *)recognizer.view;
+    
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
+        if (!label.isPaused) {
+            [label pauseLabel];
+        } else {
+            [label unpauseLabel];
+        }
+    }
 }
 @end

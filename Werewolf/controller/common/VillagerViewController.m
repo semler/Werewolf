@@ -21,12 +21,15 @@
     [super viewWillAppear:animated];
     
     if ([GameStatus sharedManager].currentTurn == 0) {
-        self.commentLabel.text = @"村人です!";
+        self.commentLabel.text = @"役職確認";
+        self.positionText.text = @"村人は特殊な能力を持たないただの一般人ですが、このゲームの主人公でもあります。\n他の村人や、特殊能力を持った仲間たちと協力して人狼を処刑し、全滅させましょう。\nもしかするとあなたの1票が、村の命運を大きく左右することになるかも知れません。";
     } else if ([GameStatus sharedManager].currentTurn == 1) {
     } else if ([GameStatus sharedManager].currentTurn == 2) {
-        self.commentLabel.text = @"村人です!";
+        self.commentLabel.text = @"寝ています";
+        self.positionText.text = @"村人は特殊な能力を持たないただの一般人ですが、このゲームの主人公でもあります。\n他の村人や、特殊能力を持った仲間たちと協力して人狼を処刑し、全滅させましょう。\nもしかするとあなたの1票が、村の命運を大きく左右することになるかも知れません。";
         self.subView.hidden = YES;
         self.okButton.enabled = YES;
+        self.positionText.hidden = NO;
     }
 }
 

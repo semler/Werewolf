@@ -44,7 +44,7 @@ static VoteManager *voteManager = nil;
     
     Player *temp;
     Player *player0;
-    for (int i = 1; i < [PlayerManager sharedManager].playerList.count; i ++) {
+    for (int i = 1; i < [GameStatus sharedManager].playerCount; i ++) {
         player0 = [players objectAtIndex:0];
         temp = [[PlayerManager sharedManager].playerList objectAtIndex:i];
         if (temp.voteCount > player0.voteCount) {
@@ -63,7 +63,7 @@ static VoteManager *voteManager = nil;
         if (player.position == 1) {
             [GameStatus sharedManager].werewolfCount --;
         }
-        self.lastDead = player.position;
+        self.lastDead = player;
         return YES;
     } else {
         for (int i = 0; i < [players count]; i ++) {
@@ -89,7 +89,7 @@ static VoteManager *voteManager = nil;
     if (!player.isGuarded) {
         player.isAttacked = YES;
         [GameStatus sharedManager].alivePlayerCount --;
-        self.lastDead = player.position;
+        self.lastDead = player;
     }
 }
 

@@ -27,14 +27,16 @@
     [super viewWillAppear:animated];
     
     if ([GameStatus sharedManager].currentTurn == 0) {
-        self.commentLabel.text = @"預言者です!";
+        self.commentLabel.text = @"役職確認";
+        self.positionText.text = @"予言者は毎晩目を覚まし、自分が人狼だと疑っている人物を1人指定してその人物が人狼かそうでないかを司会者から教えてもらえます。\n人狼を見つけることが出来ればぐっと有利になれますが、その能力ゆえ人狼に襲われやすい役職でもあるのです。";
     } else if ([GameStatus sharedManager].currentTurn == 1) {
         self.seeButton.enabled = NO;
     } else if ([GameStatus sharedManager].currentTurn == 2) {
-        self.commentLabel.text = @"預言者です!";
+        self.commentLabel.text = @"予言したプレイヤーの画像を押してください。";
         self.subView.hidden = NO;
         self.seeButton.enabled = YES;
         self.okButton.enabled = NO;
+        self.positionText.hidden = YES;
     }
 }
 

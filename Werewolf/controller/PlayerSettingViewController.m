@@ -10,9 +10,11 @@
 #import "PlayerViewController.h"
 #import "PlayerManager.h"
 #import "GameStatus.h"
+#import "MarqueeLabel.h"
 
 @interface PlayerSettingViewController ()
 
+@property (weak, nonatomic) IBOutlet MarqueeLabel *label;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *playerButtons;
 
 - (IBAction)playerButtonsPressed:(id)sender;
@@ -54,11 +56,23 @@
             button.enabled = NO;
         }
     }
+    
+    // アニメーションラベル
+    self.label.marqueeType = MLContinuous;
+    self.label.scrollDuration = 10.0f;
+    self.label.fadeLength = 10.0f;
+    self.label.trailingBuffer = 30.0f;
+    self.label.text = @"画像を押して、プレイヤーを登録してください。最大11人まで登録できます。";
+    
+    self.label.userInteractionEnabled = YES; // Don't forget this, otherwise the gesture recognizer will fail (UILabel has this as NO by default)
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pauseTap:)];
+    tapRecognizer.numberOfTapsRequired = 1;
+    tapRecognizer.numberOfTouchesRequired = 1;
+    [self.label addGestureRecognizer:tapRecognizer];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -81,4 +95,17 @@
 - (IBAction)backButtonPressed:(id)sender {
     [self performSegueWithIdentifier:@"back" sender:self];
 }
+
+- (void)pauseTap:(UITapGestureRecognizer *)recognizer {
+    MarqueeLabel *label = (MarqueeLabel *)recognizer.view;
+    
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
+        if (!label.isPaused) {
+            [label pauseLabel];
+        } else {
+            [label unpauseLabel];
+        }
+    }
+}
+
 @end

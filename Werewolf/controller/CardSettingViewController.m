@@ -9,6 +9,7 @@
 #import "CardSettingViewController.h"
 #import "GameStatus.h"
 #import "PlayerManager.h"
+#import "MarqueeLabel.h"
 
 @interface CardSettingViewController ()
 
@@ -18,6 +19,8 @@
 @property (nonatomic) int bodyguardCount;
 @property (nonatomic) int madmanCount;
 @property (nonatomic) int mediumCount;
+
+@property (weak, nonatomic) IBOutlet MarqueeLabel *label;
 
 @property (weak, nonatomic) IBOutlet UILabel *villageLabal;
 @property (weak, nonatomic) IBOutlet UILabel *werewolfLabal;
@@ -108,11 +111,23 @@
         self.mediumCount = 1;
     }
     [self updateLabel];
+    
+    // アニメーションラベル
+    self.label.marqueeType = MLContinuous;
+    self.label.scrollDuration = 10.0f;
+    self.label.fadeLength = 10.0f;
+    self.label.trailingBuffer = 30.0f;
+    self.label.text = @"役職を設定してください。すでにプレイヤ数に適化された役職人数が設定されていますが、調整ができます。";
+    
+    self.label.userInteractionEnabled = YES; // Don't forget this, otherwise the gesture recognizer will fail (UILabel has this as NO by default)
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pauseTap:)];
+    tapRecognizer.numberOfTapsRequired = 1;
+    tapRecognizer.numberOfTouchesRequired = 1;
+    [self.label addGestureRecognizer:tapRecognizer];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -540,6 +555,18 @@
         [self performSegueWithIdentifier:@"startGame10" sender:self];
     } else if ([GameStatus sharedManager].playerCount == 11) {
         [self performSegueWithIdentifier:@"startGame11" sender:self];
+    }
+}
+
+- (void)pauseTap:(UITapGestureRecognizer *)recognizer {
+    MarqueeLabel *label = (MarqueeLabel *)recognizer.view;
+    
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
+        if (!label.isPaused) {
+            [label pauseLabel];
+        } else {
+            [label unpauseLabel];
+        }
     }
 }
 @end

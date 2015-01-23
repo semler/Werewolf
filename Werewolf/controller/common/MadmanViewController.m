@@ -23,10 +23,12 @@
     [super viewWillAppear:animated];
     
     if ([GameStatus sharedManager].currentTurn == 0) {
-        self.commentLabel.text = @"狂人です!";
+        self.commentLabel.text = @"役職確認";
+        self.positionText.text = @"狂人は何も能力を持っていませんが、人狼側の人間です。\n人狼が勝利した時、自らも勝者となります。\nもちろん、予言者に見られてもただの人間として判定されます。\nわざと予言者などの役職を演じたり、嘘をつくなどして議論の場を混乱させましょう。";
     } else if ([GameStatus sharedManager].currentTurn == 1) {
     } else if ([GameStatus sharedManager].currentTurn == 2) {
-        self.commentLabel.text = @"狂人です!";
+        self.commentLabel.text = @"寝ています";
+        self.positionText.text = @"狂人は何も能力を持っていませんが、人狼側の人間です。\n人狼が勝利した時、自らも勝者となります。\nもちろん、予言者に見られてもただの人間として判定されます。\nわざと予言者などの役職を演じたり、嘘をつくなどして議論の場を混乱させましょう。";
         self.subView.hidden = YES;
         self.okButton.enabled = YES;
     }

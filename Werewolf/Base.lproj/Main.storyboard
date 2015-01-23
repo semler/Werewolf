@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="OFb-rI-Zxm">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6246"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--Game Start View Controller-->
@@ -209,29 +209,26 @@
                                     <action selector="playerButtonsPressed:" destination="0lW-LY-AcE" eventType="touchUpInside" id="Mu0-U9-HvH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AF-Kf-mKz">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AF-Kf-mKz">
                                 <rect key="frame" x="10" y="10" width="50" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="back">
+                                <state key="normal" image="imgArrowRedLeft">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="0lW-LY-AcE" eventType="touchUpInside" id="K7x-l5-lf7"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PLAYER SETTING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9k-Qe-ugp">
-                                <rect key="frame" x="194" y="10" width="180" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9k-Qe-ugp" customClass="MarqueeLabel">
+                                <rect key="frame" x="70" y="10" width="488" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvJ-RI-DQz">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CvJ-RI-DQz">
                                 <rect key="frame" x="478" y="250" width="80" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="btnStart">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="次へ"/>
                                 <connections>
                                     <action selector="startButtonPressed:" destination="0lW-LY-AcE" eventType="touchUpInside" id="b5p-22-Sj3"/>
                                 </connections>
@@ -242,6 +239,7 @@
                     <navigationItem key="navigationItem" id="XzA-Ez-jEc"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="label" destination="V9k-Qe-ugp" id="Dtr-Bw-Oe5"/>
                         <outletCollection property="playerButtons" destination="iF6-hG-Ooe" id="F6r-Fp-dbZ"/>
                         <outletCollection property="playerButtons" destination="5Rm-c2-FCQ" id="2i8-bZ-UHc"/>
                         <outletCollection property="playerButtons" destination="qHz-5L-PMY" id="Msv-AM-YkR"/>
@@ -276,11 +274,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgBgDark" translatesAutoresizingMaskIntoConstraints="NO" id="zD2-fr-dGh">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqF-ao-iWq">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqF-ao-iWq">
                                 <rect key="frame" x="10" y="10" width="50" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="back">
+                                <state key="normal" title="back" image="imgArrowRedLeft">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -487,8 +483,8 @@
                                     <action selector="startGameButtonPressed:" destination="tSh-G2-2Cb" eventType="touchUpInside" id="aOo-ag-VLU"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CARD SETTING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UT-jY-cUK">
-                                <rect key="frame" x="194" y="10" width="180" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UT-jY-cUK" customClass="MarqueeLabel">
+                                <rect key="frame" x="70" y="10" width="488" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -500,6 +496,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="bodyguardLabal" destination="eyc-0Q-eqK" id="ODL-im-A3S"/>
+                        <outlet property="label" destination="0UT-jY-cUK" id="mjg-aC-Plz"/>
                         <outlet property="madmanLabal" destination="yw8-gj-WLE" id="TIR-uA-BKT"/>
                         <outlet property="mediumLabal" destination="R8o-T3-wkW" id="PqF-K5-Z4D"/>
                         <outlet property="minusBodyguardButton" destination="eKf-mi-MPS" id="GsV-Tc-BTe"/>
@@ -2397,8 +2394,8 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="adB-yk-mKp">
                                 <rect key="frame" x="83" y="90" width="402" height="140"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="役職を確認してください" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dv8-Ge-gZh">
-                                        <rect key="frame" x="76" y="20" width="250" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dv8-Ge-gZh" customClass="MarqueeLabel">
+                                        <rect key="frame" x="10" y="20" width="382" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -2406,7 +2403,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CV-m7-yER">
                                         <rect key="frame" x="161" y="90" width="80" height="30"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="次へ">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -2431,6 +2428,7 @@
                     <navigationItem key="navigationItem" id="bdd-qN-d1l"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="label" destination="Dv8-Ge-gZh" id="bVH-Fk-Rn5"/>
                         <outletCollection property="playerButtons" destination="Z2s-e7-SJD" id="Vfm-oB-ddD"/>
                         <outletCollection property="playerButtons" destination="fwY-xQ-iL1" id="tU0-pu-rAh"/>
                         <outletCollection property="playerButtons" destination="FcX-VE-Xut" id="FYA-Au-jd2"/>
@@ -2500,8 +2498,8 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zpL-Yf-v3i">
                                 <rect key="frame" x="83" y="90" width="402" height="140"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="朝になりました、議論開始" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CpO-fj-5MG">
-                                        <rect key="frame" x="51" y="20" width="300" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CpO-fj-5MG" customClass="MarqueeLabel">
+                                        <rect key="frame" x="10" y="20" width="382" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -2509,10 +2507,8 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G18-9D-yCd">
                                         <rect key="frame" x="111" y="90" width="80" height="30"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="議論">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="議論"/>
                                         <connections>
                                             <action selector="discussButtonPressed:" destination="0ZZ-P2-8CM" eventType="touchUpInside" id="pqu-fO-1nJ"/>
                                         </connections>
@@ -2520,10 +2516,8 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBI-EF-fPp">
                                         <rect key="frame" x="211" y="90" width="80" height="30"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="次へ">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="次へ"/>
                                         <connections>
                                             <action selector="nextButtonPressed:" destination="0ZZ-P2-8CM" eventType="touchUpInside" id="DjH-bU-NUQ"/>
                                         </connections>
@@ -2547,6 +2541,7 @@
                     <connections>
                         <outlet property="commentLabel" destination="CpO-fj-5MG" id="3Gi-wX-q46"/>
                         <outlet property="discussButton" destination="G18-9D-yCd" id="5Ya-D4-cRZ"/>
+                        <outlet property="label" destination="CpO-fj-5MG" id="5Qr-de-pdg"/>
                         <outlet property="nextButton" destination="mBI-EF-fPp" id="Ngm-pv-VrY"/>
                         <outletCollection property="playerButtons" destination="X7W-UT-gQU" id="DVv-Ex-pbr"/>
                         <outletCollection property="playerButtons" destination="7df-vX-X4G" id="UeR-Zs-a6U"/>
@@ -2997,8 +2992,8 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QtA-7u-nG1">
                                 <rect key="frame" x="83" y="90" width="402" height="140"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="一人が追放されました" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bA5-cq-Tbv">
-                                        <rect key="frame" x="51" y="20" width="300" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bA5-cq-Tbv" customClass="MarqueeLabel">
+                                        <rect key="frame" x="10" y="20" width="382" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -3006,7 +3001,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNs-Mz-TMj">
                                         <rect key="frame" x="161" y="90" width="80" height="30"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="次へ">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -3040,6 +3035,7 @@
                     <navigationItem key="navigationItem" id="3jd-vs-cw1"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="label" destination="bA5-cq-Tbv" id="hMd-vX-qYt"/>
                         <outletCollection property="playerImages" destination="hUr-Xv-Oyv" id="MGK-aR-RHt"/>
                         <outletCollection property="playerImages" destination="26U-8V-wRa" id="Y16-wv-bsS"/>
                         <outletCollection property="playerImages" destination="e1I-cR-FSa" id="TzB-2I-3xJ"/>
@@ -3070,8 +3066,8 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aRr-yl-Z5K">
                                 <rect key="frame" x="83" y="90" width="402" height="140"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="夜になりました" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7B-R5-GBc">
-                                        <rect key="frame" x="51" y="20" width="300" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7B-R5-GBc" customClass="MarqueeLabel">
+                                        <rect key="frame" x="10" y="20" width="382" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -3079,7 +3075,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7QM-PX-EYW">
                                         <rect key="frame" x="161" y="90" width="80" height="30"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="次へ">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -3143,6 +3139,7 @@
                     <navigationItem key="navigationItem" id="Agn-jG-dZo"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="label" destination="g7B-R5-GBc" id="rUS-bY-qBV"/>
                         <outletCollection property="playerButtons" destination="l3L-Gj-hf9" id="FoM-Jg-dUr"/>
                         <outletCollection property="playerButtons" destination="DLN-4H-H2W" id="yVm-r8-LhG"/>
                         <outletCollection property="playerButtons" destination="Avj-rU-tFf" id="DjJ-Zc-xEW"/>
@@ -3172,10 +3169,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zUb-Tr-Ah6">
-                                <rect key="frame" x="83" y="82" width="402" height="140"/>
+                                <rect key="frame" x="83" y="90" width="402" height="140"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ゲーム終了" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gh-eO-kKJ">
-                                        <rect key="frame" x="51" y="20" width="300" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gh-eO-kKJ">
+                                        <rect key="frame" x="10" y="20" width="382" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -3183,7 +3180,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MyZ-8H-qBo">
                                         <rect key="frame" x="161" y="90" width="80" height="30"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="終了">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -4847,6 +4844,7 @@
         <image name="iconUragiri" width="170" height="142"/>
         <image name="iconUranai" width="139" height="142"/>
         <image name="imgArrowLeft" width="37" height="76"/>
+        <image name="imgArrowRedLeft" width="167" height="103"/>
         <image name="imgArrowRight" width="37" height="76"/>
         <image name="imgBgDark" width="1920" height="1080"/>
         <image name="imgPlayer1" width="247" height="281"/>
@@ -4868,21 +4866,21 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="kdd-wz-MD0"/>
-        <segue reference="spx-lV-kdc"/>
-        <segue reference="Rfj-oZ-d22"/>
-        <segue reference="IHb-cG-fr5"/>
-        <segue reference="GLi-bP-nW2"/>
-        <segue reference="2bP-kA-sR5"/>
-        <segue reference="TtO-2y-XDW"/>
-        <segue reference="uoc-O7-dCe"/>
-        <segue reference="3tP-53-61U"/>
-        <segue reference="DVb-6I-Dyw"/>
         <segue reference="AD7-zg-kte"/>
         <segue reference="cie-bz-xZg"/>
-        <segue reference="XaU-8t-inX"/>
-        <segue reference="Zkh-cz-ddy"/>
+        <segue reference="iaH-ig-0D7"/>
+        <segue reference="ahJ-Ed-w4O"/>
+        <segue reference="Vz4-g6-Jk4"/>
+        <segue reference="wY7-MT-2Zs"/>
         <segue reference="Sw3-hF-RYA"/>
         <segue reference="kee-dZ-KBc"/>
+        <segue reference="Rfj-oZ-d22"/>
+        <segue reference="spx-lV-kdc"/>
+        <segue reference="2bP-kA-sR5"/>
+        <segue reference="y2s-Ki-ByN"/>
+        <segue reference="XaU-8t-inX"/>
+        <segue reference="Zkh-cz-ddy"/>
+        <segue reference="DVb-6I-Dyw"/>
+        <segue reference="3tP-53-61U"/>
     </inferredMetricsTieBreakers>
 </document>

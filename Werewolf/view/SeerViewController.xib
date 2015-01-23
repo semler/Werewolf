@@ -9,6 +9,7 @@
                 <outlet property="commentLabel" destination="jSv-PN-Tux" id="92n-lz-hhL"/>
                 <outlet property="okButton" destination="39s-Is-SAh" id="r1s-xL-PHo"/>
                 <outlet property="playerImageView" destination="LaE-XN-9TH" id="bCo-uy-HYf"/>
+                <outlet property="positionText" destination="rwf-g0-2wc" id="8gI-sf-lmj"/>
                 <outlet property="seeButton" destination="Qly-AR-OeA" id="nRs-bI-tdb"/>
                 <outlet property="subView" destination="sPf-Zc-VfH" id="gbW-Au-nmm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sET-gj-vuS"/>
@@ -41,11 +42,11 @@
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="預言者" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFH-c1-gug">
                     <rect key="frame" x="163" y="10" width="395" height="50"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="説明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSv-PN-Tux">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSv-PN-Tux">
                     <rect key="frame" x="103" y="70" width="455" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -166,6 +167,12 @@
                         </button>
                     </subviews>
                 </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rwf-g0-2wc">
+                    <rect key="frame" x="10" y="120" width="548" height="150"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39s-Is-SAh">
                     <rect key="frame" x="478" y="280" width="80" height="30"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>

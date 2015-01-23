@@ -42,6 +42,12 @@
     
     //アラーム用のサウンドを読み込む
     self.alarmSound = [[NSBundle mainBundle] pathForResource:@"koukaon1" ofType:@"wav"];
+    
+    // サイズリセット
+    CGAffineTransform t0 = CGAffineTransformMakeTranslation(self.pickerView.bounds.size.width/2, self.pickerView.bounds.size.height/2);
+    CGAffineTransform s0 = CGAffineTransformMakeScale(1, 1.5);
+    CGAffineTransform t1 = CGAffineTransformMakeTranslation(-self.pickerView.bounds.size.width/2, -self.pickerView.bounds.size.height/2);
+    self.pickerView.transform = CGAffineTransformConcat(t0, CGAffineTransformConcat(s0, t1));
 }
     
 - (void)viewDidLoad {
@@ -92,7 +98,7 @@
     myView.text = [self.array objectAtIndex:row];
         
     myView.textAlignment = NSTextAlignmentCenter;
-    myView.font = [UIFont systemFontOfSize:20];         //用label来设置字体大小
+    myView.font = [UIFont boldSystemFontOfSize:20];         //用label来设置字体大小
     myView.textColor = [UIColor whiteColor];
     myView.backgroundColor = [UIColor clearColor];
     

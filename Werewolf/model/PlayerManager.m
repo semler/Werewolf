@@ -8,6 +8,7 @@
 
 #import "PlayerManager.h"
 #import "GameStatus.h"
+#import "VoteManager.h"
 
 @implementation PlayerManager
 
@@ -133,6 +134,7 @@ static PlayerManager *playerManager = nil;
     for (Player *player in self.playerList) {
         player.voteCount = 0;
     }
+    [[VoteManager sharedManager].playerArray removeAllObjects];
 }
 
 @end

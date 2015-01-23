@@ -33,7 +33,7 @@
                     </connections>
                 </button>
                 <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DtY-b1-06j">
-                    <rect key="frame" x="0.0" y="0.0" width="264" height="200"/>
+                    <rect key="frame" x="0.0" y="-35" width="264" height="200"/>
                 </pickerView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BU4-Fv-w4u">
                     <rect key="frame" x="264" y="70" width="60" height="60"/>

@@ -23,10 +23,12 @@
     if ([GameStatus sharedManager].currentTurn == 0) {
         self.subView.hidden = YES;
         self.okButton.enabled = YES;
+        self.positionText.hidden = NO;
     } else if ([GameStatus sharedManager].currentTurn == 1) {
-        self.commentLabel.text = @"投票してください";
+        self.commentLabel.text = @"投票したいプレイヤーの画像を押してください。";
         self.subView.hidden = NO;
         self.okButton.enabled = NO;
+        self.positionText.hidden = YES;
     } else if ([GameStatus sharedManager].currentTurn == 2) {
     }
     [self setPlayerImage];

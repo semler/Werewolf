@@ -15,9 +15,11 @@
 #import "BodyguardViewController.h"
 #import "MadmanViewController.h"
 #import "MediumViewController.h"
+#import "MarqueeLabel.h"
 
 @interface CheckPositionViewController ()
 
+@property (weak, nonatomic) IBOutlet MarqueeLabel *label;
 @property (strong, nonatomic) IBOutletCollection (UIButton) NSArray *playerButtons;
 
 - (IBAction)playerButtonsPressed:(id)sender;
@@ -50,11 +52,23 @@
             [self.view addSubview:imageView];
         }
     }
+    
+    // アニメーションラベル
+    self.label.marqueeType = MLContinuous;
+    self.label.scrollDuration = 10.0f;
+    self.label.fadeLength = 10.0f;
+    self.label.trailingBuffer = 30.0f;
+    self.label.text = @"画像を押して、役職を確認して下さい。全員が確認終わったら、「次へ」ボタンを押してください。";
+    
+    self.label.userInteractionEnabled = YES; // Don't forget this, otherwise the gesture recognizer will fail (UILabel has this as NO by default)
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pauseTap:)];
+    tapRecognizer.numberOfTapsRequired = 1;
+    tapRecognizer.numberOfTouchesRequired = 1;
+    [self.label addGestureRecognizer:tapRecognizer];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -90,5 +104,17 @@
 
 - (IBAction)nextButtonPressed:(id)sender {
     [self performSegueWithIdentifier:@"toDay" sender:self];
+}
+
+- (void)pauseTap:(UITapGestureRecognizer *)recognizer {
+    MarqueeLabel *label = (MarqueeLabel *)recognizer.view;
+    
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
+        if (!label.isPaused) {
+            [label pauseLabel];
+        } else {
+            [label unpauseLabel];
+        }
+    }
 }
 @end

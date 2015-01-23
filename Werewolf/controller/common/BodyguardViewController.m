@@ -23,12 +23,14 @@
     [super viewWillAppear:animated];
     
     if ([GameStatus sharedManager].currentTurn == 0) {
-        self.commentLabel.text = @"ボディガードです!";
+        self.commentLabel.text = @"役職確認";
+        self.positionText.text = @"ボディーガードは毎晩目を覚まし、誰かを1人指定してその人物を人狼の襲撃から守ります。\nただし、自分自身を守ったり、同じ人を2日以上連続では守ることはできません。\n予言者などの村人にとって心強い仲間を守ることのできる、力強く頼もしい役職です。";
     } else if ([GameStatus sharedManager].currentTurn == 1) {
     } else if ([GameStatus sharedManager].currentTurn == 2) {
-        self.commentLabel.text = @"ボディガードです!";
+        self.commentLabel.text = @"守りたいプレイヤーの画像を押してください。";
         self.subView.hidden = NO;
         self.okButton.enabled = NO;
+        self.positionText.hidden = YES;
     }
 }
 
@@ -64,7 +66,7 @@
     } else if ([GameStatus sharedManager].currentTurn == 2) {
         [[VoteManager sharedManager] resetGuard];
         if (![[VoteManager sharedManager] guard:self.guard]) {
-            self.commentLabel.text = @"他のプレイヤーを選んでください！";
+            self.commentLabel.text = @"二夜連続同じプレイヤーを守る事はできませんので、他のプレイヤーを選んでください。";
             return;
         }
     }
